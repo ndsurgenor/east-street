@@ -18,7 +18,10 @@ GROUP_SIZE = (
 )
 
 # Allows admin to confirm/deny user bookings
-STATUS = ((0, 'TBC'), (1, 'Confirmed'))
+STATUS = (
+    (0, 'TBC'),
+    (1, 'Confirmed')
+)
 
 
 class Booking(models.Model):

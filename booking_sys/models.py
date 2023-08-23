@@ -19,8 +19,8 @@ GROUP_SIZE = (
 
 # Allows admin to confirm/deny user bookings
 STATUS = (
-    (0, 'TBC'),
-    (1, 'Confirmed')
+    (0, 'Request sent to restaurant'),
+    (1, 'Booking confirmed by restaurant')
 )
 
 

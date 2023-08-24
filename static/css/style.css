@@ -1,3 +1,21 @@
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?&family=Libre+Baskerville:wght@400&family=Noto+Sans+JP:wght@300&display=swap');
+
+/* General */
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+h1 {
+    font-family: 'Libre Baskerville', serif;
+    font-weight: 400;
+    font-size: 2em;
+}
+
 body {
-    background-color: red;
+    font-family: 'Noto Sans JP', sans-serif;
+    font-weight: 300;
+    font-size: 1.5em;
 }

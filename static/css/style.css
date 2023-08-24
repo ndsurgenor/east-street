@@ -8,7 +8,8 @@
     border: none;
 }
 
-h1 {
+h1,
+h2 {
     font-family: 'Libre Baskerville', serif;
     font-weight: 400;
     font-size: 2em;

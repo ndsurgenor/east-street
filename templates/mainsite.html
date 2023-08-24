@@ -1,16 +1,22 @@
 {% extends 'base.html' %}
 {% block site %}
 
-    <nav>
-        <ul>
-            <li><a href="{% url 'index' %}">Home</a></li>
-            <li><a href="{% url 'menu' %}">Menu</a></li>
-            <li><a href="{% url 'location' %}">Location</a></li>
-            <li><a href="{% url 'bookings' %}">Bookings</a></li>
-        </ul>
-    </nav>
+<!-- Navbar for Main Site -->
+<nav class="navbar bg-body-tertiary">
+    <div class="container-fluid">        
+        <a class="navbar-brand" href="{% url 'index' %}">
+            <h1><i class="fa-solid fa-stroopwafel"></i>EastSt.</h1>
+        </a>
+    </div>
+    <ul>
+        <li><a href="{% url 'index' %}">Home</a></li>
+        <li><a href="{% url 'menu' %}">Menu</a></li>
+        <li><a href="{% url 'location' %}">Location</a></li>
+        <li><a href="{% url 'bookings' %}">Bookings</a></li>
+    </ul>
+</nav>
 
-    {% block content %}
-    {% endblock %}
+{% block content %}
+{% endblock %}
 
 {% endblock %}

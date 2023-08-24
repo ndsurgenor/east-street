@@ -3,11 +3,14 @@
 
     <nav>
         <ul>
-            <li><a href="{% url 'index' %}">Return to Main Site</a></li>
+            <li><a href="{% url 'index' %}">Home</a></li>
+            <li>Menu</li>
+            <li>Location</li>
             <li><a href="{% url 'bookings' %}">Bookings</a></li>
         </ul>
     </nav>
 
-    <h1>Bookings</h1>
+    {% block content %}
+    {% endblock %}
 
 {% endblock %}

@@ -8,15 +8,41 @@
     border: none;
 }
 
-h1,
-h2 {
+h1 {
     font-family: 'Libre Baskerville', serif;
     font-weight: 400;
-    font-size: 2em;
 }
 
-body {
+body,
+.nav-item {
     font-family: 'Noto Sans JP', sans-serif;
     font-weight: 300;
-    font-size: 1.5em;
+}
+
+i {
+    font-size: 0.85em;
+    padding-left: 0.2em;
+    padding-right: 0.4em;
+}
+
+/* Navbar */
+.nav-item {
+    padding-right: 1.5em;
+}
+
+.nav-item a {
+    color: ghostwhite;
+    text-transform: uppercase;
+}
+
+.nav-btn a {
+    color: black;
+    background-color: gainsboro;
+    font-weight: bold;
+    border-radius: 10px;
+}
+
+.nav-btn a:hover {
+    color: ghostwhite;
+    background-color: dimgray;
 }

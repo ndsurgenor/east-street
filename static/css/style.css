@@ -50,3 +50,8 @@ i {
     color: ghostwhite;
     background-color: dimgray;
 }
+
+/* Footer */
+footer div {
+    background-color: aqua;
+}

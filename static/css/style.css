@@ -69,7 +69,7 @@ footer h2 {
 footer h3 {
     font-size: 1em;
     font-weight: bold;
-    margin-top: 0.7em;
+    margin-top: 0.8em;
     margin-bottom: 0.1em;
 }
 
@@ -78,12 +78,25 @@ footer p {
     margin-left: 0.5em;
 }
 
+footer p {
+    font-size: 0.9em;
+}
+
 .social-icon {
     color: darkslategrey;
     background-color: whitesmoke;
     font-size: 2em;
-    width: 1.65em;
-    height: 1.65em;
+    width: 3.5rem;
+    padding: 0.1em 0.3rem;
     border-radius: 50%;
-    margin: 0 0.3em;
+    margin: 0 0.15em;
 }
+
+/* Media Queries */
+/* Footer */
+@media only screen and (max-width: 576px) {
+    footer h2 {
+      font-size: 1.75rem;
+      text-align: right;
+    }
+  }

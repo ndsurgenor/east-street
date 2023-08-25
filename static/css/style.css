@@ -1,5 +1,6 @@
 /* Google Fonts */
-@import url('https://fonts.googleapis.com/css2?&family=Libre+Baskerville:wght@400&family=Noto+Sans+JP:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?&family=Libre+Baskerville:wght@400&display=swap');
+@import url('https://fonts.googleapis.com/css2?&family=Noto+Sans+JP:wght@300&display=swap');
 
 /* General */
 * {
@@ -8,26 +9,28 @@
     border: none;
 }
 
-h1 {
+h1,
+h2 {
     font-family: 'Libre Baskerville', serif;
     font-weight: 400;
 }
 
+h3,
 body,
 .nav-item {
     font-family: 'Noto Sans JP', sans-serif;
     font-weight: 300;
 }
 
-i {
+/* Navbar */
+.navbar-brand h1 {
+    font-size: 2.5em;
+}
+
+.navbar-brand h1 i {
     font-size: 0.9em;
     padding-left: 0.2em;
     padding-right: 0.4em;
-}
-
-/* Navbar */
-.navbar-brand h1 {
-    font-size: 2em;
 }
 
 .nav-item {
@@ -53,5 +56,34 @@ i {
 
 /* Footer */
 footer div {
-    background-color: aqua;
+    color: ghostwhite;
+    background-color: darkslategrey;
+}
+
+footer h2 {
+    font-size: 2em;
+    margin-bottom: 1rem;
+    margin-right: 0.3em;
+}
+
+footer h3 {
+    font-size: 1em;
+    font-weight: bold;
+    margin-top: 0.7em;
+    margin-bottom: 0.1em;
+}
+
+footer h3,
+footer p {
+    margin-left: 0.5em;
+}
+
+.social-icon {
+    color: darkslategrey;
+    background-color: whitesmoke;
+    font-size: 2em;
+    width: 1.65em;
+    height: 1.65em;
+    border-radius: 50%;
+    margin: 0 0.3em;
 }

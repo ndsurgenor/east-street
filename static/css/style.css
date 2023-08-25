@@ -22,6 +22,12 @@ body,
     font-weight: 300;
 }
 
+body {    
+    background: url(../images/background.jpg) center center;
+    background-size: cover;
+    min-height: 100vh;
+}
+
 /* Navbar */
 .navbar-brand h1 {
     font-size: 2.5em;

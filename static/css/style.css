@@ -15,6 +15,10 @@ h2 {
     font-weight: 400;
 }
 
+h2 {
+    font-size: 2em;
+}
+
 h3,
 body,
 .nav-item {
@@ -58,6 +62,16 @@ body {
 .nav-btn a:hover {
     color: ghostwhite;
     background-color: dimgray;
+}
+
+/* Menu Page */
+.menu-div {
+    background-color: rgba(255, 255, 255, 0.925);
+}
+
+.menu-div h3 {
+    font-size: 1.25rem;
+    font-weight: bold;
 }
 
 /* Footer */

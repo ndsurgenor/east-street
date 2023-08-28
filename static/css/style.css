@@ -26,7 +26,7 @@ body,
     font-weight: 300;
 }
 
-.bg-image {    
+body {
     background: url(../images/background.jpg) center center;
     background-size: cover;
     height: 100vh;
@@ -74,6 +74,13 @@ body,
     font-weight: bold;
 }
 
+.menu-details-left,
+.menu-details-right {
+    margin-bottom: 10rem;
+}
+
+
+
 /* Footer */
 footer div {
     color: ghostwhite;
@@ -113,10 +120,19 @@ footer p {
 }
 
 /* Media Queries */
-/* Footer */
+@media only screen and (max-width: 768px) {
+    .menu-details-left {
+        margin-bottom: 0rem;
+    }
+
+    .menu-details-right {
+        margin-bottom: 15rem;
+    }
+}
+
 @media only screen and (max-width: 576px) {
     footer h2 {
-      font-size: 1.75rem;
-      text-align: right;
+        font-size: 1.75rem;
+        text-align: right;
     }
-  }
+}

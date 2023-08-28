@@ -52,16 +52,17 @@ body {
     text-transform: uppercase;
 }
 
-.nav-btn a {
+.btn-light {
     color: black;
     background-color: whitesmoke;
     font-weight: bold;
-    border-radius: 10px;
+    text-transform: uppercase;    
 }
 
-.nav-btn a:hover {
+.btn-light:hover {
     color: ghostwhite;
-    background-color: dimgray;
+    background-color: darkslategray;
+    border-color: darkslategray;
 }
 
 /* Menu Page */

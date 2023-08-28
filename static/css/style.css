@@ -27,7 +27,7 @@ body,
 }
 
 body {
-    background: center center no-repeat;
+    background: url('https://res.cloudinary.com/dzgxvsnpr/image/upload/v1693042277/static/images/background.30fd0022142d.jpg') center center no-repeat;
     background-size: cover;
     min-height: 100vh;
 }

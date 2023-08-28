@@ -27,9 +27,9 @@ body,
 }
 
 body {
-    background: url(../images/background.jpg) center center;
+    background: center center no-repeat;
     background-size: cover;
-    height: 100vh;
+    min-height: 100vh;
 }
 
 /* Navbar */

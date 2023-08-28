@@ -47,7 +47,7 @@ body {
     padding-right: 1.5em;
 }
 
-.nav-item a {
+.nav-link {
     color: ghostwhite;
     text-transform: uppercase;
 }

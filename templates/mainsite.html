@@ -1,31 +1,29 @@
 {% extends 'base.html' %}
 {% block content %}
 
-<!-- Navbar for Main Site -->
-<nav class="navbar bg-dark border-bottom border-body sticky-top navbar-expand-md" data-bs-theme="dark">
-    <div class="container-fluid">
-        <a class="navbar-brand" href="{% url 'index' %}">
-            <h1><i class="fa-solid fa-stroopwafel"></i>EastSt.</h1>
-        </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-            <ul class="navbar-nav">
-                <li class="nav-item"><a class="nav-link" href="{% url 'index' %}">Home</a></li>
-                <li class="nav-item"><a class="nav-link" href="{% url 'menu' %}">Menu</a></li>
-                <li class="nav-item"><a class="nav-link" href="{% url 'location' %}">Location</a></li>
-                <li class="nav-item">
-                    <button type="button" class="btn btn-light" data-bs-toggle="modal"
-                        data-bs-target="#accessModal">Bookings</button>
-                </li>
-            </ul>
+    <!-- Navbar for Main Site -->
+    <nav class="navbar bg-dark border-bottom border-body sticky-top navbar-expand-md" data-bs-theme="dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="{% url 'index' %}">
+                <h1><i class="fa-solid fa-stroopwafel"></i>EastSt.</h1>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="{% url 'index' %}">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{% url 'menu' %}">Menu</a></li>
+                    <li class="nav-item"><a class="nav-link" href="{% url 'location' %}">Location</a></li>
+                    <li class="nav-item"><a class="btn btn-light" href="{% url 'account_login' %}">Bookings</a></li>
+                </ul>
+            </div>
         </div>
-    </div>
-</nav>
+    </nav>
 
-{% block details %}
-{% endblock %}
+    <!-- Page Specific Details -->
+    {% block details %}
+    {% endblock %}
 
 {% endblock %}

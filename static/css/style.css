@@ -67,6 +67,7 @@ body {
 /* Menu Page */
 .menu-div {
     background-color: rgba(245, 245, 235, 0.925);
+    padding: 0 1.5rem;
 }
 
 .menu-div h3 {

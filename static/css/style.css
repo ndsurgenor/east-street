@@ -68,7 +68,7 @@ body {
 /* Menu Page */
 .menu-div {
     background-color: rgba(245, 245, 235, 0.925);
-    padding: 0 1.5rem;
+    padding: 0 3rem;
 }
 
 .menu-div h3 {
@@ -81,7 +81,21 @@ body {
     margin-bottom: 10rem;
 }
 
+/* Authorisation Forms */
+.access-form {
+    background-color: ghostwhite;
+    border: 0.5rem gainsboro solid;
+    margin-top: 2rem;
+}
 
+.access-form button {
+    color: ghostwhite;
+    background-color: dimgrey;
+}
+
+.access-form-smalltxt {
+    font-size: 0.9rem;
+}
 
 /* Footer */
 footer div {

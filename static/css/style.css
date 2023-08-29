@@ -56,7 +56,7 @@ body {
     color: black;
     background-color: whitesmoke;
     font-weight: bold;
-    text-transform: uppercase;    
+    text-transform: uppercase;
 }
 
 .btn-light:hover {
@@ -88,7 +88,8 @@ body {
     margin-top: 2rem;
 }
 
-.access-form button {
+.access-form button,
+.access-form-input {
     color: ghostwhite;
     background-color: dimgrey;
 }

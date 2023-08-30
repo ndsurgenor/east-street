@@ -66,19 +66,28 @@ body {
 }
 
 /* Home Page */
+.opening-details {
+    margin-top: 1.5rem;
+}
+
+.opening-banner h2 {
+    font-size: 1.5rem;
+}
+
 .opening-times {
-    background: dimgrey;
+    background-color: darkslategrey;
     opacity: 95%;
+    padding: 1.5rem 0;
 }
 
 .opening-times h3 {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     font-weight: bold;
     text-transform: uppercase;
 }
 
 .opening-times p {
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.4rem;
 }
 
 /* Menu Page */

@@ -1,15 +1,15 @@
 {% extends 'mainsite.html' %}
 {% block details %}
 
-<div class="container">
+<div class="container opening-details clearfix">
     <div class="row justify-content-center text-center mt-3">
-        <div class="d-none d-md-block col-md-8 col-lg-6 bg-dark text-light pt-2">
-            <h2>Restaurant cuisine inspired by the street-styles of Asia</h2>
+        <div class="opening-banner col-10 col-md-8 col-lg-6 col-xl-4 bg-dark text-light pt-3 pb-2">
+            <h2 class="d-none d-md-block">Restaurant cuisine inspired by the street-styles of Asia</h2>
         </div>
     </div>
     <div class="row justify-content-center text-center">
-        <div class="opening-times col-10 col-md-8 col-lg-6 text-light pt-2">
-            <h3>Opening Times</h3>
+        <div class="opening-times col-10 col-md-8 col-lg-6 col-xl-4 text-light pt-2">
+            <h3 class="pt-3">Opening Times</h3>
             <p>Monday: CLOSED</p>
             <p>Tuesday: CLOSED</p>
             <p>Wednesday: 12.30-10.30pm</p>
@@ -20,8 +20,9 @@
         </div>
     </div>
     <div class="row justify-content-center text-center">
-        <div class="col-10 col-md-8 col-lg-6 bg-dark text-light pt-3 pb-3">
-            <a class="btn btn-light mt-1 mb-1" href="{% url 'account_login' %}">Book Now</a>
+        <div class="opening-banner col-10 col-md-8 col-lg-6 col-xl-4 bg-dark text-light pt-3 pb-3">
+            <a class="d-sm d-md-none btn btn-light mx-2 my-1" href="{% url 'menu' %}">Menu</a>
+            <a class="btn btn-light my-1" href="{% url 'account_login' %}">Book Now</a>
         </div>
     </div>
 </div>

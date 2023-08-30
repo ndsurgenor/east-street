@@ -61,8 +61,24 @@ body {
 
 .btn-light:hover {
     color: ghostwhite;
-    background-color: darkslategray;
-    border-color: darkslategray;
+    background-color: darkslategrey;
+    border-color: darkslategrey;
+}
+
+/* Home Page */
+.opening-times {
+    background: dimgrey;
+    opacity: 95%;
+}
+
+.opening-times h3 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.opening-times p {
+    margin-bottom: 0.5rem;
 }
 
 /* Menu Page */

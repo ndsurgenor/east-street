@@ -8,12 +8,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link rel="prerender" href="{% static 'images/open.jpg' %}">
+    <link rel="prerender" href="{% static 'images/background.jpg' %}">
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
     <link rel="shortcut icon" href="{% static 'images/favicon.png' %}" type="image/x-icon">
     <title>EastSt. Restaurant</title>
 </head>
 
-<body>
+<body background="{% static 'images/background.jpg' %}">
     <!-- Navbar and Main Content -->
     {% block content %}
     {% endblock %}
@@ -30,19 +32,19 @@
                 </div>
                 <div
                     class="col-10 col-sm-6 col-md-4 col-lg-4 d-flex justify-content-sm-end justify-content-md-center align-items-center text-center">
-                    <a class="social-icon" href="https://gmail.com" target="_blank" aria-label="Get in contact via email"><i
-                            class=" fa-solid fa-envelope"></i></a>
-                    <a class="social-icon" href="https://instagram.com" target="_blank" aria-label="Follow us on Instagram"><i
-                            class="fa-brands fa-instagram"></i></a>
-                    <a class="social-icon" href="https://facebook.com" target="_blank" aria-label="Follow us on Facebook"><i
-                            class="fa-brands fa-facebook"></i></a>
+                    <a class="social-icon" href="https://gmail.com" target="_blank"
+                        aria-label="Get in contact via email"><i class=" fa-solid fa-envelope"></i></a>
+                    <a class="social-icon" href="https://instagram.com" target="_blank"
+                        aria-label="Follow us on Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a class="social-icon" href="https://facebook.com" target="_blank"
+                        aria-label="Follow us on Facebook"><i class="fa-brands fa-facebook"></i></a>
                 </div>
                 <div class="col-2 col-sm-12 col-md-4 col-lg-4 d-flex justify-content-end align-items-end">
                     <h2>est. 2023</h2>
                 </div>
             </div>
         </div>
-    </footer>    
+    </footer>
 
     <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"

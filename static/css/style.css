@@ -72,11 +72,12 @@ body {
 /* Home Page */
 #index-splash {
     margin-top: 1rem;
+    margin-bottom: 10rem;
     height: 30rem;
 }
 
 #index-image {
-    background: url('https://res.cloudinary.com/dzgxvsnpr/image/upload/v1693042277/static/images/background.30fd0022142d.jpg') center center no-repeat;
+    background: url('https://res.cloudinary.com/dzgxvsnpr/image/upload/v1693492354/static/images/open.49122d4bd2e4.jpg') center center no-repeat;
     background-size: cover;
 }
 
@@ -86,7 +87,6 @@ body {
 
 .opening-times {
     background-color: darkslategrey;
-    opacity: 95%;
     padding: 1.5rem 0;
 }
 
@@ -98,10 +98,6 @@ body {
 
 .opening-times p {
     margin-bottom: 0.4rem;
-}
-
-.bottom-banner {
-    margin-bottom: 12.5rem;
 }
 
 .bottom-banner a:hover {
@@ -181,6 +177,10 @@ footer p {
 
 /* Media Queries */
 @media only screen and (max-width: 768px) {
+    #index-splash {
+        height: 26rem;
+    }
+    
     .menu-details-left {
         margin-bottom: 0rem;
     }

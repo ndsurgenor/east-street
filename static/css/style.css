@@ -32,7 +32,7 @@ body {
     min-height: 100vh;
 }
 
-/* Navbar */
+/* Mainsite Navbar */
 .navbar-brand h1 {
     font-size: 2.5em;
 }
@@ -65,12 +65,16 @@ body {
     border-color: darkslategrey;
 }
 
-/* Home Page */
-.opening-details {
-    margin-top: 1.5rem;
+.navbar-toggler {
+    margin-right: 1.2rem;
 }
 
-.opening-banner h2 {
+/* Home Page */
+.top-banner {
+    margin-top: 1rem;
+}
+
+.top-banner h2 {
     font-size: 1.5rem;
 }
 
@@ -88,6 +92,14 @@ body {
 
 .opening-times p {
     margin-bottom: 0.4rem;
+}
+
+.bottom-banner {
+    margin-bottom: 12.5rem;
+}
+
+.bottom-banner a:hover {
+    background-color: dimgrey;
 }
 
 /* Menu Page */

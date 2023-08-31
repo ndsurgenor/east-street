@@ -66,38 +66,38 @@ body {
 }
 
 .navbar-toggler {
-    margin-right: 1.2rem;
+    margin-right: 1.2em;
 }
 
 /* Home Page */
 #index-splash {
-    margin-top: 1rem;
-    margin-bottom: 10rem;
-    height: 30rem;
+    margin-top: 1em;
+    margin-bottom: 10em;
+    height: 30em;
 }
 
 #index-image {
-    background: url('https://res.cloudinary.com/dzgxvsnpr/image/upload/v1693492354/static/images/open.49122d4bd2e4.jpg') center center no-repeat;
+    background: url('../images/open.jpg') center center no-repeat;
     background-size: cover;
 }
 
 .top-banner h2 {
-    font-size: 1.5rem;
+    font-size: 1.5em;
 }
 
 .opening-times {
     background-color: darkslategrey;
-    padding: 1.5rem 0;
+    padding: 1.5em 0;
 }
 
 .opening-times h3 {
-    font-size: 1.25rem;
+    font-size: 1.25em;
     font-weight: bold;
     text-transform: uppercase;
 }
 
 .opening-times p {
-    margin-bottom: 0.4rem;
+    margin-bottom: 0.4em;
 }
 
 .bottom-banner a:hover {
@@ -107,23 +107,23 @@ body {
 /* Menu Page */
 .menu-div {
     background-color: rgba(245, 245, 235, 0.925);
-    padding: 0 3rem;
+    padding: 0 3em;
 }
 
 .menu-div h3 {
-    font-size: 1.25rem;
+    font-size: 1.25em;
     font-weight: bold;
 }
 
 .menu-details-left,
 .menu-details-right {
-    margin-bottom: 10rem;
+    margin-bottom: 10em;
 }
 
 /* Authorisation Forms */
 .access-form {
     background-color: ghostwhite;
-    border: 0.5rem solid gainsboro;
+    border: 0.5em solid gainsboro;
     margin-top: 2rem;
 }
 
@@ -134,7 +134,7 @@ body {
 }
 
 .access-form-smalltxt {
-    font-size: 0.9rem;
+    font-size: 0.9em;
 }
 
 /* Footer */
@@ -145,8 +145,8 @@ footer div {
 
 footer h2 {
     font-size: 2em;
-    margin-bottom: 1rem;
-    margin-right: 0.3em;
+    margin-bottom: 0.5em;
+    margin-right: 1em;
 }
 
 footer h3 {
@@ -169,8 +169,8 @@ footer p {
     color: darkslategrey;
     background-color: whitesmoke;
     font-size: 2em;
-    width: 3.5rem;
-    padding: 0.1em 0.3rem;
+    width: 1.75em;
+    padding: 0.1em 0.3em;
     border-radius: 50%;
     margin: 0 0.15em;
 }
@@ -178,21 +178,27 @@ footer p {
 /* Media Queries */
 @media only screen and (max-width: 768px) {
     #index-splash {
-        height: 26rem;
+        height: 26em;
     }
-    
+
     .menu-details-left {
-        margin-bottom: 0rem;
+        margin-bottom: 0em;
     }
 
     .menu-details-right {
-        margin-bottom: 15rem;
+        margin-bottom: 15em;
     }
 }
 
 @media only screen and (max-width: 576px) {
     footer h2 {
-        font-size: 1.75rem;
+        font-size: 1.75em;
         text-align: right;
+    }
+}
+
+@media only screen and (max-height: 720px) {
+    body {
+        margin-bottom: 8em;
     }
 }

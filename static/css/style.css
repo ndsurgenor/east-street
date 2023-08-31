@@ -70,8 +70,14 @@ body {
 }
 
 /* Home Page */
-.top-banner {
+#index-splash {
     margin-top: 1rem;
+    height: 30rem;
+}
+
+#index-image {
+    background: url('https://res.cloudinary.com/dzgxvsnpr/image/upload/v1693042277/static/images/background.30fd0022142d.jpg') center center no-repeat;
+    background-size: cover;
 }
 
 .top-banner h2 {
@@ -121,7 +127,7 @@ body {
 /* Authorisation Forms */
 .access-form {
     background-color: ghostwhite;
-    border: 0.5rem gainsboro solid;
+    border: 0.5rem solid gainsboro;
     margin-top: 2rem;
 }
 

@@ -18,4 +18,6 @@ def location(request):
 
 class UserBookings(generic.ListView):
     model = Booking
-    template_name = 'bookings.html'
+    queryset = Booking.objects.filter(status=0).order_by('date')
+    template_name = 'userbookings.html'
+    paginate_by = 10

@@ -1,5 +1,46 @@
 {% extends 'bookingsite.html' %}
 
 {% block details %}
-<h2>Test</h2>
+
+<div class="container">
+    <!-- View heading -->
+    <div class="row">
+        <div class="col-8">
+            <h2>Your Bookings</h2>
+        </div>
+    </div>
+    <!-- List headings -->
+    <div class="row">
+        <div class="col-2">
+            <p>Date</p>
+        </div>
+        <div class="col-2">
+            <p>Time</p>
+        </div>
+        <div class="col-2">
+            <p>Group Size</p>
+        </div>
+        <div class="col-2">
+            <p>Confirmed?</p>
+        </div>
+    </div>
+    <!-- List of user-made bookings -->
+    {% for booking in booking_list %}
+    <div class="row">
+        <div class="col-2">
+            <p>{{ booking.date }}</p>
+        </div>
+        <div class="col-2">
+            <p>{{ booking.time }}</p>
+        </div>
+        <div class="col-2">
+            <p>{{ booking.group }}</p>
+        </div>
+        <div class="col-2">
+            <p>{{ booking.confirmed }}</p>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+
 {% endblock %}

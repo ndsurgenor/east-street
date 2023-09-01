@@ -1,15 +1,28 @@
 {% extends 'mainsite.html' %}
 {% block details %}
 
-<div class="container">
+<div class="container text-light">
+    <!-- Google map -->
     <div class="row justify-content-center mt-3 pt-2">
-        <div class="col-10">
-            <iframe width="100%" height="500" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"
+        <div class="col-11 col-xl-9 gx-0 bg-dark">
+            <iframe width="100%" height="400" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"
                 src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=23A%20East%20Street%20Newtownards+(EastSt.%20Restaurant)&amp;t=&amp;z=15&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"><a
                     href="https://www.maps.ie/population/">Population calculator map</a>
             </iframe>
         </div>
     </div>
+    <!-- Transport info banner -->
+    <div class="row justify-content-center">
+        <div class="col-11 col-lg-6 col-xl-5 bg-dark pt-1 pt-lg-2 text-center text-lg-start">
+            <p><i class="fa-solid fa-car me-2"></i> Nearest parking found at Ann St & Kennel Lane</p>
+        </div>
+        <div class="col-11 col-lg-5 col-xl-4 bg-dark pt-0 pt-lg-2 text-center text-lg-end">
+            <p><i class="d-lg-none fa-solid fa-bus-simple me-2"></i> Bus services operate from 33 Regent St <i
+                    class="d-none d-lg-inline fa-solid fa-bus-simple ms-2"></i></p>
+        </div>
+    </div>
+</div>
+
 </div>
 
 {% endblock %}

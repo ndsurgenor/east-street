@@ -1,27 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User
-
-# Defines options for size of booking party (min=1, max=12)
-GROUP_SIZE = (
-    (1, '1'),
-    (2, '2'),
-    (3, '3'),
-    (4, '4'),
-    (5, '5'),
-    (6, '6'),
-    (7, '7'),
-    (8, '8'),
-    (9, '9'),
-    (10, '10'),
-    (11, '11'),
-    (12, '12'),
-)
-
-# Allows admin to confirm/deny user bookings
-STATUS = (
-    (0, 'Booking Requested'),
-    (1, 'Booking Confirmed')
-)
+from .variables import TIMES, GROUP_SIZE, STATUS
 
 
 class Booking(models.Model):
@@ -32,7 +11,7 @@ class Booking(models.Model):
     contact = models.ForeignKey(
         User, on_delete=models.CASCADE, related_name='bookings')
     date = models.DateField()
-    time = models.TimeField()
+    time = models.TimeField(choices=TIMES)
     group = models.IntegerField(choices=GROUP_SIZE, default=1)
     status = models.IntegerField(choices=STATUS, default=0)
 

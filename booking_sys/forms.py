@@ -9,6 +9,13 @@ class DateInput(forms.DateInput):
     input_type = 'date'
 
 
+class TimeInput(forms.TimeInput):
+    """
+    Creates calendar for date widget below
+    """
+    input_type = 'time'
+
+
 class BookingForm(forms.ModelForm):
     """
     Form to allow user-made bookings
@@ -17,5 +24,6 @@ class BookingForm(forms.ModelForm):
         model = Booking
         fields = ('date', 'time', 'group')
         widgets = {
-            'date': DateInput
+            'date': DateInput,
+            'time': TimeInput,
         }

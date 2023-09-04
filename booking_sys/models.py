@@ -28,7 +28,7 @@ class Booking(models.Model):
     """
     Model for User made booking
     """
-    reference = models.SlugField(max_length=12, unique=True)
+    reference = models.SlugField(max_length=20, unique=True)
     contact = models.ForeignKey(
         User, on_delete=models.CASCADE, related_name='bookings')
     date = models.DateField()

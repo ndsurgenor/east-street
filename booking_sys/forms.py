@@ -11,7 +11,7 @@ class DateInput(forms.DateInput):
 
 class TimeInput(forms.TimeInput):
     """
-    Creates calendar for date widget below
+    Creates format for time widget below
     """
     input_type = 'time'
 

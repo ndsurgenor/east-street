@@ -1,7 +1,8 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 from django.http import HttpResponse
-from django.views import generic
+from django.views import generic, View
 from .models import Booking
+from .forms import BookingForm
 
 
 def index(request):
@@ -18,6 +19,21 @@ def location(request):
 
 class UserBookings(generic.ListView):
     model = Booking
-    queryset = Booking.objects.filter(status=0).order_by('date')
+    queryset = Booking.objects.order_by('date')
     template_name = 'userbookings.html'
     paginate_by = 10
+
+
+class BookingDetail(View):
+
+    def get(self, request, reference, *args, **kwargs):
+        queryset = Booking.objects
+        booking = get_object_or_404(queryset, slug=reference)
+
+    return render(
+        request,
+        'userbookings.html',
+        {
+            'booking': booking,
+        },
+    )

@@ -32,7 +32,6 @@ DEBUG = True
 
 ALLOWED_HOSTS = [
     'localhost',
-    'east-street.herokuapp.com',
     'east-street-bc0671035c95.herokuapp.com',
     '8000-ndsurgenor-eaststreet-j1vdwlv49uq.ws-eu104.gitpod.io',
 ]
@@ -64,7 +63,7 @@ LOGOUT_REDIRECT_URL = ''
 
 ACCOUNT_EMAIL_VERIFICATION = 'none'
 
-CRISPY_TEMPLATE_PACK = 'bootstrap5'
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',

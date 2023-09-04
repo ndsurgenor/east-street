@@ -30,10 +30,10 @@ class BookingDetail(View):
         queryset = Booking.objects
         booking = get_object_or_404(queryset, slug=reference)
 
-    return render(
-        request,
-        'userbookings.html',
-        {
-            'booking': booking,
-        },
-    )
+        return render(
+            request,
+            'bookingdetail.html',
+            {
+                'booking': booking,
+            },
+        )

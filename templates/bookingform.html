@@ -4,12 +4,13 @@
 
 <div class="container">
     <div class="row">
-        <div class="col-8">
+        <div class="col-8 bg-dark text-light">
+            <h2>Make a Booking</h2>
             <form method="POST">
-
                 {% csrf_token %}
-                {{ form.as_p }}
-
+                <p>Date: {{ form.date }}</p>
+                <p>Time: {{ form.time }}</p>
+                <p>Group Size: {{ form.group }}</p>
                 <button type="submit" class="btn">Submit</button>
             </form>
         </div>

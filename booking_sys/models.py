@@ -40,4 +40,4 @@ class Booking(models.Model):
         ordering = ['date', 'time']
 
     def __str__(self):
-        return self.title
+        return self.reference

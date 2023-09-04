@@ -1,0 +1,21 @@
+{% extends 'bookingsite.html' %}
+
+{% block details %}
+
+<div class="container">
+    <div class="row">
+        <div class="col-8">
+            <form action="." method="POST">
+
+                {% csrf_token %}
+                
+                <table>
+                
+                </table>
+                <button type="submit">SUBMIT</button>
+                </form>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

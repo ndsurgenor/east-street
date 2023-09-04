@@ -17,6 +17,11 @@ def location(request):
     return render(request, 'location.html')
 
 
+class BookingFormView(generic.CreateView):
+    form_class = BookingForm
+    template_name = 'bookingform.html'
+
+
 class UserBookings(generic.ListView):
     model = Booking
     queryset = Booking.objects.order_by('date')

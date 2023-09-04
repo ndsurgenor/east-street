@@ -26,7 +26,7 @@ STATUS = (
 
 class Booking(models.Model):
     """
-    Model for User made booking
+    Model for user-made booking
     """
     reference = models.SlugField(max_length=20, unique=True)
     contact = models.ForeignKey(

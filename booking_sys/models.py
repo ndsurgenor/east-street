@@ -7,7 +7,6 @@ class Booking(models.Model):
     """
     Model for user-made booking
     """
-    reference = models.SlugField(max_length=20, unique=True)
     contact = models.ForeignKey(
         User, on_delete=models.CASCADE, related_name='bookings')
     date = models.DateField()
@@ -19,4 +18,4 @@ class Booking(models.Model):
         ordering = ['date', 'time']
 
     def __str__(self):
-        return self.reference
+        return f'{self.date}, {self.time} - {self.contact} x{self.group}'

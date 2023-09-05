@@ -18,11 +18,23 @@ def location(request):
 
 
 class BookingFormView(generic.CreateView):
+    """
+    Generates a booking form for the user
+    """
+    model = Booking
     form_class = BookingForm
     template_name = 'bookingform.html'
+    success_url = 'index.html'
+
+    def form_valid(self, form):
+        form.instance.user = self.request.user
+        return super(BookingFormView, self).form_valid(form)
 
 
 class UserBookings(generic.ListView):
+    """
+    Generates a list of the user's bookings
+    """
     model = Booking
     queryset = Booking.objects.order_by('date')
     template_name = 'userbookings.html'

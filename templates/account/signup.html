@@ -11,7 +11,7 @@
       <!-- Sign-up title -->
       <h2 class="text-center pt-2">{% trans "Sign Up" %}</h2>
       <!-- Subtitle with link for existing account -->
-      <p class="access-form-smalltxt text-center">{% blocktrans %}If you have booked with us before, please <a href="{{ login_url }}">sign in</a>.{% endblocktrans %}
+      <p class="access-form-smalltxt text-center">{% blocktrans %}If you have booked with us before, please <a href="{{ login_url }}">Sign In</a>.{% endblocktrans %}
       </p>
 
       <!-- Sign-up form -->
@@ -21,7 +21,7 @@
         {% if redirect_field_value %}
         <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
         {% endif %}
-        <button type="submit" class="btn btn-light mb-3">{% trans "Sign Up" %}</button>
+        <button class="btn btn-light mb-3" type="submit">{% trans "Sign Up" %}</button>
       </form>
     </div>
   </div>

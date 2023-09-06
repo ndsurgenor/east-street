@@ -22,7 +22,7 @@
     </div>
     {% endif %}
 
-    <div>
+    <!-- <div>
       <strong>{% trans "Menu:" %}</strong>
       <ul>
         {% if user.is_authenticated %}
@@ -33,7 +33,7 @@
         <li><a href="{% url 'account_signup' %}">{% trans "Sign Up" %}</a></li>
         {% endif %}
       </ul>
-    </div>
+    </div> -->
     {% block content %}
     {% endblock %}
     {% endblock %}

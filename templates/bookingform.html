@@ -4,12 +4,12 @@
 
 <div class="container-fluid">
     <div class="row justify-content-center">
-        <div class="col-9 col-md-7 col-lg-5 col-xl-3 booking-form bg-dark shadow">
-            <h2 class="text-center">Make a Booking</h2>
+        <div class="col-9 col-md-7 col-lg-5 col-xl-3 booking-form shadow">
+            <h2 class="text-center pt-2">Make a Booking</h2>
             <form method="POST">
                 {% csrf_token %}
                 {{ form.as_p }}
-                <button type="submit" class="btn btn-light">Submit</button>
+                <button class="btn btn-light mb-3" type="submit">Submit</button>
             </form>
         </div>
     </div>

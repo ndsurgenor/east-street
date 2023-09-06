@@ -24,11 +24,13 @@ class BookingFormView(generic.CreateView):
     model = Booking
     form_class = BookingForm
     template_name = 'bookingform.html'
-    success_url = 'index.html'
+    success_url = '/userbookings'
 
     def form_valid(self, form):
-        form.instance.user = self.request.user
         return super(BookingFormView, self).form_valid(form)
+
+    def form_invalid(self, form):
+        return HttpResponse(f'Form invalid')
 
 
 class UserBookings(generic.ListView):

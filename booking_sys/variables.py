@@ -1,6 +1,26 @@
 import datetime
 
 # Defines times allowed for bookings (start 12:00pm, end 9.30pm)
+DATES = (
+    (datetime.date(2023, 9, 1), '01/09/23'),
+    (datetime.date(2023, 9, 2), '02/09/23'),
+    (datetime.date(2023, 9, 3), '03/09/23'),
+    (datetime.date(2023, 9, 4), '04/09/23'),
+    (datetime.date(2023, 9, 5), '05/09/23'),
+    (datetime.date(2023, 9, 6), '06/09/23'),
+    (datetime.date(2023, 9, 7), '07/09/23'),
+    (datetime.date(2023, 9, 8), '08/09/23'),
+    (datetime.date(2023, 9, 9), '09/09/23'),
+    (datetime.date(2023, 9, 10), '10/09/23'),
+    (datetime.date(2023, 9, 11), '11/09/23'),
+    (datetime.date(2023, 9, 12), '12/09/23'),
+    (datetime.date(2023, 9, 13), '13/09/23'),
+    (datetime.date(2023, 9, 14), '14/09/23'),
+    (datetime.date(2023, 9, 15), '15/09/23'),
+    (datetime.date(2023, 9, 16), '16/09/23'),
+)
+
+# Defines times allowed for bookings (start 12:00pm, end 9.30pm)
 TIMES = (
     (datetime.time(12, 00), '12:00pm'),
     (datetime.time(12, 15), '12:15pm'),

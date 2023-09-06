@@ -11,33 +11,10 @@
 <div class="container-fluid">
   <div class="row justify-content-center">
     <div class="col-9 col-md-7 col-lg-5 col-xl-3 access-form shadow">
-      <!-- Sign-in title -->
+      <!-- Sign-in title & subtitle with link for sign up -->
       <h2 class="text-center pt-2">{% trans "Sign In" %}</h2>
-
-      {% get_providers as socialaccount_providers %}
-
-      {% if socialaccount_providers %}
-      <p>{% blocktrans with site.name as site_name %}Please sign in with one
-        of your existing third party accounts. Or, <a href="{{ signup_url }}">sign up</a>
-        for a {{ site_name }} account and sign in below:{% endblocktrans %}</p>
-
-      <div class="socialaccount_ballot">
-
-        <ul class="socialaccount_providers">
-          {% include "socialaccount/snippets/provider_list.html" with process="login" %}
-        </ul>
-
-        <div class="login-or">{% trans 'or' %}</div>
-
-      </div>
-
-      {% include "socialaccount/snippets/login_extra.html" %}
-
-      {% else %}
-      <!-- Subtitle with link for sign up -->
       <p class="access-form-smalltxt text-center">{% blocktrans %}If you have never booked with us before, please
         <a href="{{ signup_url }}">sign up</a> first.{% endblocktrans %}</p>
-      {% endif %}
 
       <!-- Sign-in form -->
       <form class="login" method="POST" action="{% url 'account_login' %}">

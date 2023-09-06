@@ -30,6 +30,10 @@ class BookingFormView(generic.CreateView):
         return super(BookingFormView, self).form_valid(form)
 
     def form_invalid(self, form):
+        # for field, errors in form.errors.items():
+        #     print(f"Field: {field}")
+        #     for error in errors:
+        #         print(f"Error: {error}")
         return HttpResponse(f'Form invalid')
 
 

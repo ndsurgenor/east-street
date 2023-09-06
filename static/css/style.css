@@ -136,6 +136,13 @@ body {
     font-size: 0.9em;
 }
 
+/* Booking Forms & Tables */
+.booking-form {
+    color: ghostwhite;
+    border: 0.5em solid gainsboro;
+    margin-top: 2rem;
+}
+
 /* Footer */
 footer div {
     color: ghostwhite;

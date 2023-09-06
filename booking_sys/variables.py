@@ -59,5 +59,5 @@ GROUP_SIZE = (
 # Allows admin to confirm/deny user bookings
 STATUS = (
     (0, 'Booking Requested'),
-    (1, 'Booking Confirmed')
+    (1, 'Booking Confirmed'),
 )

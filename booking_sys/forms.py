@@ -2,18 +2,12 @@ from django import forms
 from .models import Booking
 
 
-# class DateInput(forms.DateInput):
-#     """
-#     Creates calendar for date widget below
-#     """
-#     input_type = 'date'
+class DateInput(forms.DateInput):
+    input_type = 'date'
 
 
-# class TimeInput(forms.TimeInput):
-#     """
-#     Creates format for time widget below
-#     """
-#     input_type = 'time'
+class TimeInput(forms.TimeInput):
+    input_type = 'time'
 
 
 class BookingForm(forms.ModelForm):
@@ -23,7 +17,8 @@ class BookingForm(forms.ModelForm):
     class Meta:
         model = Booking
         fields = '__all__'
-        # widgets = {
-        #     'date': DateInput(),
-        #     'time': TimeInput(),
-        # }
+        widgets = {
+            'date': DateInput(),
+            'time': TimeInput(),
+            'status': forms.HiddenInput(),
+        }

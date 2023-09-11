@@ -8,7 +8,10 @@ class Booking(models.Model):
     Model for user-made booking
     """
     contact = models.ForeignKey(
-        User, on_delete=models.CASCADE, related_name='bookings')
+        User,
+        on_delete=models.CASCADE,
+        default=User.id,
+        related_name='bookings')
     date = models.DateField()
     time = models.TimeField()
     group = models.IntegerField(choices=GROUP_SIZE, default=2)

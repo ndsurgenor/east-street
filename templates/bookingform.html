@@ -6,6 +6,7 @@
     <div class="row justify-content-center">
         <div class="col-9 col-md-7 col-lg-5 col-xl-3 booking-form shadow">
             <h2 class="text-center pt-2">Make a Booking</h2>
+            <p>You are booking as {{ user.username }}</p>
             <form method="POST">
                 {% csrf_token %}
                 {{ form.as_p }}

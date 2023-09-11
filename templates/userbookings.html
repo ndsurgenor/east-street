@@ -6,41 +6,46 @@
 <div class="container bg-dark text-light">
     <!-- View heading -->
     <div class="row">
-        <div class="col-8">
+        <div class="col-12">
             <h2>Your Bookings</h2>
         </div>
     </div>
     <!-- List headings -->
     <div class="row">
-        <div class="col-2">
+        <div class="col-3">
             <p>Date</p>
         </div>
-        <div class="col-2">
+        <div class="col-3">
             <p>Time</p>
         </div>
-        <div class="col-2">
+        <div class="col-3">
             <p>Group Size</p>
         </div>
-        <div class="col-2">
+        <div class="col-3">
             <p>Confirmed?</p>
         </div>
     </div>
     <!-- List of user-made bookings -->
     {% for booking in booking_list %}
+    {% ifequal user.username booking.contact %}
     <div class="row">
-        <div class="col-2">
+        <div class="col-3">
+            <p>{{ booking.contact }}</p>
+        </div>
+        <div class="col-3">
             <p>{{ booking.date }}</p>
         </div>
-        <div class="col-2">
+        <div class="col-3">
             <p>{{ booking.time }}</p>
         </div>
-        <div class="col-2">
+        <div class="col-3">
             <p>{{ booking.group }}</p>
         </div>
-        <div class="col-2">
+        <div class="col-3">
             <p>{{ booking.confirmed }}</p>
         </div>
     </div>
+    {% endifequal %}
     {% endfor %}
 </div>
 

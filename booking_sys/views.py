@@ -27,13 +27,14 @@ class BookingFormView(generic.CreateView):
     success_url = '/userbookings'
 
     def form_valid(self, form):
+        form.instance.contact_id = self.request.user.id
         return super(BookingFormView, self).form_valid(form)
 
     def form_invalid(self, form):
-        # for field, errors in form.errors.items():
-        #     print(f"Field: {field}")
-        #     for error in errors:
-        #         print(f"Error: {error}")
+        for field, errors in form.errors.items():
+            print(f"Field: {field}")
+            for error in errors:
+                print(f"Error: {error}")
         return HttpResponse(f'Form invalid')
 
 

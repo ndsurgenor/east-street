@@ -1,6 +1,5 @@
 {% extends 'bookingsite.html' %}
 
-{% if user.is_authenticated %}
 {% block details %}
 
 <div class="container bg-dark text-light">
@@ -27,11 +26,7 @@
     </div>
     <!-- List of user-made bookings -->
     {% for booking in booking_list %}
-    {% ifequal user.username booking.contact %}
     <div class="row">
-        <div class="col-3">
-            <p>{{ booking.contact }}</p>
-        </div>
         <div class="col-3">
             <p>{{ booking.date }}</p>
         </div>
@@ -42,17 +37,10 @@
             <p>{{ booking.group }}</p>
         </div>
         <div class="col-3">
-            <p>{{ booking.confirmed }}</p>
+            <p>{{ booking.status }}</p>
         </div>
     </div>
-    {% endifequal %}
     {% endfor %}
 </div>
 
 {% endblock %}
-{% else %}
-
-    <!-- Redirect to sign-in page -->
-    <meta http-equiv="refresh" content="0; url='{% url 'account_login' %}'" />
-
-{% endif %}

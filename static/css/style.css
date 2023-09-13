@@ -31,7 +31,7 @@ body {
     min-height: 100vh;
 }
 
-/* Mainsite Navbar */
+/* Navbar */
 .navbar-brand h1 {
     font-size: 2.5em;
 }
@@ -40,6 +40,12 @@ body {
     font-size: 0.9em;
     padding-left: 0.2em;
     padding-right: 0.4em;
+}
+
+.navbar-text {
+    color: black;
+    margin-top: -0.25em;
+    margin-left: 1em;
 }
 
 .nav-item {
@@ -51,14 +57,19 @@ body {
     text-transform: uppercase;
 }
 
-.btn-light {
-    color: black;
-    background-color: whitesmoke;
+.btn-light,
+.btn-dark {
     font-weight: bold;
     text-transform: uppercase;
 }
 
-.btn-light:hover {
+.btn-light {
+    color: black;
+    background-color: whitesmoke;
+}
+
+.btn-light:hover,
+.btn-dark:hover {
     color: ghostwhite;
     background-color: darkslategrey;
     border-color: darkslategrey;

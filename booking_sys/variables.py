@@ -60,4 +60,5 @@ GROUP_SIZE = (
 STATUS = (
     (0, 'Booking Requested'),
     (1, 'Booking Confirmed'),
+    (2, 'Booking Cancelled'),
 )

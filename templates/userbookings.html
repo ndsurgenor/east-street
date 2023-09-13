@@ -1,46 +1,59 @@
 {% extends 'bookingsite.html' %}
 
+{% if user.is_authenticated %}
 {% block details %}
 
-<div class="container bg-dark text-light">
+<div class="container text-light">
     <!-- View heading -->
-    <div class="row">
-        <div class="col-12">
+    <div class="row justify-content-center pt-3">
+        <div class="col-12 col-lg-8 bg-dark">
             <h2>Your Bookings</h2>
         </div>
     </div>
     <!-- List headings -->
-    <div class="row">
-        <div class="col-3">
-            <p>Date</p>
+    <div class="row justify-content-center">
+        <div class="col-3 col-lg-2 bg-dark">
+            <p><u>Date</u></p>
         </div>
-        <div class="col-3">
-            <p>Time</p>
+        <div class="col-3 col-lg-2 bg-dark">
+            <p><u>Time</u></p>
         </div>
-        <div class="col-3">
-            <p>Group Size</p>
+        <div class="col-3 col-lg-2 bg-dark">
+            <p><u>Group Size</u></p>
         </div>
-        <div class="col-3">
-            <p>Confirmed?</p>
+        <div class="col-3 col-lg-2 bg-dark">
+            <p><u>Status</u></p>
         </div>
     </div>
     <!-- List of user-made bookings -->
     {% for booking in booking_list %}
-    <div class="row">
-        <div class="col-3">
-            <p>{{ booking.date }}</p>
+    {% if booking.contact_id == user.id %}
+    <div class="row justify-content-center">
+        <div class="col-3 col-lg-2 bg-table">
+            <p>{{ booking.contact }}</p>
         </div>
-        <div class="col-3">
-            <p>{{ booking.time }}</p>
+        <div class="col-3 col-lg-2 bg-table">
+            <p>{{ booking.date|date:"D, jS M Y" }}</p>
         </div>
-        <div class="col-3">
+        <div class="col-3 col-lg-2 bg-table">
+            <p>{{ booking.time|time:"H:i" }}</p>
+        </div>
+        <div class="col-3 col-lg-2 bg-table">
             <p>{{ booking.group }}</p>
         </div>
-        <div class="col-3">
-            <p>{{ booking.status }}</p>
+        <div class="col-3 col-lg-2 bg-table">
+            {% if booking.status == 1 %}
+            <p>Confirmed</p>
+            {% elif booking.status == 2 %}
+            <p>Cancelled</p>
+            {% else %}
+            <p>Pending</p>
+            {% endif %}
         </div>
     </div>
+    {% endif %}
     {% endfor %}
 </div>
 
 {% endblock %}
+{% endif %}

@@ -6,7 +6,8 @@ urlpatterns = [
     path('', views.index, name='index'),
     path('menu/', views.menu, name='menu'),
     path('location/', views.location, name='location'),
-    path('bookingsite/', views.BookingFormView.as_view(), name='bookingsite'),
-    path('userbookings/', views.UserBookings.as_view(), name='userbookings'),
-    path('<slug:slug>/', views.BookingDetail.as_view(), name='bookingdetail'),
+    path('bookingsite/', views.BookFormView.as_view(), name='bookingsite'),
+    path('userbookings/', views.BookListView.as_view(), name='userbookings'),
+    path('<pk>/delete/', views.BookDeleteView.as_view(), name='delete'),
+    path('<slug:slug>/', views.BookDetail.as_view(), name='detail'),
 ]

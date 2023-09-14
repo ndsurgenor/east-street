@@ -5,6 +5,7 @@ from .models import Booking
 from .forms import BookingForm
 
 
+# Static views for main site
 def index(request):
     return render(request, 'index.html')
 
@@ -17,10 +18,8 @@ def location(request):
     return render(request, 'location.html')
 
 
-class BookingFormView(generic.CreateView):
-    """
-    Generates a booking form for the user
-    """
+# Generates a booking form for the user
+class BookFormView(generic.CreateView):
     model = Booking
     form_class = BookingForm
     template_name = 'bookingform.html'
@@ -28,7 +27,7 @@ class BookingFormView(generic.CreateView):
 
     def form_valid(self, form):
         form.instance.contact_id = self.request.user.id
-        return super(BookingFormView, self).form_valid(form)
+        return super(BookFormView, self).form_valid(form)
 
     def form_invalid(self, form):
         for field, errors in form.errors.items():
@@ -38,17 +37,21 @@ class BookingFormView(generic.CreateView):
         return HttpResponse(f'Form invalid')
 
 
-class UserBookings(generic.ListView):
-    """
-    Generates a list of the user's bookings
-    """
+# Generates a list of the user's bookings
+class BookListView(generic.ListView):
     model = Booking
     queryset = Booking.objects.order_by('date')
     template_name = 'userbookings.html'
-    paginate_by = 10
 
 
-class BookingDetail(View):
+# Allows a user to delete a booking
+class BookDeleteView(generic.DeleteView):
+    model = Booking
+    template_name = 'bookingdelete.html'
+    success_url = '/userbookings'
+
+
+class BookDetail(View):
 
     def get(self, request, reference, *args, **kwargs):
         queryset = Booking.objects

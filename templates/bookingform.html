@@ -5,12 +5,17 @@
 <div class="container-fluid">
     <div class="row justify-content-center">
         <div class="col-9 col-md-7 col-lg-5 col-xl-3 booking-form text-center shadow">
-            <h2 class="pt-2">Make a Booking</h2>
+            <h2 class="pt-2">{% if booking %}Update {% else %}Make {% endif %}a Booking</h2>
             <p>You are booking as '{{ user.username }}'</p>
             <form method="POST">
                 {% csrf_token %}
                 {{ form.as_p }}
-                <button class="btn btn-light mb-3" type="submit">Submit</button>
+                    {% if booking %}
+                    <button class="btn btn-light mb-3" type="submit">Confirm & Update</button>
+                    <a class="btn btn-light mb-3" href="{% url 'userbookings' %}">Return</a>
+                    {% else %}
+                    <button class="btn btn-light mb-3" type="submit">Submit</button>
+                    {% endif %}
             </form>
         </div>
     </div>

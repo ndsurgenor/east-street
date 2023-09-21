@@ -21,7 +21,35 @@ All projects were assigned to epics, prioritized under the labels, Must have, sh
 
 A Kanban board was created using GitHub Projects and can be located here and can be viewed to see more information on the project cards. All stories except the documentation tasks have a full set of acceptance criteria in order to define the functionality that marks that story as complete.
 
-### Milestones
+### Milestones & User Stories
+
+This project was developed with 5 milestones or epics in mind. From each of these milestones a number of dev goals and user stories were created. The detail of each of these milestones, goals and stories is outlined below:
+
+#### Milestone 1 - Initial Setup
+- Dev Goal: set up Django and its supporting libraries (along with the Secret Key) via the IDE in order for development to begin
+- Dev Goal: create an early deployment of the site to Heroku to ensure that all is working from the very start and allow continous testing throughout production
+
+#### Milestone 2 - Main Site Pages
+- User Story: as a Site Visitor/User I want to view/access info/links on the home page so that I can easily discern info and make a booking
+- User Story: as a Site Visitor/User I want to view the opening times so that I can see when the restaurant is open before I book
+- User Story: as a Site Visitor/User I want to view the restaurant menu so that I can see what food is available before booking
+- User Story: as a Site Visitor/User I want to view the location/address of the restaurant so that I know where the restaurant is located
+
+#### Milestone 3 - Booking Site Access
+- User Story: as a Site Admin I want to view all customer details/bookings so that I can plan for required table numbers/sizes
+- User Story: as a Site Visitor I want to sign up to the site so that I can make bookings
+- User Story: as a Site User I want to sign in to the site so that I can make/view/adjust/delete bookings
+- User Story: as a Site User I want to be able to log out from the booking area so that no-one can change my details inadvertently or otherwise
+
+#### Milestone 4 - CRUD Functionality
+- User Story: as a Site User I want to make an online booking so that I can secure a table for a particular date, time & group size
+- User Story: as a Site User I want to view my booking(s) so that I can see if it has been recorded correctly and remind myself of its details
+- User Story: as a Site User I want to access/adjust my booking(s) so that I can correct an error/make necessary changes
+- User Story: as a Site User I want to cancel my booking(s) so that it/they no longer appear on the system
+- User Story: as a Site Admin I want to have the ability to accept/reject new bookings so that I can manage customer numbers within the restaurant
+
+#### Milestone 5 - Restrictive Coding
+- User Story: as a Site Admin I want to prevent bookings being made for unavailable dates/times so that bookings are not made when the restaurant is closed 
 
 ## Scope
 

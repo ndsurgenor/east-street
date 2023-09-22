@@ -14,47 +14,40 @@ The site is aimed at helping customers to easily access information regarding th
 
 ## Strategy
 
-### Agile Planning
-This project was developed using agile methodologies designed to deliver small features in incremental sprints. Three sprints in total were created each lasting two weeks.
-
-All projects were assigned to epics, prioritized under the labels, Must have, should have, could have. They were assigned to sprints and story pointed according to complexity. "Must have" stories were completed first, "should haves" and then finally "could haves". It was done this way to ensure that all core requirements were completed first to give the project a complete feel, with the nice to have features being added should there be capacity.
-
-A Kanban board was created using GitHub Projects and can be located here and can be viewed to see more information on the project cards. All stories except the documentation tasks have a full set of acceptance criteria in order to define the functionality that marks that story as complete.
-
 ### Milestones & User Stories
 
-This project was developed with 5 milestones or epics in mind. From each of these milestones a number of dev goals and user stories were created. The detail of each of these milestones, goals and stories is outlined below:
+This project was developed with 5 milestones (epics) in mind. From each of these milestones a number of dev goals and user stories were created. The detail of each of these milestones, goals and stories is outlined below:
 
 #### Milestone 1 - Initial Setup
-- Dev Goal: set up Django and its supporting libraries (along with the Secret Key) via the IDE in order for development to begin
-- Dev Goal: create an early deployment of the site to Heroku to ensure that all is working from the very start and allow continous testing throughout production
+- 1.1 - Dev Goal: set up Django and its supporting libraries (along with the Secret Key) via the IDE in order for development to begin
+- 1.2 - Dev Goal: create an early deployment of the site to Heroku to ensure that all is working from the very start and allow continous testing throughout production
 
 #### Milestone 2 - Main Site Pages
-- User Story: as a Site Visitor/User I want to view/access info/links on the home page so that I can easily discern info and make a booking
-- User Story: as a Site Visitor/User I want to view the opening times so that I can see when the restaurant is open before I book
-- User Story: as a Site Visitor/User I want to view the restaurant menu so that I can see what food is available before booking
-- User Story: as a Site Visitor/User I want to view the location/address of the restaurant so that I know where the restaurant is located
+- 2.1 - User Story: as a Site Visitor/User I want to access info/links from the home page so that I can easily discern information and make a booking
+- 2.2 - User Story: as a Site Visitor/User I want to view the opening times so that I can see when the restaurant is open before I book
+- 2.3 - User Story: as a Site Visitor/User I want to view the restaurant menu so that I can see what food is available before booking
+- 2.4 - User Story: as a Site Visitor/User I want to view the location/address of the restaurant so that I know where the restaurant is located
 
 #### Milestone 3 - Booking Site Access
-- User Story: as a Site Admin I want to view all customer details/bookings so that I can plan for required table numbers/sizes
-- User Story: as a Site Visitor I want to sign up to the site so that I can make bookings
-- User Story: as a Site User I want to sign in to the site so that I can make/view/adjust/delete bookings
-- User Story: as a Site User I want to be able to log out from the booking area so that no-one can change my details inadvertently or otherwise
+- 3.1 - User Story: as a Site Admin I want to view all customer details/bookings so that I can plan for required table numbers/sizes
+- 3.2 - User Story: as a Site Visitor I want to sign up to the site so that I can make bookings
+- 3.3 - User Story: as a Site User I want to sign in to the site so that I can make/view/adjust/delete bookings
+- 3.4 - User Story: as a Site User I want to be able to log out from the booking area so that no-one can change my details inadvertently or otherwise
 
 #### Milestone 4 - CRUD Functionality
-- User Story: as a Site User I want to make an online booking so that I can secure a table for a particular date, time & group size
-- User Story: as a Site User I want to view my booking(s) so that I can see if it has been recorded correctly and remind myself of its details
-- User Story: as a Site User I want to access/adjust my booking(s) so that I can correct an error/make necessary changes
-- User Story: as a Site User I want to cancel my booking(s) so that it/they no longer appear on the system
-- User Story: as a Site Admin I want to have the ability to accept/reject new bookings so that I can manage customer numbers within the restaurant
+- 4.1 - User Story: as a Site User I want to make an online booking so that I can secure a table for a particular date, time & group size
+- 4.2 - User Story: as a Site User I want to view my booking(s) so that I can see if it has been recorded correctly and remind myself of its details
+- 4.3 - User Story: as a Site User I want to access/adjust my booking(s) so that I can correct an error/make necessary changes
+- 4.4 - User Story: as a Site User I want to cancel my booking(s) so that it/they no longer appear on the system
+- 4.5 - User Story: as a Site Admin I want to have the ability to accept/reject new bookings so that I can manage customer numbers within the restaurant
 
-#### Milestone 5 - Defensive Coding
-- User Story: as a Site Admin I want to prevent bookings being made for unavailable dates/times so that bookings are not made when the restaurant is closed
-- Dev Goal: set up 404, 403 and 500 pages to correctly handle access/server issues when the site is in use 
+#### Milestone 5 - Additional Coding
+- 5.1 - User Story: as a Site Admin I want to prevent bookings being made for unavailable dates/times so that bookings are not made when the restaurant is closed
+- 5.2 - Dev Goal: set up 404, 403 and 500 pages to correctly handle access/server issues when the site is in use 
 
 ## Scope
 
-Using these milestones, goals and stories to guide my thinking, the following features were planned:
+Using these milestones, goals, and stories to guide my thinking, the following was planned as the scope of the project:
 
 - Responsive Design allowing full functionality and appropraite resizing on all devices from 360px upwards
 - Use of Toggle-menu and hidden elements (e.g. home page image) when site is viewed on tablet/mobile devices
@@ -74,12 +67,33 @@ Using these milestones, goals and stories to guide my thinking, the following fe
 
 ## Structure
 
-With the Strategy and Scope now in place
+With Strategy and Scope now in place, focus shifted to setting acceptence criteria for each of the above thereby informing exactly what features to include as part of the project
 
-### Features implemented
+### Features
 
+**Milestone**|**Ref**|**Type**|**Acceptence Criteria/Features**
+:-----:|:-----:|:-----:|-----
+Initial Setup|1.1|Dev Goal|<ul><li>Install Django to the east-street Gitpod workspace</li><li>Install and setupdjango-allauth for sign-up/in/out functionality.</li><li>Install and setup cloudinary to host image files.</li><li>Install SQL.</li></ul>
+Initial Setup|1.2|Dev Goal|<ul><li>Update the settings.py file .</li><li>Set up and deploy the app via Heroku with required config vars</li></ul>
+Main Site|2.1|User Story|<ul><li>A home page immediately displaying opening times of the restaurant to the end user along with a quick link to the booking area of the site.</li><li>A navbar providing clear links to menu and location info.</li><li>A highlighted link to the booking area in the navbar.</li><li>A footer providing summarised info and social links.</li></ul>
+Main Site|2.2|User Story|<ul><li>A static page showing the opening day/times of the restaurant.</li><li>Elements that display/resize/scroll when viewed on different sized devices.</li></ul>
+Main Site|2.3|User Story|<ul><li>A static page showing the food and prices within the restaurant.</li><li>Elements that display/resize/scroll when viewed on different sized devices.</li></ul>
+Main Site|2.4|User Story|<ul><li>A static page showing the map location and transport options for the restaurant.</li><li>Elements that display/resize/scroll when viewed on different sized devices.</li></ul>
+Booking Site |3.1|User Story|<ul><li>An admin area only allowing access to the site admin/superuser.</li><li>A link to the database to clearly display the details of each booking i.e. entry in the database</li></ul>
+Booking Site|3.2|User Story|<ul><li>A sign-up form requiring username, email and password details</li></ul>
+Booking Site|3.3|User Story|<ul><li>A sign-in form requiring username, email and password details</li></ul>
+Booking Site|3.4|User Story|<ul><li>A sign-out form requiring username, email and password details</li></ul>
+CRUD|4.1|User Story|<ul><li>A booking form with date, time, and group size fields which saves those details to the database.</li><li>A navbar link to the form to allow access from a different area of the booking site.</li></ul>
+CRUD|4.2|User Story|<ul><li>A list of bookings praticular to that user which displays automatically after they have submitted a valid booking.</li><li>A navbar link to the list of bookings to allow access from a different area of the booking site.</li></ul>
+CRUD|4.3|User Story|<ul><li>A button beside each entry in the booking list to allow updating of its details.</li><li>The displaying of the current details within the booking form when clicking said button.</li><li>The option of returning to the list without making changes.</li> <li>The updating of these details to the database when the user changes values and clicks 'Confirm'.</li></ul>
+CRUD|4.4|User Story|<ul><li>A button beside each entry in the booking list to allow for its deletion.</li><li>The displaying of the details to be deleted alongside a warning when clicking said button.</li><li>The option of returning to the list without making changes.</li><li>The deletion of the booking on the database when the user clicks 'Confirm'.</li></ul>
+CRUD|4.5|User Story|<ul><li>A list of all bookings made in the admin area of the site.</li><li>A dropdown option for each individual booking allowing for selection of 'Confirmed' or 'Cancelled'.</li></ul>
+Additional|5.1|User Story|<ul><li>The option to only select between the days of Wednesday to Sunday inclusive on the booking form.</li><li>The option to only select between the hours of 12.30pm and 9.30pm inclusive on the booking form.</li><li>The option to only select between the group size of 1 and 12 inclusive on the booking form.</li></ul>
+Additional|5.2|Dev Goal|<ul><li>A 403 Error page which provides a link back to a valid area of the site</li><li>A 404 Error page which provides a link back to a valid area of the site</li><li>A 500 Error page which provides a link back to a valid area of the site</li></ul>
 
-### Features to be implemented
+### Agile Planning
+This project was developed using agile methodologies designed to deliver small feature updates in incremental sprints. The elements given in detail below lead to the creation of the 
+
 
 ## Skeleton
 ### Wireframe
@@ -90,3 +104,4 @@ With the Strategy and Scope now in place
 
 ## Surface
 ### Features implemented
+### Features to be implemented

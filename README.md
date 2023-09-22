@@ -48,13 +48,45 @@ This project was developed with 5 milestones or epics in mind. From each of thes
 - User Story: as a Site User I want to cancel my booking(s) so that it/they no longer appear on the system
 - User Story: as a Site Admin I want to have the ability to accept/reject new bookings so that I can manage customer numbers within the restaurant
 
-#### Milestone 5 - Restrictive Coding
-- User Story: as a Site Admin I want to prevent bookings being made for unavailable dates/times so that bookings are not made when the restaurant is closed 
+#### Milestone 5 - Defensive Coding
+- User Story: as a Site Admin I want to prevent bookings being made for unavailable dates/times so that bookings are not made when the restaurant is closed
+- Dev Goal: set up 404, 403 and 500 pages to correctly handle access/server issues when the site is in use 
 
 ## Scope
 
+Using these milestones, goals and stories to guide my thinking, the following features were planned:
+
+- Responsive Design allowing full functionality and appropraite resizing on all devices from 360px upwards
+- Use of Toggle-menu and hidden elements (e.g. home page image) when site is viewed on tablet/mobile devices
+- A main section of the site containing all restaurant information (non-restricted access):
+  - Opening Times
+  - Menu
+  - Location
+- A booking section of the site allowing CRUD functionality for end users (restricted access):
+  - Sign Up/In/Out
+  - Make Bookings
+  - View Bookings
+  - Adjust Bookings
+  - Cancel Bookings
+- An admin backend to the site allowing CRUD functionality for site admin (restricted access):
+  - View All Bookings
+  - Confirm Bookings
+
 ## Structure
 
+With the Strategy and Scope now in place
+
+### Features implemented
+
+
+### Features to be implemented
+
 ## Skeleton
+### Wireframe
+
+[LINK TO WIREFRAME DIAGRAM](https://cacoo.com/diagrams/V4VlzIhRUc2eQPq5/2A59E)
+
+### Database Design
 
 ## Surface
+### Features implemented

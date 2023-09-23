@@ -1,0 +1,17 @@
+{% extends 'mainsite.html' %}
+{% block details %}
+
+<div class="container-fluid">
+    <div class="row justify-content-center">
+        <div class="col-9 col-md-7 col-lg-5 col-xl-3 booking-form text-center shadow">
+            <h2 class="pt-3">500 Error</h2>
+            <h3 class="pb-2">Internal server issue</h3>
+            <p>Server encounted an unexpected condition. Please click a link in the navigation bar above to
+                continue, or select one of the options below.</p>
+            <a class="btn btn-light mb-3" href="{% url 'index' %}">Home</a>
+            <a class="btn btn-light mb-3" href="{% url 'userbookings' %}">Bookings</a>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

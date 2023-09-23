@@ -15,14 +15,11 @@ import os
 import dj_database_url
 if os.path.isfile('env.py'):
     import env
+from django.contrib.messages import constants as messages
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
-
-
-# Quick-start development settings - unsuitable for production
-# See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = os.environ.get('SECRET_KEY')
@@ -35,7 +32,6 @@ ALLOWED_HOSTS = [
     'east-street-bc0671035c95.herokuapp.com',
     '8000-ndsurgenor-eaststreet-j1vdwlv49uq.ws-eu104.gitpod.io',
 ]
-
 
 # Application definition
 
@@ -62,8 +58,6 @@ LOGOUT_REDIRECT_URL = ''
 
 ACCOUNT_EMAIL_VERIFICATION = 'none'
 
-CRISPY_TEMPLATE_PACK = 'bootstrap4'
-
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -73,6 +67,14 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
+
+MESSAGE_TAGS = {
+        messages.DEBUG: 'alert-secondary',
+        messages.INFO: 'alert-info',
+        messages.SUCCESS: 'alert-success',
+        messages.WARNING: 'alert-warning',
+        messages.ERROR: 'alert-danger',
+ }
 
 ROOT_URLCONF = 'eaststreet.urls'
 
@@ -93,7 +95,6 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = 'eaststreet.wsgi.application'
-
 
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
@@ -127,7 +128,6 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-
 # Internationalization
 # https://docs.djangoproject.com/en/3.2/topics/i18n/
 
@@ -140,7 +140,6 @@ USE_I18N = True
 USE_L10N = True
 
 USE_TZ = True
-
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.2/howto/static-files/

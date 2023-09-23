@@ -3,6 +3,7 @@
 {% if user.is_authenticated %}
 {% block details %}
 
+    <!-- Deletion confirmation dialog -->
     {% if booking.contact_id == user.id %}
 
     <div class="container-fluid">

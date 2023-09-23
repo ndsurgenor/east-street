@@ -28,6 +28,7 @@ class BookFormView(generic.CreateView):
 
     def form_valid(self, form):
         form.instance.contact_id = self.request.user.id
+        messages.success(self.request, 'Booking submitted successfully')
         return super(BookFormView, self).form_valid(form)
 
     def form_invalid(self, form):
@@ -53,8 +54,7 @@ class BookUpdateView(generic.UpdateView):
     success_url = '/userbookings'
 
     def form_valid(self, form):
-        # form.instance.contact_id = self.request.user.id
-        messages.success(self.request, 'The booking was successfully updated')
+        messages.success(self.request, 'Booking updated successfully')
         return super(BookUpdateView, self).form_valid(form)
 
     def form_invalid(self, form):

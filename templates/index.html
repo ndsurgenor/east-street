@@ -4,12 +4,12 @@
 {% block details %}
 
 <div class="container">
-    <div id="index-splash" class="row justify-content-center text-light">
+    <div id="index-splash" class="row justify-content-center text-light">        
         <!-- Left panel containg the welcome image -->
         <div id="image-column"
             class="d-none d-md-block col-md-6 col-lg-5 col-xl-4 gx-0 bg-dark border border-end-0 border-dark-subtle border-3">
             <img id="splash-image" class="img-fluid" src="{% static 'images/open.jpg' %}" alt="">
-        </div>
+        </div>        
         <!-- Right panel containg opening times and other text -->
         <div id="text-column"
             class="col-9 col-md-6 col-lg-5 col-xl-4 bg-dark text-center border-top border-bottom border-end border-dark-subtle border-3">
@@ -36,9 +36,11 @@
                     <a class="d-sm d-md-none btn btn-light mx-2 my-1" href="{% url 'menu' %}">Menu</a>
                     <a class="btn btn-light my-1" href="{% url 'account_login' %}">Book Now</a>
                     <p class="pt-2">or call us on (028) 9527 1012</p>
-                </div>
+                </div>                
             </div>
         </div>
+        <!-- Allows for displaying of alert messages -->
+        {% include 'alerts.html' %}
     </div>
 </div>
 

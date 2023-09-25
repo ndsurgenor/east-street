@@ -23,13 +23,13 @@
                 </div>
             </div>
         </nav>
-
-        <!-- Allows for displaying of alert messages -->
-        {% include 'alerts.html' %}
-
+      
         <!-- View Specific Details -->
         {% block details %}
         {% endblock %}
+
+        <!-- Allows for displaying of alert messages -->
+        {% include 'alerts.html' %} 
 
     {% else %}
 

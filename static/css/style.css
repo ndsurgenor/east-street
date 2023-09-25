@@ -28,7 +28,6 @@ body,
 
 body {
     background-size: cover;
-    min-height: 100vh;
 }
 
 /* Navbar */
@@ -82,8 +81,6 @@ body {
 /* Home Page */
 #index-splash {
     margin-top: 1.5em;
-    margin-bottom: 10em;
-    height: 30em;
 }
 
 #splash-image {
@@ -199,10 +196,6 @@ footer p {
 
 /* Media Queries */
 @media only screen and (max-width: 768px) {
-    #index-splash {
-        height: 26em;
-    }
-
     #text-column {
         border-left: solid
     }

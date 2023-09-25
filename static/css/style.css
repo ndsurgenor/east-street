@@ -28,6 +28,7 @@ body,
 
 body {
     background-size: cover;
+    min-height: 100vh;
 }
 
 /* Navbar */
@@ -216,8 +217,8 @@ footer p {
     }
 }
 
-@media only screen and (max-height: 720px) {
+@media only screen and (max-height: 800px) {
     body {
-        margin-bottom: 8em;
+        margin-bottom: 5em;
     }
 }

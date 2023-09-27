@@ -5,9 +5,9 @@
     <nav class="navbar bg-dark border-bottom sticky-top navbar-expand-md" data-bs-theme="dark">
         <div class="container-fluid">
             <a class="navbar-brand" href="{% url 'index' %}">
-                <h1><i class="fa-solid fa-stroopwafel"></i>EastSt.</h1>
+                <h1><i class="fa-solid fa-stroopwafel"></i> EastSt.</h1>
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            <button class="navbar-toggler p-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -16,13 +16,15 @@
                     <li class="nav-item"><a class="nav-link" href="{% url 'index' %}">Home</a></li>
                     <li class="nav-item"><a class="nav-link" href="{% url 'menu' %}">Menu</a></li>
                     <li class="nav-item"><a class="nav-link" href="{% url 'location' %}">Location</a></li>
-                    <li class="nav-item"><a class="btn btn-light" href="{% url 'account_login' %}">Bookings</a></li>
+                    <!-- Different 'Bookings' links for toggled/untoggled menu -->
+                    <li class="nav-item d-md-none bg-light-subtle rounded"><a class="nav-link" href="{% url 'account_login' %}">Bookings</a></li>
+                    <li class="nav-item d-none d-md-inline"><a class="btn btn-light" href="{% url 'account_login' %}">Bookings</a></li>
                 </ul>
             </div>
         </div>
     </nav>
      
-    <!-- Page Specific Details -->
+    <!-- Specific content for page -->
     {% block details %}
     {% endblock %}    
 

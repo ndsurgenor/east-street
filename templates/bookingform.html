@@ -4,7 +4,7 @@
     {% if booking %}
         {% if booking.contact_id != user.id %}
         <!-- Redirect back to user-made bookings -->
-        <meta http-equiv="refresh" content="0; url='{% url 'userbookings' %}'" />
+        <meta http-equiv="refresh" content="0; url='{% url 'bookinglist' %}'" />
         {% endif %}
     {% endif %}
 
@@ -12,16 +12,16 @@
         <div class="row justify-content-center">
             <div class="col-9 col-md-7 col-lg-5 col-xl-3 booking-form text-center shadow">
                 <h2 class="pt-2">{% if booking %}Update {% else %}Make {% endif %}a Booking</h2>
-                <p>You are booking as <em>{{ user.username }}</em>.</p>
+                <p>You are booking as <em>{{ user.username }}</em></p>
                 {% if booking %}
-                <p class="pt-2">NOTE: updated bookings are reset to 'Pending'.</p>
+                <p class="pt-2">NOTE: updated bookings are reset to 'Pending'</p>
                 {% endif %}
                 <form method="POST">
                     {% csrf_token %}
                     {{ form.as_p }}
                         {% if booking %}
                         <button class="btn btn-light mb-3" type="submit">Confirm & Update</button>
-                        <a class="btn btn-light mb-3" href="{% url 'userbookings' %}">Return</a>
+                        <a class="btn btn-light mb-3" href="{% url 'bookinglist' %}">Return</a>
                         {% else %}
                         <button class="btn btn-light mb-3" type="submit">Submit</button>
                         {% endif %}

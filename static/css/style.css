@@ -37,9 +37,8 @@ body {
 }
 
 .navbar-brand h1 i {
-    font-size: 0.9em;
+    font-size: 0.95em;
     padding-left: 0.2em;
-    padding-right: 0.4em;
 }
 
 .navbar-text {
@@ -49,7 +48,7 @@ body {
 }
 
 .nav-item {
-    padding-right: 1.5em;
+    padding-right: 1.25em;
 }
 
 .nav-link {
@@ -76,7 +75,9 @@ body {
 }
 
 .navbar-toggler {
-    margin-right: 1.2em;
+    margin-top: -0.5em;
+    margin-right: 0.5em;
+    border: 2px solid;
 }
 
 /* Home Page */
@@ -154,7 +155,7 @@ body {
 .booking-form {
     color: ghostwhite;
     border: 0.5em solid gainsboro;
-    margin-top: 2rem;
+    margin-top: 0.5rem;
 }
 
 /* Footer */
@@ -197,6 +198,10 @@ footer p {
 
 /* Media Queries */
 @media only screen and (max-width: 768px) {
+    .nav-item {
+        padding-right: 0.5em;
+    }
+    
     #text-column {
         border-left: solid
     }

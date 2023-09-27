@@ -24,26 +24,19 @@ class BookFormView(generic.CreateView):
     model = Booking
     form_class = BookingForm
     template_name = 'bookingform.html'
-    success_url = '/userbookings'
+    success_url = '/bookinglist'
 
     def form_valid(self, form):
         form.instance.contact_id = self.request.user.id
         messages.success(self.request, 'Booking submitted successfully')
         return super(BookFormView, self).form_valid(form)
 
-    def form_invalid(self, form):
-        for field, errors in form.errors.items():
-            print(f"Field: {field}")
-            for error in errors:
-                print(f"Error: {error}")
-        return HttpResponse(f'Form invalid')
-
 
 # Generates a list of the user's bookings
 class BookListView(generic.ListView):
     model = Booking
     queryset = Booking.objects.order_by('date')
-    template_name = 'userbookings.html'
+    template_name = 'bookinglist.html'
 
 
 # Allows a user to update a booking
@@ -51,7 +44,7 @@ class BookUpdateView(generic.UpdateView):
     model = Booking
     form_class = BookingForm
     template_name = 'bookingform.html'
-    success_url = '/userbookings'
+    success_url = '/bookinglist'
 
     def form_valid(self, form):
         form.instance.status = 0
@@ -63,7 +56,7 @@ class BookUpdateView(generic.UpdateView):
 class BookDeleteView(generic.DeleteView):
     model = Booking
     template_name = 'bookingdelete.html'
-    success_url = '/userbookings'
+    success_url = '/bookinglist'
 
     def delete(self, request, *args, **kwargs):
         messages.success(self.request, 'Booking deleted successfully')

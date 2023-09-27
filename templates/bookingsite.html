@@ -7,34 +7,43 @@
         <nav class="navbar bg-light border-bottom border-body sticky-top navbar-expand-md" data-bs-theme="light">
             <div class="container-fluid">
                 <a class="navbar-brand" href="{% url 'account_logout' %}">
-                    <h1><i class="fa-solid fa-stroopwafel"></i>EastSt.</h1>
+                    <h1><i class="fa-solid fa-stroopwafel"></i> EastSt.</h1>
                 </a>
-                <span class="navbar-text"> Logged in as <em>{{ user.username }}</em></span>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                <button class="navbar-toggler p-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                     aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse justify-content-end text-end" id="navbarNav">
                     <ul class="navbar-nav">
                         <li class="nav-item"><a class="nav-link text-dark" href="{% url 'bookingsite' %}">New Booking</a></li>
-                        <li class="nav-item"><a class="nav-link text-dark" href="{% url 'userbookings' %}">My Bookings</a></li>
-                        <li class="nav-item"><a class="btn btn-dark" href="{% url 'account_logout' %}">Logout</a></li>
+                        <li class="nav-item"><a class="nav-link text-dark" href="{% url 'bookinglist' %}">Current Bookings</a>
+                        </li>
+                        <!-- Different 'Logout' links for toggled/untoggled menu -->
+                        <li class="nav-item d-md-none rounded bg-dark-subtle"><a class="nav-link text-dark"
+                                href="{% url 'account_logout' %}">Logout</a></li>
+                        <li class="nav-item d-none d-md-inline"><a class="btn btn-dark"
+                                href="{% url 'account_logout' %}">Logout</a>
+                        </li>
                     </ul>
                 </div>
             </div>
         </nav>
-      
-        <!-- View Specific Details -->
+        <!-- Active-user details -->
+        <div class="container-fluid text-light text-end">
+            <p><span class="bg-dark px-2 px-md-3 pb-1"> Logged in as <em>{{ user.username }}</em></span> </p>
+        </div>
+
+        <!-- Specific content for page -->
         {% block details %}
         {% endblock %}
 
         <!-- Allows for displaying of alert messages -->
-        {% include 'alerts.html' %} 
+        {% include 'alerts.html' %}
 
     {% else %}
 
-    <!-- Redirect to sign-in page -->
-    <meta http-equiv="refresh" content="0; url='{% url 'account_login' %}'" />
+        <!-- Redirect to sign-in page -->
+        <meta http-equiv="refresh" content="0; url='{% url 'account_login' %}'" />
 
     {% endif %}
 {% endblock %}

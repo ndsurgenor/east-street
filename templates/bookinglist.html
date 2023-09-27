@@ -6,66 +6,67 @@
 <div class="container text-light">
     <!-- View heading -->
     <div class="row justify-content-center pt-3">
-        <div class="col-12 col-lg-7 bg-table">
-            <h2>Your Bookings</h2>
+        <div class="col-12 col-md-10 col-xl-7 bg-table">
+            <h2 class="pt-2">Your Bookings</h2>
         </div>
     </div>
     <!-- List headings -->
     <div class="row justify-content-center">
-        <div class="col-4 col-lg-2 bg-table">
+        <div class="col-4 col-md-3 col-xl-2 bg-table">
             <p><u>Date</u></p>
         </div>
-        <div class="col-2 col-lg-1 text-center bg-table">
+        <div class="col-2 col-md-1 text-start bg-table">
             <p><u>Time</u></p>
         </div>
-        <div class="col-2 col-lg-1 text-center bg-table">
+        <div class="col-2 col-md-1 text-center bg-table">
             <p><u>Group</u></p>
         </div>
-        <div class="col-4 col-lg-1 text-end bg-table">
+        <div class="col-4 col-md-2 col-xl-1 text-end bg-table">
             <p><u>Status</u></p>
         </div>
-        <div class="d-none d-lg-block col-lg-2 text-end bg-table">
+        <div class="d-none d-md-block col-md-3 col-xl-2 text-end bg-table">
             <p><u>Actions</u></p>
         </div>
     </div>
     <!-- List of user-made bookings -->
     {% for booking in booking_list %}
-    {% if booking.contact_id == user.id %}
-    <div class="row justify-content-center">
-        <!-- Date (format changes depending on screen size) -->
-        <div class="col-4 d-md-none bg-dark">
-            <p>{{ booking.date|date:"d/m/Y" }}</p>
+        {% if booking.contact_id == user.id %}
+        <div class="row booking-entry justify-content-center">
+            <!-- Date (format changes depending on screen size) -->
+            <div class="col-4 d-md-none bg-dark pt-1">
+                <p>{{ booking.date|date:"d/m/Y" }}</p>
+            </div>
+            <div class="d-none d-md-block col-md-3 col-xl-2 bg-dark">
+                <p>{{ booking.date|date:"D, jS M Y" }}</p>
+            </div>
+            <!-- Time -->        
+            <div class="col-2 col-md-1 text-start bg-dark pt-1 pt-md-0">
+                <p>{{ booking.time|time:"H:i" }}</p>
+            </div>
+            <!-- Group Size -->
+            <div class="col-2 col-md-1 text-center bg-dark pt-1 pt-md-0">
+                <p>{{ booking.group }}</p>
+            </div>
+            <!-- Booking Status -->
+            <div class="col-4 col-md-2 col-xl-1 text-end bg-dark pt-1 pt-md-0">
+                {% if booking.status == 1 %}
+                <p>Confirmed</p>
+                {% elif booking.status == 2 %}
+                <p>Cancelled</p>
+                {% else %}
+                <p>Pending</p>
+                {% endif %}
+            </div>
+            <!-- Action Buttons -->
+            <div class="col-12 col-md-3 col-xl-2 text-end bg-dark pb-3 pb-md-0">
+                <!-- 'Update' button does not appear if booking status is 'Cancelled' -->
+                {% if booking.status != 2 %}
+                <a class="btn btn-light btn-sm" href="{% url 'update' booking.id %}">Update</a>
+                {% endif %}
+                <a class="btn btn-light btn-sm" href="{% url 'delete' booking.id %}">Delete</a>
+            </div>
         </div>
-        <div class="d-none d-md-block col-lg-2 bg-dark">
-            <p>{{ booking.date|date:"D, jS M Y" }}</p>
-        </div>
-        <!-- Time -->        
-        <div class="col-2 col-lg-1 text-center bg-dark">
-            <p>{{ booking.time|time:"H:i" }}</p>
-        </div>
-        <!-- Group Size -->
-        <div class="col-2 col-lg-1 text-center bg-dark">
-            <p>{{ booking.group }}</p>
-        </div>
-        <!-- Booking Status -->
-        <div class="col-4 col-lg-1 text-end bg-dark">
-            {% if booking.status == 1 %}
-            <p>Confirmed</p>
-            {% elif booking.status == 2 %}
-            <p>Cancelled</p>
-            {% else %}
-            <p>Pending</p>
-            {% endif %}
-        </div>
-        <!-- Action Buttons -->
-        <div class="col-12 col-lg-2 text-end bg-dark mb-2 mb-sm-0 pb-3 pb-md-0">
-            {% if booking.status != 2 %}
-            <a class="btn btn-light btn-sm" href="{% url 'update' booking.id %}">Update</a>
-            {% endif %}
-            <a class="btn btn-light btn-sm" href="{% url 'delete' booking.id %}">Delete</a>
-        </div>
-    </div>
-    {% endif %}
+        {% endif %}
     {% endfor %}
 </div>
 

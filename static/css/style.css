@@ -213,6 +213,10 @@ footer p {
     .menu-details-right {
         margin-bottom: 15em;
     }
+
+    .booking-entry {
+        border-top: solid 2px dimgrey;
+    }
 }
 
 @media only screen and (max-width: 576px) {

@@ -20,7 +20,7 @@ DATES = (
     (datetime.date(2023, 9, 16), '16/09/23'),
 )
 
-# Defines times allowed for bookings (start 12:00pm, end 9.30pm)
+# Defines times allowed for bookings (start 12:00pm, end 9.45pm)
 TIMES = (
     (datetime.time(12, 00), '12:00pm'),
     (datetime.time(12, 15), '12:15pm'),
@@ -37,7 +37,7 @@ TIMES = (
     (datetime.time(15, 00), '3:00pm'),
     (datetime.time(15, 15), '3:15pm'),
     (datetime.time(15, 30), '3:30pm'),
-    (datetime.time(15, 45), '3:45pm'),
+    (datetime.time(15, 45), '3:45pm'),    
 )
 
 

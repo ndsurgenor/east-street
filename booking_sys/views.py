@@ -54,6 +54,7 @@ class BookUpdateView(generic.UpdateView):
     success_url = '/userbookings'
 
     def form_valid(self, form):
+        form.instance.status = 0
         messages.success(self.request, 'Booking updated successfully')
         return super(BookUpdateView, self).form_valid(form)
 

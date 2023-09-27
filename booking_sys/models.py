@@ -1,6 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User
-from .variables import DATES, TIMES, GROUP_SIZE, STATUS
+from .variables import GROUP_SIZE, STATUS
 
 
 class Booking(models.Model):

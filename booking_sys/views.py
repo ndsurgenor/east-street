@@ -57,13 +57,6 @@ class BookUpdateView(generic.UpdateView):
         messages.success(self.request, 'Booking updated successfully')
         return super(BookUpdateView, self).form_valid(form)
 
-    def form_invalid(self, form):
-        for field, errors in form.errors.items():
-            print(f"Field: {field}")
-            for error in errors:
-                print(f"Error: {error}")
-        return HttpResponse(f'Form invalid')
-
 
 # Allows a user to delete a booking
 class BookDeleteView(generic.DeleteView):

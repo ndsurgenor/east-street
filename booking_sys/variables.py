@@ -42,20 +42,10 @@ TIMES = (
 
 
 # Defines options for size of booking party (min=1, max=12)
-GROUP_SIZE = (
-    (1, '1'),
-    (2, '2'),
-    (3, '3'),
-    (4, '4'),
-    (5, '5'),
-    (6, '6'),
-    (7, '7'),
-    (8, '8'),
-    (9, '9'),
-    (10, '10'),
-    (11, '11'),
-    (12, '12'),
-)
+GROUP_SIZE = tuple()
+
+for i in range(1, 13):
+    GROUP_SIZE += ((i, str(i)),)
 
 
 # Allows admin to confirm/deny user bookings

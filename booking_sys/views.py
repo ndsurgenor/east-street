@@ -70,3 +70,7 @@ class BookDeleteView(generic.DeleteView):
     model = Booking
     template_name = 'bookingdelete.html'
     success_url = '/userbookings'
+
+    def delete(self, request, *args, **kwargs):
+        messages.success(self.request, 'Booking deleted successfully')
+        return super(BookDeleteView, self).delete(request, *args, **kwargs)

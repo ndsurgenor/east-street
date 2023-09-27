@@ -40,6 +40,7 @@ TIMES = (
     (datetime.time(15, 45), '3:45pm'),
 )
 
+
 # Defines options for size of booking party (min=1, max=12)
 GROUP_SIZE = (
     (1, '1'),
@@ -55,6 +56,7 @@ GROUP_SIZE = (
     (11, '11'),
     (12, '12'),
 )
+
 
 # Allows admin to confirm/deny user bookings
 STATUS = (

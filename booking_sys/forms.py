@@ -20,6 +20,5 @@ class BookingForm(forms.ModelForm):
         fields = ('date', 'time', 'group', 'status')
         widgets = {
             'date': DateInput(),
-            'time': TimeInput(),
             'status': forms.HiddenInput(),
         }

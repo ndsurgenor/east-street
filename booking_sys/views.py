@@ -7,6 +7,7 @@ from .forms import BookingForm
 
 
 # Static views for main site
+
 def index(request):
     return render(request, 'index.html')
 
@@ -19,8 +20,12 @@ def location(request):
     return render(request, 'location.html')
 
 
-# Generates a booking form for the user
+# Class views for booking site
+
 class BookFormView(generic.CreateView):
+    """
+    View to create a new booking
+    """
     model = Booking
     form_class = BookingForm
     template_name = 'bookingform.html'
@@ -32,15 +37,19 @@ class BookFormView(generic.CreateView):
         return super(BookFormView, self).form_valid(form)
 
 
-# Generates a list of the user's bookings
 class BookListView(generic.ListView):
+    """
+    View to display bookings already made by a user
+    """
     model = Booking
     queryset = Booking.objects.order_by('date')
     template_name = 'bookinglist.html'
 
 
-# Allows a user to update a booking
 class BookUpdateView(generic.UpdateView):
+    """
+    View to allow a booking to be updated
+    """
     model = Booking
     form_class = BookingForm
     template_name = 'bookingform.html'
@@ -52,8 +61,10 @@ class BookUpdateView(generic.UpdateView):
         return super(BookUpdateView, self).form_valid(form)
 
 
-# Allows a user to delete a booking
 class BookDeleteView(generic.DeleteView):
+    """
+    View to allow deletion of a booking
+    """
     model = Booking
     template_name = 'bookingdelete.html'
     success_url = '/bookinglist'

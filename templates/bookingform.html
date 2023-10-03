@@ -10,21 +10,21 @@
 
     <div class="container-fluid">
         <div class="row justify-content-center">
-            <div class="col-9 col-md-7 col-lg-5 col-xl-3 booking-form text-center shadow">
+            <div class="col-10 col-sm-7 col-md-6 col-lg-4 col-xxl-3 booking-form text-center shadow">
                 <h2 class="pt-2">{% if booking %}Update {% else %}Make {% endif %}a Booking</h2>
-                <p>You are booking as <em>{{ user.username }}</em></p>
+                <p class="pb-2">Booking as <em>{{ user.username }}</em>. Please book at least one day in advance. Closed Monday/Tuesday.</p>
                 {% if booking %}
                 <p class="pt-2">NOTE: updated bookings are reset to 'Pending'</p>
                 {% endif %}
                 <form method="POST">
                     {% csrf_token %}
                     {{ form.as_p }}
-                        {% if booking %}
-                        <button class="btn btn-light mb-3" type="submit">Confirm & Update</button>
-                        <a class="btn btn-light mb-3" href="{% url 'bookinglist' %}">Return</a>
-                        {% else %}
-                        <button class="btn btn-light mb-3" type="submit">Submit</button>
-                        {% endif %}
+                    {% if booking %}
+                    <button class="btn btn-light mb-3" type="submit">Confirm & Update</button>
+                    <a class="btn btn-light mb-3" href="{% url 'bookinglist' %}">Return</a>
+                    {% else %}
+                    <button class="btn btn-light mb-3" type="submit">Submit</button>
+                    {% endif %}
                 </form>
             </div>
         </div>

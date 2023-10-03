@@ -1,8 +1,5 @@
 import datetime
 
-# Sets default for 'date' field as tomorrow
-date_tomorrow = datetime.date.today() + datetime.timedelta(days=1)
-
 
 # Defines options for booking times (12.00 to 9.45pm)
 TIMES = tuple()

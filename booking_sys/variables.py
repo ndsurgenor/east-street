@@ -1,6 +1,5 @@
 import datetime
 
-
 # Sets default for 'date' field as tomorrow
 date_tomorrow = datetime.date.today() + datetime.timedelta(days=1)
 

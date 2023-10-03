@@ -6,19 +6,18 @@ date_tomorrow = datetime.date.today() + datetime.timedelta(days=1)
 
 
 # Defines options for booking times (12.00 to 9.45pm)
-
 TIMES = tuple()
 time_list = list(TIMES)
 
-for h in range(12, 22):
-    for m in range(0, 60, 15):
-        if m == 0:
-            t_text = f'{h}:00'
+for hrs in range(12, 22):
+    for min in range(0, 60, 15):
+        if min == 0:
+            time_text = f'{hrs}:00'
         else:
-            t_text = f'{h}:{m}'
+            time_text = f'{hrs}:{min}'
 
-        t_val = datetime.time(h, m)
-        time_list.append((t_val, t_text))
+        time_val = datetime.time(hrs, min)
+        time_list.append((time_val, time_text))
 
 TIMES = tuple(time_list)
 
@@ -26,8 +25,8 @@ TIMES = tuple(time_list)
 # Defines options for size of booking party (min=1, max=12)
 GROUP_SIZE = tuple()
 
-for i in range(1, 13):
-    GROUP_SIZE += ((i, str(i)),)
+for num in range(1, 13):
+    GROUP_SIZE += ((num, str(num)),)
 
 
 # Allows admin to confirm/deny user bookings

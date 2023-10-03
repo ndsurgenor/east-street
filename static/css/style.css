@@ -133,7 +133,7 @@ body {
 .access-form {
     background-color: ghostwhite;
     border: 0.5em solid gainsboro;
-    margin-top: 2rem;
+    margin-top: 2em;
 }
 
 .access-form button,
@@ -146,6 +146,10 @@ body {
     font-size: 0.9em;
 }
 
+#sign-out {
+    margin-top: -1.5rem;
+}
+
 /* Booking Forms & Tables */
 .booking-form,
 .bg-table {
@@ -155,7 +159,7 @@ body {
 .booking-form {
     color: ghostwhite;
     border: 0.5em solid gainsboro;
-    margin-top: 0.5rem;
+    margin-top: 0.2rem;
 }
 
 /* Footer */
@@ -236,8 +240,9 @@ footer p {
         font-size: 0.85em;
     }
 
-    body {
-        margin-bottom: 3em;
+    body,
+    #index-splash {
+        margin-bottom: 5em;        
     }
 
     footer h2 {

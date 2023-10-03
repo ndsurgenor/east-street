@@ -227,7 +227,15 @@ footer p {
 }
 
 @media only screen and (max-height: 800px) {
+    .navbar-brand {
+        font-size: 0.85em;
+    }
+
     body {
         margin-bottom: 5em;
+    }
+
+    .opening-hours {
+        display: none;
     }
 }

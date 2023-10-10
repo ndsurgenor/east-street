@@ -19,8 +19,9 @@ The site is aimed at helping customers to easily access information regarding th
 This project was developed with 5 milestones (epics) in mind. From each of these milestones a number of dev goals and user stories were created. The detail of each of these milestones, goals and stories is outlined below:
 
 #### Milestone 1 - Initial Setup
-- 1.1 - Dev Goal: set up Django and its supporting libraries (along with the Secret Key) via the IDE in order for development to begin
-- 1.2 - Dev Goal: create an early deployment of the site to Heroku to ensure that all is working from the very start and allow continous testing throughout production
+- 1.1 - Dev Goal: set up Django and its supporting libraries via the IDE in order for development to begin
+- 1.2 - Dev Goal: set up the Django project and app
+- 1.3 - Dev Goal: create an early Heroku deployment to ensure all is working from the very start and allow continuous testing throughout production
 
 #### Milestone 2 - Main Site Pages
 - 2.1 - User Story: as a Site Visitor/User I want to access info/links from the home page so that I can easily discern information and make a booking
@@ -73,8 +74,9 @@ With Strategy and Scope now in place, focus shifted to setting acceptence criter
 
 **Milestone**|**Ref**|**Type**|**Acceptence Criteria/Features**
 :-----:|:-----:|:-----:|-----
-Initial Setup|1.1|Dev Goal|<ul><li>Install Django to the east-street Gitpod workspace</li><li>Install and setupdjango-allauth for sign-up/in/out functionality</li><li>Install and setup cloudinary to host image files</li><li>Install SQL</li></ul>
-Initial Setup|1.2|Dev Goal|<ul><li>Update the settings.py file</li><li>Set up and deploy the app via Heroku with required config vars</li></ul>
+Initial Setup|1.1|Dev Goal|<ul><li>Install server: django-gunicorn</li><li>Install PostgreSQL library: dj_database_url psycopg2</li><li>Install image host: dj3-cloudinary-storage</li><li>Install sign-up/in/out functionality: django-allauth</li><li>Create requirements.txt file</li></ul>
+Initial Setup|1.2|Dev Goal|<ul><li>Create Django project: east-street</li><li>Create app: booking-sys</li><li>Update the settings.py file</li><li>Migrate changes</li></ul>
+Initial Setup|1.3|Dev Goal|<ul><li>Create app on Heroku</li><li>Set up ElephantSQL</li><li>Set up the env.py file</li><li>Update the settings.py file</li><li>Set config vars and deploy app</li></ul>
 Main Site|2.1|User Story|<ul><li>A home page displaying opening times of the restaurant</li><li>A home page also displaying a quick link to the booking area of the site</li><li>A navbar providing clear links to menu and location info</li><li>A highlighted link to the booking area in the navbar</li><li>A footer providing summarised info and social links</li></ul>
 Main Site|2.2|User Story|<ul><li>A static page showing the opening day/times of the restaurant</li><li>Elements that display/resize/scroll when viewed on different sized devices</li></ul>
 Main Site|2.3|User Story|<ul><li>A static page showing the food and prices within the restaurant</li><li>Elements that display/resize/scroll when viewed on different sized devices</li></ul>

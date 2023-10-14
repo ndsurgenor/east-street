@@ -39,7 +39,7 @@ This project was developed with 5 milestones (epics) in mind. From each of these
 - 4.1 - User Story: as a Site User I want to make an online booking so that I can secure a table for a particular date, time & group size
 - 4.2 - User Story: as a Site User I want to view my booking(s) so that I can see if it has been recorded correctly and remind myself of its details
 - 4.3 - User Story: as a Site User I want to access/adjust my booking(s) so that I can correct an error/make necessary changes
-- 4.4 - User Story: as a Site User I want to cancel my booking(s) so that it/they no longer appear on the system
+- 4.4 - User Story: as a Site User I want to cancel my booking(s) so that it/they no longer appear(s) on the system
 - 4.5 - User Story: as a Site Admin I want to have the ability to accept/reject new bookings so that I can manage customer numbers within the restaurant
 
 #### Milestone 5 - Additional Coding
@@ -84,9 +84,9 @@ Main Site|2.4|User Story|<ul><li>A static page showing the map location and tran
 Booking Site |3.1|User Story|<ul><li>An admin area only allowing access to the site admin/superuser</li><li>A link to the database to clearly display the details of each booking i.e. entry in the database</li></ul>
 Booking Site|3.2|User Story|<ul><li>A sign-up form requiring username, email and password details</li></ul>
 Booking Site|3.3|User Story|<ul><li>A sign-in form requiring username, email and password details</li></ul>
-Booking Site|3.4|User Story|<ul><li>A sign-out form requiring username, email and password details</li></ul>
+Booking Site|3.4|User Story|<ul><li>A sign-out form requiring the user to confirm that they wish to sign out</li></ul>
 CRUD|4.1|User Story|<ul><li>A booking form with date, time, and group size fields which saves those details to the database</li><li>A navbar link to the form to allow access from a different area of the booking site</li></ul>
-CRUD|4.2|User Story|<ul><li>A list of bookings praticular to that user which displays automatically after they have submitted a valid booking</li><li>A navbar link to the list of bookings to allow access from a different area of the booking site</li></ul>
+CRUD|4.2|User Story|<ul><li>A list of bookings particular to that user which displays automatically after they have submitted a valid booking</li><li>A navbar link to the list of bookings to allow access from a different area of the booking site</li></ul>
 CRUD|4.3|User Story|<ul><li>A button beside each entry in the booking list to allow updating of its details</li><li>The displaying of the current details within the booking form when clicking said button</li><li>The option of returning to the list without making changes</li> <li>The updating of these details to the database when the user changes values and clicks 'Confirm'</li></ul>
 CRUD|4.4|User Story|<ul><li>A button beside each entry in the booking list to allow for its deletion</li><li>The displaying of the details to be deleted alongside a warning when clicking said button</li><li>The option of returning to the list without making changes</li><li>The deletion of the booking on the database when the user clicks 'Confirm'</li></ul>
 CRUD|4.5|User Story|<ul><li>A list of all bookings made in the admin area of the site</li><li>A dropdown option for each individual booking allowing for selection of 'Confirmed' or 'Cancelled'</li></ul>

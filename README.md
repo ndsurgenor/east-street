@@ -44,7 +44,9 @@ This project was developed with 5 milestones (epics) in mind. From each of these
 
 #### Milestone 5 - Additional Coding
 - 5.1 - User Story: as a Site Admin I want to prevent bookings being made for unavailable dates/times so that bookings are not made when the restaurant is closed
-- 5.2 - Dev Goal: set up 404, 403 and 500 pages to correctly handle access/server issues when the site is in use 
+- 5.2 - User Story: as a Site User I want to have on-screen confirmation during the authorisation/booking process so that I know my input has been recorded correctly
+- 5.3 - Dev Goal: set up 404, 403 and 500 pages to correctly handle access/server issues when the site is in use
+
 
 ## Scope
 
@@ -90,8 +92,9 @@ CRUD|4.2|User Story|<ul><li>A list of bookings particular to that user which dis
 CRUD|4.3|User Story|<ul><li>A button beside each entry in the booking list to allow updating of its details</li><li>The displaying of the current details within the booking form when clicking said button</li><li>The option of returning to the list without making changes</li> <li>The updating of these details to the database when the user changes values and clicks 'Confirm'</li></ul>
 CRUD|4.4|User Story|<ul><li>A button beside each entry in the booking list to allow for its deletion</li><li>The displaying of the details to be deleted alongside a warning when clicking said button</li><li>The option of returning to the list without making changes</li><li>The deletion of the booking on the database when the user clicks 'Confirm'</li></ul>
 CRUD|4.5|User Story|<ul><li>A list of all bookings made in the admin area of the site</li><li>A dropdown option for each individual booking allowing for selection of 'Confirmed' or 'Cancelled'</li></ul>
-Additional|5.1|User Story|<ul><li>The option to only select between the days of Wednesday to Sunday inclusive on the booking form</li><li>The option to only select between the hours of 12.30pm and 9.30pm inclusive on the booking form</li><li>The option to only select between the group size of 1 and 12 inclusive on the booking form</li></ul>
-Additional|5.2|Dev Goal|<ul><li>A 403 Error page which provides a link back to a valid area of the site</li><li>A 404 Error page which provides a link back to a valid area of the site</li><li>A 500 Error page which provides a link back to a valid area of the site</li></ul>
+Additional|5.1|User Story|<ul><li>The option to only select a date beyond that of today</li><li>The option to only select between the days of Wednesday to Sunday inclusive on the booking form</li><li>The option to only select between the hours of 12.30pm and 9.45pm inclusive on the booking form</li><li>The option to only select between the group size of 1 and 12 inclusive on the booking form</li></ul>
+Additional|5.2|User Story|<ul><li>An alert for successfully signing in/out</li><li>An alert for successfully making/updating bookings</li><li>An alert for successfully deleting bookings</li></ul>
+Additional|5.3|Dev Goal|<ul><li>A 403 Error page which provides a link back to a valid area of the site</li><li>A 404 Error page which provides a link back to a valid area of the site</li><li>A 500 Error page which provides a link back to a valid area of the site</li></ul>
 
 ### Agile Planning
 This project was developed using agile methodologies designed to deliver small feature updates in incremental sprints. The elements given in detail below lead to the creation of the 

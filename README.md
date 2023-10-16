@@ -2,9 +2,9 @@
 
 East Street Restaurant (stylised as 'EastSt.') is a fictional establishment located on 23A East Street, Newtonwards, Northern Ireland.
 
-This site has been designed to allow imagined customers the ability to access info regarding and place bookings with the restaurant, as well featuring an administrative area to allow restaurant managers to manage the bookings of all users so that they can properly run the restaurant.
+This site has been designed to allow imagined customers the ability to access info regarding and place bookings with the restaurant, as well featuring an administrative area allowing restaurant managers to oversee the bookings of all users so that they can properly run the restaurant.
 
-[LIVE LINK TO SITE](https://east-street-bc0671035c95.herokuapp.com/)
+[LIVE LINK TO SITE](https://east-street-bc0671035c95.herokuapp.com/) (Note: to open links in this document in a new tab, hold CTRL + Click)
 
 ![Overview](static/images/readme/overview.png)
 
@@ -16,7 +16,9 @@ The site is aimed at helping customers to easily access information regarding th
 
 ### Milestones & User Stories
 
-This project was developed with 5 milestones (epics) in mind. From each of these milestones a number of dev goals and user stories were created. The detail of each of these milestones, goals and stories is outlined below:
+This project was developed with 5 milestones (epics) in mind. From each of these milestones a number of dev goals and user stories were created, each one given a prioritisation using the MoSCoW method. The detail of these milestones, goals and stories is outlined below; further detail regarding sprints, MoSCoW desgination and acceptance criteria (covered under Structure) are included on the [GitHub Projects Kanban Board](https://github.com/users/ndsurgenor/projects/5) created for the project.
+
+![Kanban](static/images/readme/kanban.png)
 
 #### Milestone 1 - Initial Setup
 - 1.1 - Dev Goal: set up Django and its supporting libraries via the IDE in order for development to begin
@@ -70,7 +72,7 @@ Using these milestones, goals, and stories to guide my thinking, the following w
 
 ## Structure
 
-With Strategy and Scope now in place, focus shifted to setting acceptence criteria for each of the above thereby informing exactly what features to include as part of the project
+With Strategy and Scope now in place, focus shifted to setting acceptance criteria for each of the above, thereby informing exactly what features to include as part of the project. These acceptance criteria were added to each dev goal and user story on the afforementioned Kanban board, to act as an ensurance that task would be completed to the fulless extent needed.
 
 ### Features
 
@@ -95,10 +97,6 @@ CRUD|4.5|User Story|<ul><li>A list of all bookings made in the admin area of the
 Additional|5.1|User Story|<ul><li>The option to only select a date beyond that of today</li><li>The option to only select between the days of Wednesday to Sunday inclusive on the booking form</li><li>The option to only select between the hours of 12.30pm and 9.45pm inclusive on the booking form</li><li>The option to only select between the group size of 1 and 12 inclusive on the booking form</li></ul>
 Additional|5.2|User Story|<ul><li>An alert for successfully signing in/out</li><li>An alert for successfully making/updating bookings</li><li>An alert for successfully deleting bookings</li></ul>
 Additional|5.3|Dev Goal|<ul><li>A 403 Error page which provides a link back to a valid area of the site</li><li>A 404 Error page which provides a link back to a valid area of the site</li><li>A 500 Error page which provides a link back to a valid area of the site</li></ul>
-
-### Agile Planning
-This project was developed using agile methodologies designed to deliver small feature updates in incremental sprints. The elements given in detail below lead to the creation of the 
-
 
 ## Skeleton
 ### Wireframe

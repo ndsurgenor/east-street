@@ -101,9 +101,33 @@ Additional|[5.2](#milestone-5---additional-coding "As a Site User I want to have
 Additional|[5.3](#milestone-5---additional-coding "Set up 404, 403 and 500 pages to correctly handle access/server issues when the site is in use")|Dev Goal|<ul><li>A 403 Error page which provides a link back to a valid area of the site</li><li>A 404 Error page which provides a link back to a valid area of the site</li><li>A 500 Error page which provides a link back to a valid area of the site</li></ul>
 
 ## Skeleton
-### Wireframe
 
-[LINK TO WIREFRAME DIAGRAM](https://cacoo.com/diagrams/V4VlzIhRUc2eQPq5/2A59E)
+Now that specific features had been decided upon, a wireframing tool was used to give guidance as to how these features would look in practice while a database design app helped to image the flow of data within the site before commiting it to code.
+
+### Wireframe Models
+
+All of the models which follow can be viewed on one page [using the following link](https://cacoo.com/diagrams/V4VlzIhRUc2eQPq5/2A59E)
+
+### Main Site Pages
+- Home
+- Menu
+- Location
+
+![Home](static/images/readme/wireframe-home.png)
+![Menu](static/images/readme/wireframe-menu.png)
+![Location](static/images/readme/wireframe-location.png)
+
+### Authorisation Pages
+- Sign Up
+- Sign In
+- Sign Out
+
+### Booking Pages
+- Home
+- Menu
+- Location
+
+
 
 ### Database Design
 

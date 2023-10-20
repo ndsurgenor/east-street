@@ -122,6 +122,8 @@ All of the models which follow can be viewed on one page [using the following li
 - Sign In
 - Sign Out
 
+![Authorisation](static/images/readme/wireframe-authorisation.png)
+
 ### Booking Pages
 - Home
 - Menu

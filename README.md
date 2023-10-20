@@ -125,10 +125,13 @@ All of the models which follow can be viewed on one page [using the following li
 ![Authorisation](static/images/readme/wireframe-authorisation.png)
 
 ### Booking Pages
-- Home
-- Menu
-- Location
+- New/Update Booking
+- Delete Booking
+- Current Bookings
 
+![New](static/images/readme/wireframe-new.png)
+![Delete](static/images/readme/wireframe-delete.png)
+![Current](static/images/readme/wireframe-current.png)
 
 
 ### Database Design

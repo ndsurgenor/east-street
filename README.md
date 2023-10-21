@@ -15,7 +15,6 @@ The site is aimed at helping customers to easily access information regarding th
 ## Strategy
 
 ### Milestones & User Stories
-
 This project was developed with 5 milestones (epics) in mind. From each of these milestones a number of dev goals and user stories were created, each one given a prioritisation using the MoSCoW method. The detail of these milestones, goals and stories is outlined below; further detail regarding sprints, MoSCoW desgination and acceptance criteria (covered under Structure) are included on the [GitHub Projects Kanban Board](https://github.com/users/ndsurgenor/projects/5) created for the project.
 
 ![Kanban](static/images/readme/kanban.png)
@@ -32,6 +31,7 @@ This project was developed with 5 milestones (epics) in mind. From each of these
 - 2.4 - User Story: as a Site Visitor/User I want to view the location/address of the restaurant so that I know where the restaurant is located
 
 #### Milestone 3 - Booking Site Access
+
 - 3.1 - User Story: as a Site Admin I want to view all customer details/bookings so that I can plan for required table numbers/sizes
 - 3.2 - User Story: as a Site Visitor I want to sign up to the site so that I can make bookings
 - 3.3 - User Story: as a Site User I want to sign in to the site so that I can make/view/adjust/delete bookings
@@ -48,7 +48,6 @@ This project was developed with 5 milestones (epics) in mind. From each of these
 - 5.1 - User Story: as a Site Admin I want to prevent bookings being made for unavailable dates/times so that bookings are not made when the restaurant is closed
 - 5.2 - User Story: as a Site User I want to have on-screen confirmation during the authorisation/booking process so that I know my input has been recorded correctly
 - 5.3 - Dev Goal: set up 404, 403 and 500 pages to correctly handle access/server issues when the site is in use
-
 
 ## Scope
 
@@ -75,7 +74,6 @@ Using these milestones, goals, and stories to guide my thinking, the following w
 With Strategy and Scope now in place, focus shifted to setting acceptance criteria for each of the above, thereby informing exactly what features to include as part of the project. These acceptance criteria were added to each Dev Goal and User Story on the afforementioned Kanban board to act as an ensurance that task would be completed to the fulless extent needed.
 
 ### Features
-
 Hovering over a Refernce number below will display a desciption of that Dev Goal/User Story while clicking the link will return you to the relevant Milestone section of this document.
 
 **Milestone**|**Ref**|**Type**|**Acceptence Criteria/Features**
@@ -105,7 +103,6 @@ Additional|[5.3](#milestone-5---additional-coding "Set up 404, 403 and 500 pages
 Now that specific features had been decided upon, a wireframing tool was used to give guidance as to how these features would look in practice while a database design app helped to image the flow of data within the site before commiting it to code.
 
 ### Wireframe Models
-
 All of the models which follow can be viewed on one page [using the following link](https://cacoo.com/diagrams/V4VlzIhRUc2eQPq5/2A59E)
 
 ### Main Site Pages
@@ -137,51 +134,45 @@ All of the models which follow can be viewed on one page [using the following li
 ### Database Design
 
 ## Surface
-
 Now that this thinking had been done
+
+### Design & Typography
+Colours and Fonts
 
 ### Features implemented
 
 #### Brand & Favicon
 
 #### Navbar
-
 > &bull; A navbar providing clear links to menu and location info  
 &bull; A highlighted link to the booking area in the navbar
 
 #### Footer
-
 > &bull; A footer providing summarised info and social links
 
 #### Home Page
-
 > &bull; A home page displaying opening times of the restaurant  
 &bull; A home page also displaying a quick link to the booking area of the site  
 &bull; Elements that display/resize/scroll when viewed on different sized devices
 
 #### Menu Page
-
 > &bull; A static page showing the food and prices within the restaurant  
 &bull; Elements that display/resize/scroll when viewed on different sized devices
 
 #### Location Page
-
 > &bull; A static page showing the map location and transport options for the restaurant  
 &bull; Elements that display/resize/scroll when viewed on different sized devices
 
 #### Booking Admin
-
 > &bull; An admin area only allowing access to the site admin/superuser  
 &bull; A link to the database to clearly display the details of each booking i.e. entry in the database
 
 #### Sign Up/In/Out Forms
-
 > &bull; A sign-up form requiring username, email and password details  
 &bull; A sign-in form requiring username, email and password details  
 &bull; A sign-out form requiring username, email and password details
 
 #### Booking Form
-
 > &bull; A booking form with date, time, and group size fields which saves those details to the database  
 &bull; The option to only select between the days of Wednesday to Sunday inclusive on the booking form  
 &bull; The option to only select between the hours of 12.30pm and 9.30pm inclusive on the booking form  
@@ -189,12 +180,10 @@ Now that this thinking had been done
 &bull; A navbar link to the form to allow access from a different area of the booking site
 
 #### User Booking List
-
 > &bull; A list of bookings praticular to that user which displays automatically after they have submitted a valid booking  
 &bull; A navbar link to the list of bookings to allow access from a different area of the booking site
 
 #### Booking Update Capabilities
-
 > &bull; A button beside each entry in the booking list to allow updating of its details  
 &bull; The displaying of the current details within the booking form when clicking said button  
 &bull; The option of returning to the list without making changes  
@@ -208,14 +197,58 @@ Now that this thinking had been done
 &bull; The deletion of the booking on the database when the user clicks 'Confirm'
 
 #### Booking Overview for Admin
-
 > &bull; A list of all bookings made in the admin area of the site  
 &bull; A dropdown option for each individual booking allowing for selection of 'Confirmed' or 'Cancelled'
 
 #### Error Pages
-
 > &bull; A 403 Error page which provides a link back to a valid area of the site  
 &bull; A 404 Error page which provides a link back to a valid area of the site  
 &bull; A 500 Error page which provides a link back to a valid area of the site
 
 ### Features to be implemented
+- Blocked out dates on calendar
+- Blocked out times associated with dates
+- Email notifcation to admin of customer made booking
+- Email notifcation to customer of booking status update
+
+### Technologies Used
+
+In order to code and design these featured the following technologies were utilised:
+
+- Python Modules
+  - asgiref==3.7.2
+  - cloudinary==1.34.0
+  - dj-database-url==0.5.0
+  - dj3-cloudinary-storage==0.0.6
+  - Django==3.2.20
+  - django-allauth==0.55.0
+  - gunicorn==21.2.0
+  - oauthlib==3.2.2
+  - psycopg2==2.9.7
+  - PyJWT==2.8.0
+  - python3-openid==3.2.0
+  - requests-oauthlib==1.3.1
+  - sqlparse==0.4.4
+  - urllib3==1.26.15
+- Django
+  - Used as the main Python framework in the development of this project
+  - django-allauth is employed as the means of managing user accounts used for the booking system
+  - Jinga/Django templating is used for queries to the database to insert data from it onto the site pages 
+- Heroku
+  - Used as the cloud-based deployement platform for this project
+- ElephantSQL
+  - Used as the database hosting service
+- HTML
+  - Used as the base coding language for templates and site content
+- Bootstrap
+  - Used as the main means of design layout and formatting throghout the site
+- CSS
+  - Used to modify Bootstrap behaviour where required and create additional custom stylings
+- FontAwesome
+  - Used for the brand logo, social media icons, and icons on the location page
+- JavaScript
+  - Used to create a timed automatic-dismisal of on-screen alerts
+
+### Packages Used
+
+### Resources Used

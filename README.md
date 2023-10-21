@@ -103,7 +103,7 @@ Additional|[5.3](#milestone-5---additional-coding "Set up 404, 403 and 500 pages
 Now that specific features had been decided upon, a wireframing tool was used to give guidance as to how these features would look in practice while a database design app helped to image the flow of data within the site before commiting it to code.
 
 ### Wireframe Models
-All of the models which follow can be viewed on one page [using the following link](https://cacoo.com/diagrams/V4VlzIhRUc2eQPq5/2A59E)
+All of the site-design models which follow can be viewed on one page [using the following link](https://cacoo.com/diagrams/V4VlzIhRUc2eQPq5/2A59E)
 
 ### Main Site Pages
 - Home
@@ -132,6 +132,10 @@ All of the models which follow can be viewed on one page [using the following li
 
 
 ### Database Design
+
+The database model can also be viewed [at the following link](https://drawsql.app/teams/nathan-surgenor/diagrams/eastst)
+
+![Database](static/images/readme/database-diagram.png)
 
 ## Surface
 Now that this thinking had been done

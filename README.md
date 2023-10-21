@@ -8,6 +8,29 @@ This site has been designed to allow imagined customers the ability to access in
 
 ![Overview](static/images/readme/overview.png)
 
+## Table Of Contents
+- [Introduction](#eastst)
+- [Strategy](#strategy)
+  - [Milestone 1 - Initial Setup](#milestone-1---initial-setup)
+  - [Milestone 2 - Main Site Pages](#milestone-2---main-site-pages)
+  - [Milestone 3 - Booking Site Access](#milestone-3---booking-site-access)
+  - [Milestone 4 - CRUD Functionality](#milestone-4---crud-functionality)
+  - [Milestone 5 - Additional Coding](#milestone-5---additional-coding)
+- [Scope](#scope)
+- [Structure](#structure)
+- [Skeleton](#skeleton)
+  - [Wireframe Models](#wireframe-models)
+  - [Database Model](#database-model)
+- [Surface](#surface)
+  - [Design & Typography](#design--typography)
+  - [Features Implemented](#features-implemented)
+  - [Features To Be Implemented](#features-to-be-implemented)
+- [Deployment](#deployment)
+  - [Heroku Deployment](#design--typography)
+  - [Forking The Repository](#forking-the-respository)
+  - [Cloning The Repository](#cloning-the-respository)
+- [Credits & Acknowledgements](#credits--acknowledgements)
+
 ## UX Design
 
 The site is aimed at helping customers to easily access information regarding the restaurant opening/closing times, menu, and location, as well as providing a simple interface for making, viewing, updating, and deleting bookings made with the restaurant. 
@@ -131,14 +154,14 @@ All of the site-design models which follow can be viewed on one page [using the 
 ![Current](static/images/readme/wireframe-current.png)
 
 
-### Database Design
+### Database Model
 
-The database model can also be viewed [at the following link](https://drawsql.app/teams/nathan-surgenor/diagrams/eastst)
+The database model was created on the basis of django-allauth handling the creation of authorised users, while the booking model would be coded by myself. The relationship between these two tables is a one-to-many by connection of the user_id and contact_id fields i.e. a single user can create many bookings.
 
 ![Database](static/images/readme/database-diagram.png)
 
 ## Surface
-Now that this thinking had been done
+With wireframe and database models in place, actual features of the site could now be coded using HTML, Bootstrap, CSS, and JavaScript, all according to the criteria listed above.
 
 ### Design & Typography
 Colours and Fonts
@@ -216,7 +239,6 @@ Colours and Fonts
 - Email notifcation to customer of booking status update
 
 ### Technologies Used
-
 In order to code and design these featured the following technologies were utilised:
 
 - Python Modules
@@ -254,5 +276,47 @@ In order to code and design these featured the following technologies were utili
   - Used to create a timed automatic-dismisal of on-screen alerts
 
 ### Packages Used
+- Gitpod.io was used to code the site and transfer files between the editor and the repository
+- GitHub was used to store the files for this project
+- Cacoo was used to develop the wireframe models for the site deisgn
+- DrawSQL was used to create the database models and diagram
+- PowerPoint and the Windows Photo app were used to produce the image files for this document
 
-### Resources Used
+### Reference Materials
+- Django documentation was referenced frequently in order to achieve CRUD functionality and associated views
+- Django-allauth documentation was referenced frequently in order to implement its features correctly
+- Code Institute course materials and walkthrough projects provided many reference points for implementing features of this project
+- Any other resources used are directly referenced where appropriate
+
+## Deployment
+
+### Heroku Deployment
+This site was deployed to and is currently [hosted on the Heroku platform](https://east-street-bc0671035c95.herokuapp.com/). The steps for deploying to Heroku are as follows:
+
+- Navigate to [Heroku](https://heroku.com) and create an account/sign in
+- Click the new button in the top right corner
+- Select create new app
+- Enter app name
+- Select region and click create app
+- Click the resources tab and search for Heroku Postgres
+- Select hobby dev and continue
+- Go to the settings tab and then click reveal config vars
+- Add the following config vars:
+  - SECRET_KEY: (Your secret key)
+  - DATABASE_URL: (This should already exist with add on of postgres)
+  - CLOUNDINARY_URL: (cloudinary api url)
+  - PORT: 8000
+- Click the deploy tab
+- Scroll down to Connect to GitHub and sign in/authorise when prompted
+- In the search box, find the repositoy you want to deploy and click connect
+- Scroll down to Manual deploy and choose the main branch
+- Click deploy to complete the process
+
+### Forking the Respository
+
+### Cloning the Respository
+
+## Credits & Acknowledgements
+- Background image
+- README outline
+- Thanks to Graeme

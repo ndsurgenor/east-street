@@ -291,26 +291,46 @@ In order to code and design these featured the following technologies were utili
 ## Deployment
 
 ### Heroku Deployment
-This site was deployed to and is currently [hosted on the Heroku platform](https://east-street-bc0671035c95.herokuapp.com/). The steps for deploying to Heroku are as follows:
+This site was deployed to and is currently [hosted on the Heroku platform](https://east-street-bc0671035c95.herokuapp.com/). The steps for deploying to Heroku, using ElephantSQL as the database host, are as follows:
 
-- Navigate to [Heroku](https://heroku.com) and create an account/sign in
-- Click the new button in the top right corner
-- Select create new app
-- Enter app name
-- Select region and click create app
-- Click the resources tab and search for Heroku Postgres
-- Select hobby dev and continue
-- Go to the settings tab and then click reveal config vars
-- Add the following config vars:
-  - SECRET_KEY: (Your secret key)
-  - DATABASE_URL: (This should already exist with add on of postgres)
-  - CLOUNDINARY_URL: (cloudinary api url)
-  - PORT: 8000
-- Click the deploy tab
-- Scroll down to Connect to GitHub and sign in/authorise when prompted
-- In the search box, find the repositoy you want to deploy and click connect
-- Scroll down to Manual deploy and choose the main branch
-- Click deploy to complete the process
+#### ElephantSQL Setup
+  1. Navigate to [ElephantSQL](https://www.elephantsql.com/) and create an account/log in
+  2. Click 'Create New Instance' in the top right
+  3. Enter an Instance/Database name, choose a Plan (free version will suffice) then click 'Select Region'
+  4. Select a region from the dropdown, click 'Review' and then 'Create instance'
+  5. Return to the dashboard and click on the instance name
+  6. In the URL section click the copy icon to copy the database URL
+
+#### Project Settings
+  7. In the project workspace, navigate to/create a file named 'Procfile' (remember the capital 'P')
+  8. Add the code ```web: gunicorn <myapp>.wsgi``` to the file replacing ```<myapp>``` with the actual app name then save the file
+  9. Now navigate to/create a file named 'env.py'
+  10. Add ```import os``` to the top of the file then add the following code:<br>
+      - ```os.environ["DATABASE_URL"]=<myurl>``` replacing ```<myurl>``` with the URL just copied from ElephantSQL<br>
+      - ```os.environ["SECRET_KEY"]=<mykey>``` replacing ```<mykey>``` with string of your choice
+  11. Save the file
+  12. Open 'settings.py' and add the following near the top of the code:<br>
+    import os<br>
+    import dj_database_url<br>
+    if os.path.isfile('env.py'):<br>
+      import env
+  13. Further down the page, replace any current instance of the SECRET_KEY variable with ```SECRET_KEY = os.environ.get('SECRET_KEY')```
+  14. Replace the DATABASES variable with ```DATABASES = {'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))}```
+  15. Save the file then run ```python manage.py migrate``` in the terminal
+  16. Commit and push these changes to the repository
+
+#### Heroku Setup
+  17. Navigate to [Heroku](https://heroku.com) and create an account/log in
+  18. Click 'New' in the top right and select 'Create New App'
+  19. Enter an App name (must be unique), choose a region, and then click 'Create app'
+  20. Select 'Settings' in the menubar
+  21. Click 'Reveal Config Vars' and add the following:<br>
+    - DATABASE_URL: the DATABASE_URL copied from ElephantSQL<br>
+    - SECRET_KEY: The SECRET_KEY string you created<br>
+    - PORT: 8000
+  22. Click 'Deploy' in the menubar tab then 'GitHub' under 'Deployment method'
+  23. Select the repository you want to deploy and click 'Connect'
+  24. Scroll down and click 'Deploy Branch' to complete the process
 
 ### Forking the Respository
 

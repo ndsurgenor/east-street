@@ -55,7 +55,6 @@ This project was developed with 5 milestones (epics) in mind. From each of these
 - 2.4 - User Story: as a Site Visitor/User I want to view the location/address of the restaurant so that I know where the restaurant is located
 
 #### Milestone 3 - Booking Site Access
-
 - 3.1 - User Story: as a Site Admin I want to view all customer details/bookings so that I can plan for required table numbers/sizes
 - 3.2 - User Story: as a Site Visitor I want to sign up to the site so that I can make bookings
 - 3.3 - User Story: as a Site User I want to sign in to the site so that I can make/view/adjust/delete bookings
@@ -157,7 +156,7 @@ All of the site-design models which follow can be viewed on one page [using the 
 
 ### Database Model
 
-The database model was created on the basis of django-allauth handling the creation of authorised users, while the booking model would be coded by myself. The relationship between these two tables is a one-to-many by connection of the user_id and contact_id fields i.e. a single user can create many bookings.
+The database model was created on the basis of django-allauth handling the creation of authorised users, while the booking model would be coded by myself. The relationship between these two tables is a one-to-many by connection of the user_id and contact_id fields i.e. a single user can create many bookings, but each booking can only belong to one user.
 
 ![Database](static/images/readme/database-diagram.png)
 
@@ -165,11 +164,22 @@ The database model was created on the basis of django-allauth handling the creat
 With wireframe and database models in place, actual features of the site could now be coded using HTML, Bootstrap, CSS, and JavaScript, all according to the criteria listed above.
 
 ### Design & Typography
-Colours and Fonts
+  - [Libre Baskerville](https://fonts.google.com/specimen/Libre+Baskerville) was chosen as the font for h1 and h2 elements throughout the site to give a refined 'serif' look to major headings
+  - All other text on the site is styled using [Noto Sans](https://fonts.google.com/noto/specimen/Noto+Sans) to provide a minimalist contrast to the headings and be clearly legible for larger portions of text
+  - The main colours selected for the site were chosen as a variation on a monochromatic scheme thus creating a refined, modern look to reflect the style of the restaurant. Specifically these colours and their hexdecimal codes are:
+    - Eerie Black #1B1B1B
+    - Dark Slate Grey #2F4F4F
+    - Dim Grey #696969
+    - Gainsboro #DCDCDC
+    - Ghost White #F8F8FF    
+  - The background image and landing page image were selected from the [Pexels](https://www.pexels.com/) library ([specific credit below](#credits--acknowledgements)) and chosen to reflect elements of the colour scheme
+
+    ![Colours](static/images/readme/colour-board.png)
 
 ### Features implemented
 
 #### Brand & Favicon
+  - The 
 
 #### Navbar
 > &bull; A navbar providing clear links to menu and location info  
@@ -238,6 +248,9 @@ Colours and Fonts
 - Blocked out times associated with dates
 - Email notifcation to admin of customer made booking
 - Email notifcation to customer of booking status update
+- Ability to add menu items
+- Ability to input closing times, dates, group numbers
+- Only status can be changed by staff to avoid accidentally changing bookings
 
 ### Technology & Resources
 
@@ -259,35 +272,37 @@ In order to code and design these featured the following technologies were utili
   - requests-oauthlib==1.3.1
   - sqlparse==0.4.4
   - urllib3==1.26.15
-- Django
+- [Django](https://www.djangoproject.com/)
   - Used as the main Python framework in the development of this project
   - django-allauth is employed as the means of managing user accounts used for the booking system
   - Jinga/Django templating is used for queries to the database to insert data from it onto the site pages 
-- Heroku
+- [Heroku](https://heroku.com)
   - Used as the cloud-based deployement platform for this project
-- ElephantSQL
+- [ElephantSQL](https://elephantsql.com)
   - Used as the database hosting service
 - HTML
   - Used as the base coding language for templates and site content
-- Bootstrap
+- [Bootstrap](https://getbootstrap.com/)
   - Used as the main means of design layout and formatting throghout the site
 - CSS
   - Used to modify Bootstrap behaviour where required and create additional custom stylings
-
 - JavaScript
   - Used to create a timed automatic-dismisal of on-screen alerts
 
 #### Packages Used
-- Gitpod.io was used to code the site and transfer files between the editor and the repository
-- GitHub was used to store the files for this project
-- Cacoo was used to develop the wireframe models for the site deisgn
-- DrawSQL was used to create the database models and diagram
-- PowerPoint and the Windows Photo app were used to produce the image files for this document
+- [Gitpod](https://gitpod.io) was used to code the site and transfer files between the editor and the repository
+- [GitHub](https://github.com) was used to store the files for this project
+- [Cacoo](https://cacoo.com) was used to develop the wireframe models for the site deisgn
+- [DrawSQL](https://drawsql.app) was used to create the database models and diagram
+- [Google Maps](https://www.google.com/maps) was used to create the specific map for the Location page
+- [Google Fonts](https://fonts.google.com/) was used to style the text throughout the site
+- [Coolors](https://coolors.co/) was used to help create the colour scheme
+- PowerPoint, MS Paint and the Windows Photo app were used to produce the image files for this document
 
 #### Reference Materials
-- Django documentation was referenced frequently in order to achieve CRUD functionality and associated views
-- Django-allauth documentation was referenced frequently in order to implement its features correctly
-- Code Institute course materials and walkthrough projects provided many reference points for implementing features of this project
+- [Django documentation](https://docs.djangoproject.com/en/4.2/ref/class-based-views/generic-editing/) was referenced frequently in order to achieve CRUD functionality and associated views
+- [Django-allauth documentation](https://docs.allauth.org/en/latest/) was referenced frequently in order to implement its features correctly
+- [Code Institute](https://codeinstitute.net/) course materials and walkthrough projects provided many reference points for implementing features of this project
 - Documentation for similar projects by [MattBCoding](https://github.com/MattBCoding/pp4-the-pantry) and [Gareth-McGirr](https://github.com/Gareth-McGirr/Portfolio-Project-4-SizzleAndSteak) was referenced frequently when creating the READ.md and TESTING.md files
 - Any other resources used are directly referenced where appropriate
 

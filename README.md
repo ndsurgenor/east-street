@@ -25,8 +25,9 @@ This site has been designed to allow imagined customers the ability to access in
   - [Design & Typography](#design--typography)
   - [Features Implemented](#features-implemented)
   - [Features To Be Implemented](#features-to-be-implemented)
+  - [Technology & Resources](#technology--resources)
 - [Deployment](#deployment)
-  - [Heroku Deployment](#design--typography)
+  - [Heroku Deployment](#heroku-deployment)
   - [Forking The Repository](#forking-the-respository)
   - [Cloning The Repository](#cloning-the-respository)
 - [Credits & Acknowledgements](#credits--acknowledgements)
@@ -238,7 +239,9 @@ Colours and Fonts
 - Email notifcation to admin of customer made booking
 - Email notifcation to customer of booking status update
 
-### Technologies Used
+### Technology & Resources
+
+#### Technologies Used
 In order to code and design these featured the following technologies were utilised:
 
 - Python Modules
@@ -270,22 +273,22 @@ In order to code and design these featured the following technologies were utili
   - Used as the main means of design layout and formatting throghout the site
 - CSS
   - Used to modify Bootstrap behaviour where required and create additional custom stylings
-- FontAwesome
-  - Used for the brand logo, social media icons, and icons on the location page
+
 - JavaScript
   - Used to create a timed automatic-dismisal of on-screen alerts
 
-### Packages Used
+#### Packages Used
 - Gitpod.io was used to code the site and transfer files between the editor and the repository
 - GitHub was used to store the files for this project
 - Cacoo was used to develop the wireframe models for the site deisgn
 - DrawSQL was used to create the database models and diagram
 - PowerPoint and the Windows Photo app were used to produce the image files for this document
 
-### Reference Materials
+#### Reference Materials
 - Django documentation was referenced frequently in order to achieve CRUD functionality and associated views
 - Django-allauth documentation was referenced frequently in order to implement its features correctly
 - Code Institute course materials and walkthrough projects provided many reference points for implementing features of this project
+- Documentation for similar projects by [MattBCoding](https://github.com/MattBCoding/pp4-the-pantry) and [Gareth-McGirr](https://github.com/Gareth-McGirr/Portfolio-Project-4-SizzleAndSteak) was referenced frequently when creating the READ.md and TESTING.md files
 - Any other resources used are directly referenced where appropriate
 
 ## Deployment
@@ -301,42 +304,71 @@ This site was deployed to and is currently [hosted on the Heroku platform](https
   5. Return to the dashboard and click on the instance name
   6. In the URL section click the copy icon to copy the database URL
 
-#### Project Settings
+#### Django Project Settings
   7. In the project workspace, navigate to/create a file named 'Procfile' (remember the capital 'P')
-  8. Add the code ```web: gunicorn <myapp>.wsgi``` to the file replacing ```<myapp>``` with the actual app name then save the file
+  8. Add the following code replacing ```<myapp>``` with the actual app name then save the file:
+      ``` python
+      web: gunicorn <myapp>.wsgi
+      ```
   9. Now navigate to/create a file named 'env.py'
-  10. Add ```import os``` to the top of the file then add the following code:<br>
-      - ```os.environ["DATABASE_URL"]=<myurl>``` replacing ```<myurl>``` with the URL just copied from ElephantSQL<br>
-      - ```os.environ["SECRET_KEY"]=<mykey>``` replacing ```<mykey>``` with string of your choice
-  11. Save the file
-  12. Open 'settings.py' and add the following near the top of the code:<br>
-    import os<br>
-    import dj_database_url<br>
-    if os.path.isfile('env.py'):<br>
-      import env
-  13. Further down the page, replace any current instance of the SECRET_KEY variable with ```SECRET_KEY = os.environ.get('SECRET_KEY')```
-  14. Replace the DATABASES variable with ```DATABASES = {'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))}```
-  15. Save the file then run ```python manage.py migrate``` in the terminal
-  16. Commit and push these changes to the repository
+  10. Add the following code, replacing ```<myurl>``` with the URL just copied from ElephantSQL and ```<mykey>``` with a string of your choice then save the file:
+      ``` python
+      import os
+
+      os.environ["DATABASE_URL"]=<myurl>
+      os.environ["SECRET_KEY"]=<mykey>
+      ```
+  11. Open 'settings.py' and add the following near the top of the code:
+      ```python
+      import os
+      import dj_database_url
+      if os.path.isfile('env.py'):
+        import env
+      ```
+  12. Further down the page, replace any current instance of the SECRET_KEY variable with:
+      ``` python
+      SECRET_KEY = os.environ.get('SECRET_KEY')
+      ```
+  13. Replace the DATABASES variable with
+      ```python
+      DATABASES = {
+        'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
+        }
+      ```
+  14. Save the file then run ```python manage.py migrate``` in the terminal
+  15. Commit and push these changes to the repository
 
 #### Heroku Setup
-  17. Navigate to [Heroku](https://heroku.com) and create an account/log in
-  18. Click 'New' in the top right and select 'Create New App'
-  19. Enter an App name (must be unique), choose a region, and then click 'Create app'
-  20. Select 'Settings' in the menubar
-  21. Click 'Reveal Config Vars' and add the following:<br>
+  16. Navigate to [Heroku](https://heroku.com) and create an account/log in
+  17. Click 'New' in the top right and select 'Create New App'
+  18. Enter an App name (must be unique), choose a region, and then click 'Create app'
+  19. Select 'Settings' in the menubar
+  20. Click 'Reveal Config Vars' and add the following:<br>
     - DATABASE_URL: the DATABASE_URL copied from ElephantSQL<br>
     - SECRET_KEY: The SECRET_KEY string you created<br>
     - PORT: 8000
-  22. Click 'Deploy' in the menubar tab then 'GitHub' under 'Deployment method'
-  23. Select the repository you want to deploy and click 'Connect'
-  24. Scroll down and click 'Deploy Branch' to complete the process
+  21. Click 'Deploy' in the menubar tab then 'GitHub' under 'Deployment method'
+  22. Select the repository you want to deploy and click 'Connect'
+  23. Scroll down and click 'Deploy Branch' to complete the process
 
 ### Forking the Respository
+1. Login to/create your [GitHub](https://github.com) account
+2. Navigate to the EastSt. GitHub Repository: https://github.com/ndsurgenor/east-street
+3. Towards the top right, under the main banner, click 'Fork'
+4. Adjust the form fields if desired, then click 'Create fork' to finish
 
-### Cloning the Respository
+### Cloning the Respository/Running Locally
+1. Login to/create your [GitHub](https://github.com) account
+2. Navigate to the EastSt. GitHub Repository: https://github.com/ndsurgenor/east-street
+3. Click the '<> Code' dropdown button and ensure 'HTTPS' is selected
+4. Click the copy icon (two overlapped squares) beside the repository URL
+5. Open your local IDE and create a new project, ensuring git is installed
+6. Run ```git clone copied-git-url``` in the terminal to finish
 
 ## Credits & Acknowledgements
-- Background image
-- README outline
-- Thanks to Graeme
+- Background image by [Lisa Fotios](https://www.pexels.com/photo/restaurant-interior-776538/)
+- Landing page image by [Analogicus](https://www.pexels.com/photo/wooden-welcome-signage-on-green-wooden-door-5395777/)
+- Brand logo, social media, and location page icons by [FontAwesome](https://fontawesome.com)
+- Menu text adapted from dinner menu by [Yugo Belfast](https://yugobelfast.com/wp-content/uploads/2022/07/Yugo_Dinner.pdf)
+- README.md and TESTING.md structure/outline adapted from documentation by [MattBCoding](https://github.com/MattBCoding) and [Gareth-McGirr](https://github.com/Gareth-McGirr)
+- Many thanks to my Code Institute tutor [Graeme Taylor](https://github.com/G-Taylor) for his invaluable guidance and support in building this project

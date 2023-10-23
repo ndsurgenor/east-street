@@ -179,36 +179,52 @@ With wireframe and database models in place, actual features of the site could n
 ### Features implemented
 
 #### Brand & Favicon
-  - The 
+  - The
+
+![Brand](static/images/readme/features-brand.png)
 
 #### Navbar
 > &bull; A navbar providing clear links to menu and location info  
 &bull; A highlighted link to the booking area in the navbar
 
+![Navbar](static/images/readme/features-navbar.png)
+
 #### Footer
 > &bull; A footer providing summarised info and social links
+
+![Footer](static/images/readme/features-footer.png)
 
 #### Home Page
 > &bull; A home page displaying opening times of the restaurant  
 &bull; A home page also displaying a quick link to the booking area of the site  
 &bull; Elements that display/resize/scroll when viewed on different sized devices
 
+![Home](static/images/readme/features-home.png)
+
 #### Menu Page
 > &bull; A static page showing the food and prices within the restaurant  
 &bull; Elements that display/resize/scroll when viewed on different sized devices
+
+![Menu](static/images/readme/features-menu.png)
 
 #### Location Page
 > &bull; A static page showing the map location and transport options for the restaurant  
 &bull; Elements that display/resize/scroll when viewed on different sized devices
 
+![Location](static/images/readme/features-location.png)
+
 #### Booking Admin
 > &bull; An admin area only allowing access to the site admin/superuser  
 &bull; A link to the database to clearly display the details of each booking i.e. entry in the database
+
+![Admin](static/images/readme/features-admin.png)
 
 #### Sign Up/In/Out Forms
 > &bull; A sign-up form requiring username, email and password details  
 &bull; A sign-in form requiring username, email and password details  
 &bull; A sign-out form requiring username, email and password details
+
+![Sign](static/images/readme/features-sign.png)
 
 #### Booking Form
 > &bull; A booking form with date, time, and group size fields which saves those details to the database  
@@ -217,15 +233,21 @@ With wireframe and database models in place, actual features of the site could n
 &bull; The option to only select between the group size of 1 and 12 inclusive on the booking form  
 &bull; A navbar link to the form to allow access from a different area of the booking site
 
+![Form](static/images/readme/features-form.png)
+
 #### User Booking List
 > &bull; A list of bookings praticular to that user which displays automatically after they have submitted a valid booking  
 &bull; A navbar link to the list of bookings to allow access from a different area of the booking site
+
+![List](static/images/readme/features-list.png)
 
 #### Booking Update Capabilities
 > &bull; A button beside each entry in the booking list to allow updating of its details  
 &bull; The displaying of the current details within the booking form when clicking said button  
 &bull; The option of returning to the list without making changes  
 &bull; The updating of these details to the database when the user changes values and clicks 'Confirm'
+
+![Update](static/images/readme/features-update.png)
 
 #### Booking Deletion Capabilities
 
@@ -234,14 +256,20 @@ With wireframe and database models in place, actual features of the site could n
 &bull; The option of returning to the list without making changes  
 &bull; The deletion of the booking on the database when the user clicks 'Confirm'
 
+![Delete](static/images/readme/features-delete.png)
+
 #### Booking Overview for Admin
 > &bull; A list of all bookings made in the admin area of the site  
 &bull; A dropdown option for each individual booking allowing for selection of 'Confirmed' or 'Cancelled'
+
+![Overview](static/images/readme/features-admin-overview.png)
 
 #### Error Pages
 > &bull; A 403 Error page which provides a link back to a valid area of the site  
 &bull; A 404 Error page which provides a link back to a valid area of the site  
 &bull; A 500 Error page which provides a link back to a valid area of the site
+
+![Errors](static/images/readme/features-errors.png)
 
 ### Features to be implemented
 - Blocked out dates on calendar

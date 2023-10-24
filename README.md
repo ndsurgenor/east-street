@@ -34,7 +34,9 @@ This site has been designed to allow imagined customers the ability to access in
 
 ## UX Design
 
-The site is aimed at helping customers to easily access information regarding the restaurant opening/closing times, menu, and location, as well as providing a simple interface for making, viewing, updating, and deleting bookings made with the restaurant. 
+The site is aimed at helping customers to easily access information regarding the restaurant opening/closing times, menu, and location, as well as providing a simple interface for making, viewing, updating, and deleting bookings made with the restaurant.
+
+The site is also designed with the restaurant manager/site administrator in mind, providing an admin-only area accessible via https://east-street-bc0671035c95.herokuapp.com/admin
 
 ## Strategy
 
@@ -109,8 +111,8 @@ Main Site|[2.2](#milestone-2---main-site-pages "As a Site Visitor/User I want to
 Main Site|[2.3](#milestone-2---main-site-pages "As a Site Visitor/User I want to view the restaurant menu so that I can see what food is available before booking")|User Story|<ul><li>A static page showing the food and prices within the restaurant</li><li>Elements that display/resize/scroll when viewed on different sized devices</li></ul>
 Main Site|[2.4](#milestone-2---main-site-pages "As a Site Visitor/User I want to view the location/address of the restaurant so that I know where the restaurant is located")|User Story|<ul><li>A static page showing the map location and transport options for the restaurant</li><li>Elements that display/resize/scroll when viewed on different sized devices</li></ul>
 Booking Site |[3.1](#milestone-3---booking-site-access "As a Site Admin I want to view all customer details/bookings so that I can plan for required table numbers/sizes")|User Story|<ul><li>An admin area only allowing access to the site admin/superuser</li><li>A link to the database to clearly display the details of each booking i.e. entry in the database</li></ul>
-Booking Site|[3.2](#milestone-3---booking-site-access "As a Site Visitor I want to sign up to the site so that I can make bookings")|User Story|<ul><li>A sign-up form requiring username, email and password details</li></ul>
-Booking Site|[3.3](#milestone-3---booking-site-access "As a Site User I want to sign in to the site so that I can make/view/adjust/delete bookings")|User Story|<ul><li>A sign-in form requiring username, email and password details</li></ul>
+Booking Site|[3.2](#milestone-3---booking-site-access "As a Site Visitor I want to sign up to the site so that I can make bookings")|User Story|<ul><li>A sign-up form requiring username and password details</li></ul>
+Booking Site|[3.3](#milestone-3---booking-site-access "As a Site User I want to sign in to the site so that I can make/view/adjust/delete bookings")|User Story|<ul><li>A sign-in form requiring username and password details</li></ul>
 Booking Site|[3.4](#milestone-3---booking-site-access "As a Site User I want to be able to log out from the booking area so that no-one can change my details inadvertently or otherwise")|User Story|<ul><li>A sign-out form requiring the user to confirm that they wish to sign out</li></ul>
 CRUD|[4.1](#milestone-4---crud-functionality "As a Site User I want to make an online booking so that I can secure a table for a particular date, time & group size")|User Story|<ul><li>A booking form with date, time, and group size fields which saves those details to the database</li><li>A navbar link to the form to allow access from a different area of the booking site</li></ul>
 CRUD|[4.2](#milestone-4---crud-functionality "As a Site User I want to view my booking(s) so that I can see if it has been recorded correctly and remind myself of its details")|User Story|<ul><li>A list of bookings particular to that user which displays automatically after they have submitted a valid booking</li><li>A navbar link to the list of bookings to allow access from a different area of the booking site</li></ul>
@@ -174,7 +176,7 @@ With wireframe and database models in place, actual features of the site could n
     - Ghost White #F8F8FF
   - This palette was used to create the dark and light themes for the two distinct sections of the site i.e. the main/info section (darker theme) and the authorised-access only section for bookings (lighter theme). In each section the footer has a background colour of dark slate grey to provide continuity across the site   
   - The background image and landing page image were selected from the [Pexels](https://www.pexels.com/) library ([specific credit below](#credits--acknowledgements)) and chosen to reflect elements of the colour scheme
-  - The site logo was chosen as an abstract representation of a steamer basket, a cooking device used in Asian cuisine, as well as somewhat imitating the light fixtures shown in the background image used throughout the site 
+  - The site logo was chosen as an abstract representation of a steamer basket, a cooking device used in Asian cuisine, as well as somewhat imitating the light fixtures shown in the background image used throughout the site. This logo is also used as the favicon for the site. 
 
   ![Design](static/images/readme/design-board.png)
 
@@ -209,7 +211,11 @@ Each of the following implementations was added in response to the acceptance cr
 
 ![Home](static/images/readme/features-home.png)
 
-- 
+- The 'Open' image provides a clear welcome to users of the site
+- The restaurant ethos, opening times and phone number are clearly displayed alongside this
+- An additional 'Book Now' button is provided to guide users who may have arrived at the site for that single purpose
+- Image and ethos hidden on smaller screens to preserve well-formatted layout and keep opening times clearly displayed
+- Additional 'Menu' button appears on smaller screens for easier navigation to menu page 
 
 #### Menu Page
 > &bull; A static page showing the food and prices within the restaurant  
@@ -217,11 +223,19 @@ Each of the following implementations was added in response to the acceptance cr
 
 ![Menu](static/images/readme/features-menu.png)
 
+- Food and prices clearly laid out under different headings
+- Layout switches from two to one-column design at smaller screen sizes
+- When necessary, page scrolls to display text hidden by footer
+
 #### Location Page
 > &bull; A static page showing the map location and transport options for the restaurant  
 &bull; Elements that display/resize/scroll when viewed on different sized devices
 
 ![Location](static/images/readme/features-location.png)
+
+- Restaurant location clearly indicated at centre of map
+- Info regarding local parking and bus options given below map with appropriate icons
+- Map and transport info resizes to preserve well-formatted layout at smaller screen sizes
 
 #### Booking Admin
 > &bull; An admin area only allowing access to the site admin/superuser  
@@ -229,12 +243,25 @@ Each of the following implementations was added in response to the acceptance cr
 
 ![Admin](static/images/readme/features-admin.png)
 
+- An admin area accessible via the [following link](https://east-street-bc0671035c95.herokuapp.com/admin) which is only accessible by typing the address i.e. not direct link is provided to users of the site
+- Username and password details must be entered to gain access and will only admit those designated as administrators
+- A link named 'Bookings' provided in the lefthand menu allowing the admin to view all entries on the database
+
 #### Sign Up/In/Out Forms
-> &bull; A sign-up form requiring username, email and password details  
-&bull; A sign-in form requiring username, email and password details  
-&bull; A sign-out form requiring username, email and password details
+> &bull; A sign-up form requiring username and password details  
+&bull; A sign-in form requiring username and password details  
+&bull; A sign-out form requiring the user to confirm that they wish to sign out
 
 ![Sign](static/images/readme/features-sign.png)
+
+- Sign-in form linked directly to 'Bookings' link to display if user is not already logged in
+- Text and link on sign-in form enables sign up if user is not already registered
+- Sign-in form requires username and password in order to access booking area
+- Sign-up form requires confirmation of password in case user types incorrectly in the first instance
+- Text and link on sign-up form enables sign in if user is already registered
+- Sign-out form linked directly to 'Logout' link and brand link in bookings section
+- 'Sign Out' button returns the user to the home page with confirmation alert if sucessful
+- 'Cancel' button keeps the user signed in and returns them to the 'New Booking' page 
 
 #### Booking Form
 > &bull; A booking form with date, time, and group size fields which saves those details to the database  
@@ -244,6 +271,8 @@ Each of the following implementations was added in response to the acceptance cr
 &bull; A navbar link to the form to allow access from a different area of the booking site
 
 ![Form](static/images/readme/features-form.png)
+
+-
 
 #### User Booking List
 > &bull; A list of bookings praticular to that user which displays automatically after they have submitted a valid booking  
@@ -273,6 +302,8 @@ Each of the following implementations was added in response to the acceptance cr
 &bull; A dropdown option for each individual booking allowing for selection of 'Confirmed' or 'Cancelled'
 
 ![Overview](static/images/readme/features-admin-overview.png)
+
+- Booking names formatted as ```<date>, <time> - <username> x<group size>```
 
 #### Error Pages
 > &bull; A 403 Error page which provides a link back to a valid area of the site  
@@ -419,8 +450,8 @@ This site was deployed to and is currently [hosted on the Heroku platform](https
 6. Run ```git clone copied-git-url``` in the terminal to finish
 
 ## Credits & Acknowledgements
-- Background image by [Lisa Fotios](https://www.pexels.com/photo/restaurant-interior-776538/)
-- Landing page image by [Analogicus](https://www.pexels.com/photo/wooden-welcome-signage-on-green-wooden-door-5395777/)
+- Background restaurant image by [Lisa Fotios](https://www.pexels.com/photo/restaurant-interior-776538/)
+- Landing page 'Open' image by [Analogicus](https://www.pexels.com/photo/wooden-welcome-signage-on-green-wooden-door-5395777/)
 - Brand logo, social media, and location page icons by [FontAwesome](https://fontawesome.com)
 - Menu text adapted from dinner menu by [Yugo Belfast](https://yugobelfast.com/wp-content/uploads/2022/07/Yugo_Dinner.pdf)
 - README.md and TESTING.md structure/outline adapted from documentation by [MattBCoding](https://github.com/MattBCoding) and [Gareth-McGirr](https://github.com/Gareth-McGirr)

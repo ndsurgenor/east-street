@@ -26,6 +26,7 @@ This site has been designed to allow imagined customers the ability to access in
   - [Features Implemented](#features-implemented)
   - [Features To Be Implemented](#features-to-be-implemented)
   - [Technology & Resources](#technology--resources)
+- [Testing](#testing)
 - [Deployment](#deployment)
   - [Heroku Deployment](#heroku-deployment)
   - [Forking The Repository](#forking-the-respository)
@@ -245,7 +246,7 @@ Each of the following implementations was added in response to the acceptance cr
 
 - An admin area accessible via the [following link](https://east-street-bc0671035c95.herokuapp.com/admin) which is only accessible by typing the address i.e. not direct link is provided to users of the site
 - Username and password details must be entered to gain access and will only admit those designated as administrators
-- A link named 'Bookings' provided in the lefthand menu allowing the admin to view all entries on the database
+- A link named 'Bookings' provided in the lefthand menu allows the admin to view all entries on the database
 
 #### Sign Up/In/Out Forms
 > &bull; A sign-up form requiring username and password details  
@@ -272,13 +273,26 @@ Each of the following implementations was added in response to the acceptance cr
 
 ![Form](static/images/readme/features-form.png)
 
--
+- The booking form is displayed as the initial page when the user signs into to this section of the site
+- This form can also be accessed using the 'New Booking' link in the navbar
+- The booking form displays the signed-in username and does not allow for this to be changed
+- The booking form also displays text advising user of days which are unavailable for booking
+- Attempting to book on today's date or earlier displays the message "A booking cannot be made any earlier than tomorrow"
+- Attempting to book on a Monday/Tuesday displays the message "Sorry, the restaurant is closed on a Monday/Tuesday"
+- Times are displayed as a dropdown selection in 15 minute intervals, only allowing for times when the restaurant is open
+- Group size is also displayed as a dropdown menu only allowing for groups between 1-12 persons
 
 #### User Booking List
-> &bull; A list of bookings praticular to that user which displays automatically after they have submitted a valid booking  
+> &bull; A list of bookings particular to that user which displays automatically after they have submitted a valid booking  
 &bull; A navbar link to the list of bookings to allow access from a different area of the booking site
 
 ![List](static/images/readme/features-list.png)
+
+- The booking list will display after a user has made a successful booking
+- This user-specific booking list can also be accessed via the 'Current Bookings' link in the navbar
+- Only bookings which the signed-in user has made will be displayed in the table
+- The booking list will show the status of the booking alongside 'Update ad 'Delete' buttons, if appropriate, to allow for full CRUD functionality
+- Date format and layout will adjust for smaller screen sizes in order to keep the list well organised
 
 #### Booking Update Capabilities
 > &bull; A button beside each entry in the booking list to allow updating of its details  
@@ -287,6 +301,12 @@ Each of the following implementations was added in response to the acceptance cr
 &bull; The updating of these details to the database when the user changes values and clicks 'Confirm'
 
 ![Update](static/images/readme/features-update.png)
+
+- A button marked 'Update' appears beside all bookings marked as either 'Pending' or 'Confirmed'
+- The 'Update' button will be hidden for any entry whose status the restaturant has set to 'Cancelled'
+- Clicking this button takes the user to an adjusted version of the 'New Booking' page
+- This adjusted form provides a warning that confirmed bookings will be reset to 'Pending' if updated
+- Users can either click 'Confirm & Update' to make changes or 'Return' to return to the booking list with details unchanged
 
 #### Booking Deletion Capabilities
 
@@ -297,13 +317,21 @@ Each of the following implementations was added in response to the acceptance cr
 
 ![Delete](static/images/readme/features-delete.png)
 
+- A button marked 'Delete' appears beside all bookings in the booking list
+- Clicking this button takes the user to the 'Delete a Booking' confirmation page
+- This form provides a warning that deleting a booking cannot be undone alongside details of the booking to be deleted
+- Users can either click 'Confirm & Delete' to delete the booking or 'Return' to return to the booking list without deletion
+
 #### Booking Overview for Admin
 > &bull; A list of all bookings made in the admin area of the site  
 &bull; A dropdown option for each individual booking allowing for selection of 'Confirmed' or 'Cancelled'
 
 ![Overview](static/images/readme/features-admin-overview.png)
 
-- Booking names formatted as ```<date>, <time> - <username> x<group size>```
+- A link named 'Bookings' provided in the lefthand menu allows the admin to view all entries on the database
+- Booking names formatted as ```<date>, <time> - <username> x<group size>``` and displayed in date order for ease of reading/understanding
+- Clicking a booking name will take the admin to its detailed view where the status can be updated and saved
+- These changes are fed back to the used via their booking list on the regular site
 
 #### Error Pages
 > &bull; A 403 Error page which provides a link back to a valid area of the site  
@@ -311,6 +339,10 @@ Each of the following implementations was added in response to the acceptance cr
 &bull; A 500 Error page which provides a link back to a valid area of the site
 
 ![Errors](static/images/readme/features-errors.png)
+
+- The 403 page displays
+- The 404 page displays
+- The 500 page displays
 
 ### Features to be implemented
 - Blocked out dates on calendar
@@ -366,6 +398,7 @@ In order to code and design these featured the following technologies were utili
 - [Google Maps](https://www.google.com/maps) was used to create the specific map for the Location page
 - [Google Fonts](https://fonts.google.com/) was used to style the text throughout the site
 - [Coolors](https://coolors.co/) was used to help create the colour scheme
+- [Markdown Table Generator](https://jakebathman.github.io/Markdown-Table-Generator/) was used to create tables for this document
 - PowerPoint, MS Paint and the Windows Photo app were used to produce the image files for this document
 
 #### Reference Materials
@@ -374,6 +407,10 @@ In order to code and design these featured the following technologies were utili
 - [Code Institute](https://codeinstitute.net/) course materials and walkthrough projects provided many reference points for implementing features of this project
 - Documentation for similar projects by [MattBCoding](https://github.com/MattBCoding/pp4-the-pantry) and [Gareth-McGirr](https://github.com/Gareth-McGirr/Portfolio-Project-4-SizzleAndSteak) was referenced frequently when creating the READ.md and TESTING.md files
 - Any other resources used are directly referenced where appropriate
+
+## Testing
+
+Testing and reports undertaken for this project can be viewed in the [TESTING.md file](TESTING.md) separate to this document.
 
 ## Deployment
 

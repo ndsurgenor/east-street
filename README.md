@@ -171,28 +171,36 @@ With wireframe and database models in place, actual features of the site could n
     - Dark Slate Grey #2F4F4F
     - Dim Grey #696969
     - Gainsboro #DCDCDC
-    - Ghost White #F8F8FF    
+    - Ghost White #F8F8FF
+  - This palette was used to create the dark and light themes for the two distinct sections of the site i.e. the main/info section (darker theme) and the authorised-access only section for bookings (lighter theme). In each section the footer has a background colour of dark slate grey to provide continuity across the site   
   - The background image and landing page image were selected from the [Pexels](https://www.pexels.com/) library ([specific credit below](#credits--acknowledgements)) and chosen to reflect elements of the colour scheme
+  - The site logo was chosen as an abstract representation of a steamer basket, a cooking device used in Asian cuisine, as well as somewhat imitating the light fixtures shown in the background image used throughout the site 
 
-    ![Colours](static/images/readme/colour-board.png)
+  ![Design](static/images/readme/design-board.png)
 
-### Features implemented
+### Features Implemented
 
-#### Brand & Favicon
-  - The
+Each of the following implementations was added in response to the acceptance criteria above, specific details of which are provided below each feature heading for easy reference.
 
-![Brand](static/images/readme/features-brand.png)
-
-#### Navbar
+#### Navbar & Toggler
 > &bull; A navbar providing clear links to menu and location info  
-&bull; A highlighted link to the booking area in the navbar
+&bull; A highlighted link to the booking area page in the navbar
 
 ![Navbar](static/images/readme/features-navbar.png)
+
+- Links alter depending on which section of the site the user is accessing
+- Links provided to each page of the site for easy navigation
+- Navbar remains fixed to top of screen for constant access to links, even when scrolling
+- Navbar toggler appears at screen sizes of 746px or less to preserve well-formatted layout
+- Booking link given button formatting to stand out to users
 
 #### Footer
 > &bull; A footer providing summarised info and social links
 
 ![Footer](static/images/readme/features-footer.png)
+
+- Footer remains fixed to bottom of screen for constant display of info and social links
+- Footer resizes and hides certain details at different screen sizes to preserve well-formatted layout
 
 #### Home Page
 > &bull; A home page displaying opening times of the restaurant  
@@ -200,6 +208,8 @@ With wireframe and database models in place, actual features of the site could n
 &bull; Elements that display/resize/scroll when viewed on different sized devices
 
 ![Home](static/images/readme/features-home.png)
+
+- 
 
 #### Menu Page
 > &bull; A static page showing the food and prices within the restaurant  

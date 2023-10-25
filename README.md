@@ -159,7 +159,7 @@ All of the site-design models which follow can be viewed on one page [using the 
 
 ### Database Model
 
-The database model was created on the basis of django-allauth handling the creation of authorised users, while the booking model would be coded by myself. The relationship between these two tables is a one-to-many by connection of the user_id and contact_id fields i.e. a single user can create many bookings, but each booking can only belong to one user.
+The [database model](https://dbdiagram.io/d/EastSt-65391438ffbf5169f06e8e51) was designed on the basis of django-allauth handling data for authorised users, while the booking model would be coded by myself. The diagram below shows the relationship of various tables within the project, but central to this is the relationship between the 'auth_user' and 'booking_sys_booking' tables; specifically, a one-to-many by connection of the user_id and contact_id fields i.e. a single user can create many bookings, but each booking can only belong to one user.
 
 ![Database](static/images/readme/database-diagram.png)
 
@@ -394,7 +394,7 @@ In order to code and design these featured the following technologies were utili
 - [Gitpod](https://gitpod.io) was used to code the site and transfer files between the editor and the repository
 - [GitHub](https://github.com) was used to store the files for this project
 - [Cacoo](https://cacoo.com) was used to develop the wireframe models for the site deisgn
-- [DrawSQL](https://drawsql.app) was used to create the database models and diagram
+- [DBDiagram](https://dbdiagram.io/) was used to create the database diagram
 - [Google Maps](https://www.google.com/maps) was used to create the specific map for the Location page
 - [Google Fonts](https://fonts.google.com/) was used to style the text throughout the site
 - [Coolors](https://coolors.co/) was used to help create the colour scheme

@@ -1,10 +1,11 @@
 # EastSt.
 
-East Street Restaurant (stylised as 'EastSt.') is a fictional establishment located on 23A East Street, Newtonwards, Northern Ireland.
+East Street Restaurant (stylised as 'EastSt.') is a fictional establishment located on 23A East Street, Newtownards, Northern Ireland.
 
 This site has been designed to allow imagined customers the ability to access info regarding and place bookings with the restaurant, as well featuring an administrative area allowing restaurant managers to oversee the bookings of all users so that they can properly run the restaurant.
 
-[LIVE LINK TO SITE](https://east-street-bc0671035c95.herokuapp.com/) (Note: to open links in this document in a new tab, hold CTRL + Click)
+[LIVE LINK TO SITE](https://east-street-bc0671035c95.herokuapp.com/)<br>
+_Note: to open links in a new tab, hold CTRL + Click_
 
 ![Overview](static/images/readme/overview.png)
 
@@ -42,7 +43,7 @@ The site is also designed with the restaurant manager/site administrator in mind
 ## Strategy
 
 ### Milestones & User Stories
-This project was developed with 5 milestones (epics) in mind. From each of these milestones a number of dev goals and user stories were created, each one given a prioritisation using the MoSCoW method. The detail of these milestones, goals and stories is outlined below; further detail regarding sprints, MoSCoW desgination and acceptance criteria (covered under Structure) are included on the [GitHub Projects Kanban Board](https://github.com/users/ndsurgenor/projects/5) created for the project.
+This project was developed with 5 milestones (epics) in mind. From each of these milestones a number of dev goals and user stories were created, each one given a prioritisation using the MoSCoW method. The detail of these milestones, goals and stories is outlined below; further detail regarding sprints, MoSCoW designation and acceptance criteria (covered under Structure) are included on the [GitHub Projects Kanban Board](https://github.com/users/ndsurgenor/projects/5) created for the project.
 
 ![Kanban](static/images/readme/kanban.png)
 
@@ -79,7 +80,7 @@ This project was developed with 5 milestones (epics) in mind. From each of these
 
 Using these milestones, goals, and stories to guide my thinking, the following was planned as the Scope of the project:
 
-- Responsive Design allowing full functionality and appropraite resizing on all devices from 360px upwards
+- Responsive Design allowing full functionality and appropriate resizing on all devices from 360px upwards
 - Use of Toggle-menu and hidden elements (e.g. home page image) when site is viewed on tablet/mobile devices
 - A main section of the site containing all restaurant information (non-restricted access):
   - Opening Times
@@ -97,12 +98,12 @@ Using these milestones, goals, and stories to guide my thinking, the following w
 
 ## Structure
 
-With Strategy and Scope now in place, focus shifted to setting acceptance criteria for each of the above, thereby informing exactly what features to include as part of the project. These acceptance criteria were added to each Dev Goal and User Story on the afforementioned Kanban board to act as an ensurance that task would be completed to the fulless extent needed.
+With Strategy and Scope now in place, focus shifted to setting acceptance criteria for each of the above, thereby informing exactly what features to include as part of the project. These acceptance criteria were added to each Dev Goal and User Story on the aforementioned Kanban board to act as an insurance that task would be completed to the fullest extent needed.
 
 ### Features
-Hovering over a Refernce number below will display a desciption of that Dev Goal/User Story while clicking the link will return you to the relevant Milestone section of this document.
+Hovering over a reference (Ref) number below will display a description of that Dev Goal/User Story while clicking the link will return you to the relevant Milestone section of this document.
 
-**Milestone**|**Ref**|**Type**|**Acceptence Criteria/Features**
+**Milestone**|**Ref**|**Type**|**Acceptance Criteria/Features**
 :-----:|:-----:|:-----:|-----
 Initial Setup|[1.1](#milestone-1---initial-setup "Set up Django and its supporting libraries via the IDE in order for development to begin")|Dev Goal|<ul><li>Install server: django-gunicorn</li><li>Install PostgreSQL library: dj_database_url psycopg2</li><li>Install image host: dj3-cloudinary-storage</li><li>Install sign-up/in/out functionality: django-allauth</li><li>Create requirements.txt file</li></ul>
 Initial Setup|[1.2](#milestone-1---initial-setup "Set up the Django project and app")|Dev Goal|<ul><li>Create Django project: east-street</li><li>Create app: booking-sys</li><li>Update the settings.py file</li><li>Migrate changes</li></ul>
@@ -126,7 +127,7 @@ Additional|[5.3](#milestone-5---additional-coding "Set up 404, 403 and 500 pages
 
 ## Skeleton
 
-Now that specific features had been decided upon, a wireframing tool was used to give guidance as to how these features would look in practice while a database design app helped to image the flow of data within the site before commiting it to code.
+Now that specific features had been decided upon, a wireframing tool was used to give guidance as to how these features would look in practice while a database design app helped to image the flow of data within the site before committing it to code.
 
 ### Wireframe Models
 All of the site-design models which follow can be viewed on one page [using the following link](https://cacoo.com/diagrams/V4VlzIhRUc2eQPq5/2A59E)
@@ -169,7 +170,7 @@ With wireframe and database models in place, actual features of the site could n
 ### Design & Typography
   - [Libre Baskerville](https://fonts.google.com/specimen/Libre+Baskerville) was chosen as the font for h1 and h2 elements throughout the site to give a refined 'serif' look to major headings
   - All other text on the site is styled using [Noto Sans](https://fonts.google.com/noto/specimen/Noto+Sans) to provide a minimalist contrast to the headings and be clearly legible for larger portions of text
-  - The main colours selected for the site were chosen as a variation on a monochromatic scheme thus creating a refined, modern look to reflect the style of the restaurant. Specifically these colours and their hexdecimal codes are:
+  - The main colours selected for the site were chosen as a variation on a monochromatic scheme thus creating a refined, modern look to reflect the style of the restaurant. Specifically these colours and their hexadecimal codes are:
     - Eerie Black #1B1B1B
     - Dark Slate Grey #2F4F4F
     - Dim Grey #696969
@@ -261,7 +262,7 @@ Each of the following implementations was added in response to the acceptance cr
 - Sign-up form requires confirmation of password in case user types incorrectly in the first instance
 - Text and link on sign-up form enables sign in if user is already registered
 - Sign-out form linked directly to 'Logout' link and brand link in bookings section
-- 'Sign Out' button returns the user to the home page with confirmation alert if sucessful
+- 'Sign Out' button returns the user to the home page with confirmation alert if successful
 - 'Cancel' button keeps the user signed in and returns them to the 'New Booking' page 
 
 #### Booking Form
@@ -303,7 +304,7 @@ Each of the following implementations was added in response to the acceptance cr
 ![Update](static/images/readme/features-update.png)
 
 - A button marked 'Update' appears beside all bookings marked as either 'Pending' or 'Confirmed'
-- The 'Update' button will be hidden for any entry whose status the restaturant has set to 'Cancelled'
+- The 'Update' button will be hidden for any entry whose status the restaurant has set to 'Cancelled'
 - Clicking this button takes the user to an adjusted version of the 'New Booking' page
 - This adjusted form provides a warning that confirmed bookings will be reset to 'Pending' if updated
 - Users can either click 'Confirm & Update' to make changes or 'Return' to return to the booking list with details unchanged
@@ -347,8 +348,8 @@ Each of the following implementations was added in response to the acceptance cr
 ### Features to be implemented
 - Blocked out dates on calendar
 - Blocked out times associated with dates
-- Email notifcation to admin of customer made booking
-- Email notifcation to customer of booking status update
+- Email notification to admin of customer made booking
+- Email notification to customer of booking status update
 - Ability to add menu items
 - Ability to input closing times, dates, group numbers
 - Only status can be changed by staff to avoid accidentally changing bookings
@@ -378,22 +379,22 @@ In order to code and design these featured the following technologies were utili
   - django-allauth is employed as the means of managing user accounts used for the booking system
   - Jinga/Django templating is used for queries to the database to insert data from it onto the site pages 
 - [Heroku](https://heroku.com)
-  - Used as the cloud-based deployement platform for this project
+  - Used as the cloud-based deployment platform for this project
 - [ElephantSQL](https://elephantsql.com)
   - Used as the database hosting service
 - HTML
   - Used as the base coding language for templates and site content
 - [Bootstrap](https://getbootstrap.com/)
-  - Used as the main means of design layout and formatting throghout the site
+  - Used as the main means of design layout and formatting throughout the site
 - CSS
   - Used to modify Bootstrap behaviour where required and create additional custom stylings
 - JavaScript
-  - Used to create a timed automatic-dismisal of on-screen alerts
+  - Used to create a timed automatic dismissal of on-screen alerts
 
 #### Packages Used
 - [Gitpod](https://gitpod.io) was used to code the site and transfer files between the editor and the repository
 - [GitHub](https://github.com) was used to store the files for this project
-- [Cacoo](https://cacoo.com) was used to develop the wireframe models for the site deisgn
+- [Cacoo](https://cacoo.com) was used to develop the wireframe models for the site design
 - [DBDiagram](https://dbdiagram.io/) was used to create the database diagram
 - [Google Maps](https://www.google.com/maps) was used to create the specific map for the Location page
 - [Google Fonts](https://fonts.google.com/) was used to style the text throughout the site
@@ -472,13 +473,13 @@ This site was deployed to and is currently [hosted on the Heroku platform](https
   22. Select the repository you want to deploy and click 'Connect'
   23. Scroll down and click 'Deploy Branch' to complete the process
 
-### Forking the Respository
+### Forking the Repository
 1. Login to/create your [GitHub](https://github.com) account
 2. Navigate to the EastSt. GitHub Repository: https://github.com/ndsurgenor/east-street
 3. Towards the top right, under the main banner, click 'Fork'
 4. Adjust the form fields if desired, then click 'Create fork' to finish
 
-### Cloning the Respository/Running Locally
+### Cloning the Repository/Running Locally
 1. Login to/create your [GitHub](https://github.com) account
 2. Navigate to the EastSt. GitHub Repository: https://github.com/ndsurgenor/east-street
 3. Click the '<> Code' dropdown button and ensure 'HTTPS' is selected

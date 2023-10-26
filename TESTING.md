@@ -1,22 +1,28 @@
 # EastSt. - Testing
 
-With a 
+_Note: Note: to open links in a new tab, hold CTRL + Click_<br>
+_Note: this document only contains testing info for the EastSt. site. If you require full documentation please [click here to access the README.md](README.md) file_
+
+A number of manual  
 
 ## Table Of Contents
 - [Introduction](#eastst---testing)
-- [Basic Navigation](#basic-navigation)
-- [Authentication](#authentication)
-- [CRUD Functionality](#crud-functionality)
+- [Manual Testing](#manual-testing)
+    - [Navigation](#navigation)
+    - [Authentication](#authentication)
+    - [CRUD Functionality](#crud-functionality)
 - [Accessibility](#accessibility)
 - [Validators](#validators)
 - [Performance](#performance)
 - [Bugs](#bugs)
 
-## Basic Navigation
+## Manual Testing
 
-## Authentication
+### Navigation
 
-## CRUD Functionality
+### Authentication
+
+### CRUD Functionality
 
 ## Accessibility
 

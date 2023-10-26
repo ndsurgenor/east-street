@@ -1,4 +1,4 @@
-# EastSt. - Testing
+# EastSt. : Testing
 
 _Note: Note: to open links in a new tab, hold CTRL + Click_<br>
 _Note: this document only contains testing info for the EastSt. site. If you require full documentation please [click here to access the README.md](README.md) file_
@@ -19,6 +19,26 @@ A number of manual
 ## Manual Testing
 
 ### Navigation
+
+**Test**|**Steps**|**Expected**|**Outcome**
+-----|-----|-----|:-----:
+Home page displays when using URL|<ol><li>Type https://east-street-bc0671035c95.herokuapp.com/ into the browser</li><li>Hit 'Enter'</li></ol>|Home page displays with navbar, footer and page contents|Pass
+Home page displays when using navbar link|<ol><li>Navigate to 'Menu' or 'Location' page</li><li>Click 'Home' in the navbar</li></ol>|Home page displays with navbar, footer and page contents|Pass
+Menu page displays when using navbar link|<ol><li>Navigate to 'Home' or 'Location' page</li><li>Click 'Menu' in the navbar</li></ol>|Menu page displays with navbar, footer and page contents|Pass
+Location page displays when using navbar link|<ol><li>Navigate to 'Home' or 'Menu' page</li><li>Click 'Location' in the navbar</li></ol>|Location page displays with navbar, footer and page contents|Pass
+Home page displays when clicking brand/logo on main site|<ol><li>Navigate to 'Menu' or 'Location' page</li><li>Click the brand/logo at the top-left of navbar</ol></li>|Home page displays with navbar, footer and page contents|Pass
+Sign In/New Booking form displays when using 'Bookings' navbar link|<ol><li>Navigate to 'Home' page</li><li>Click 'Bookings' in the navbar</li></ol>|Sign In/New Booking form displays with navbar and footer|Pass
+Sign In/New Booking form displays when using 'Book Now' button|<ol><li>Navigate to 'Home' page</li><li>Click 'Book Now' button</li></ol>|Sign In/New Booking form displays with navbar and footer|Pass
+Menu page displays when using 'Menu' button|<ol><li>Navigate to 'Home' page</li><li>Reduce screen width until 'Menu' button appears below opening times</li><li>Click 'Menu' button</li></ol>|Menu page displays with navbar, footer and page contents|Pass
+Booking form displays when using  'New Booking' navbar link with correct username|<ol><li>Navigate to 'Current Bookings' page</li><li>Click 'New Booking' in the navbar</li></ol>|Booking form and username displays with navbar and footer|Pass
+Current bookings display when using navbar link and only show those made by user|<ol><li>Navigate to 'New Booking' page</li><li>Click 'Current Bookings' in the navbar</li></ol>|Booking list for signed-in user displays with navbar and footer|Pass
+Sign Out page displays when using 'Logout' navbar link|<ol><li>Navigate to 'New Booking' or 'Current Bookings' page</li><li>Click 'Logout' in the navbar</li></ol>|Sign Out page displays with navbar and footer|Pass
+Sign Out page displays when clicking brand/logo on booking site|<ol><li>Navigate to 'New Booking' or 'Current Bookings' page</li><li>Click the brand/logo at the top-left of navbar</ol></li>|Sign Out page displays with navbar and footer|Pass
+Home page displays when clicking 'Sign Out' button on Sign Out page|<ol><li>Navigate to 'Logout' page</li><li>Click 'Sign Out' button</li></ol>|Home page displays with navbar, footer and page contents|Pass
+Booking form displays when clicking 'Cancel' button on Sign Out page|<ol><li>Navigate to 'Logout' page</li><li>Click 'Cancel' button</li></ol>|Booking form and username displays with navbar and footer|Pass
+Gmail opens in a new tab/window when clicking footer icon|<ol><li>Click email icon in footer</li></ol>|Gmail opens in a new tab/window|Pass
+Instagram opens in a new tab/window when clicking footer icon|<ol><li>Click Instagram icon in footer</li></ol>|Instagram opens in a new tab/window|Pass
+Facebook opens in a new tab/window when clicking footer icon|<ol><li>Click Facebook icon in footer</li></ol>|Facebook opens in a new tab/window|Pass
 
 ### Authentication
 

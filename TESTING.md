@@ -1,6 +1,6 @@
 # EastSt. : Testing
 
-_Note: Note: to open links in a new tab, hold CTRL + Click_<br>
+_Note: to open links in a new tab, hold CTRL + Click_<br>
 _Note: this document only contains testing info for the EastSt. site. If you require full documentation please [click here to access the README.md](README.md) file_
 
 A number of manual  
@@ -9,10 +9,12 @@ A number of manual
 - [Introduction](#eastst---testing)
 - [Manual Testing](#manual-testing)
     - [Navigation](#navigation)
+    - [Responsiveness](#responsiveness)
     - [Authentication](#authentication)
     - [CRUD Functionality](#crud-functionality)
+- [Unit Testing](#unit-testing)
 - [Accessibility](#accessibility)
-- [Validators](#validators)
+- [Validator Testing](#validator-testing)
 - [Performance](#performance)
 - [Bugs](#bugs)
 
@@ -36,284 +38,58 @@ Sign Out page displays when using 'Logout' navbar link|<ol><li>Navigate to 'New 
 Sign Out page displays when clicking brand/logo on booking site|<ol><li>Navigate to 'New Booking' or 'Current Bookings' page</li><li>Click the brand/logo at the top-left of navbar</ol></li>|Sign Out page displays with navbar and footer|Pass
 Home page displays when clicking 'Sign Out' button on Sign Out page|<ol><li>Navigate to 'Logout' page</li><li>Click 'Sign Out' button</li></ol>|Home page displays with navbar, footer and page contents|Pass
 Booking form displays when clicking 'Cancel' button on Sign Out page|<ol><li>Navigate to 'Logout' page</li><li>Click 'Cancel' button</li></ol>|Booking form and username displays with navbar and footer|Pass
-Gmail opens in a new tab/window when clicking footer icon|<ol><li>Click email icon in footer</li></ol>|Gmail opens in a new tab/window|Pass
+Gmail opens in a new tab/window when clicking footer icon|<ol><li>Click email icon in footer|Gmail opens in a new tab/window</li></ol>|Pass
 Instagram opens in a new tab/window when clicking footer icon|<ol><li>Click Instagram icon in footer</li></ol>|Instagram opens in a new tab/window|Pass
 Facebook opens in a new tab/window when clicking footer icon|<ol><li>Click Facebook icon in footer</li></ol>|Facebook opens in a new tab/window|Pass
 
+### Responsiveness
+
 ### Authentication
+
+**Test**|**Steps**|**Expected**|**Outcome**
+-----|-----|-----|:-----:
+User can sign up to access the booking site|Navigate|User directed to 'New Booking' page with success alert|Pass
+User cannot sign up unless a username is entered|Navigate|Sign-up form will not submit|Pass
+User cannot sign up with previously registered username|Navigate|Sign-up form will not submit|Pass
+User can sign up without an email address|Navigate|User directed to 'New Booking' page with success alert|Pass
+User cannot sign up unless a password is entered|Navigate|Sign-up form will not submit|Pass
+User cannot sign up if passwords don't match|Navigate|Sign-up form will not submit|Pass
+User can sign in to access the booking site|Navigate|User directed to 'New Booking' page with success alert|Pass
+User cannot sign in unless a valid username is entered|Navigate|Sign-in form will not submit|Pass
+User cannot sign in unless a valid password is entered|Navigate|Sign-in form will not submit|Pass
+User can sign out from the booking site|Navigate|User directed to 'Home' page with success alert|Pass
 
 ### CRUD Functionality
 
+**Test**|**Steps**|**Expected**|**Outcome**
+-----|-----|-----|:-----:
+User can make a booking|Navigate|User directed to 'Current Bookings' page with success alert and booking added to list|Pass
+User cannot make a booking unless a valid date is entered|Navigate|Booking form will not submit|Pass
+User cannot make a booking unless a time is selected|Navigate|Booking form will not submit|Pass
+User cannot make a booking on today's date or before|Navigate|Booking form will not submit with message reading "A booking cannot be made any earlier than tomorrow" |Pass
+User cannot make a booking on a Monday or Tuesday|Navigate|Booking form will not submit with message reading "Sorry, the restaurant is closed on a Monday/Tuesday" |Pass
+User can view their previously made bookings|Navigate|'Current Bookings' page displays user-made bookings alongside appropriate action buttons|Pass
+User can update a booking|Navigate|User directed to 'Current Bookings' page with success alert and booking updated on list|Pass
+User cannot update a booking unless a valid date is entered|Navigate|Booking form will not submit|Pass
+User cannot update a booking unless a time is selected|Navigate|Booking form will not submit|Pass
+User cannot update a booking to today's date or before|Navigate|Booking form will not submit with message reading "A booking cannot be made any earlier than tomorrow" |Pass
+User cannot update a booking to a Monday or Tuesday|Navigate|Booking form will not submit with message reading "Sorry, the restaurant is closed on a Monday/Tuesday" |Pass
+User cannot update other users' bookings|Navigate|User automatically directed to 'Current Bookings' page instead of update form|Pass
+Bookings marked as 'Confirmed' change to 'Pending' when updated|Navigate|'Current Bookings' page displays booking with updated status|Pass
+User can delete a booking|Navigate|User directed to 'Current Bookings' page with success alert and booking removed from list|Pass
+User cannot delete other users' bookings|Navigate|User automatically directed to 'Current Bookings' page instead of deletion dialog|Pass
+
+## Unit Testing
+
 ## Accessibility
 
-## Validators
+## Validator Testing
 
 ## Performance
 
 ## Bugs
 
-**Authentication**
 
-Description:
-
-Ensure a user can sign up to the website
-
-Steps:
-
-1. Navigate to [sizzle-and-steak](https://sizzle-and-steak.herokuapp.com) and click Register
-2. Enter email, username and password 
-3. Click Sign up
-
-Expected:
-
-An email is recieved with a link to sign up, upon clicking the link, registration is successful
-
-Actual: 
-
-An email is recieved with a link to sign up, upon clicking the link, registration is successful
-
-<hr>
-
-Description:
-
-Ensure a user can log in once signed up
-
-Steps:
-1. Navigate to [sizzle-and-steak](https://sizzle-and-steak.herokuapp.com)
-2. Enter login detailscreated in previous test case
-3. Click login
-
-Expected:
-
-User is successfully logged in and redirected to the home page
-
-Actual:
-
-User is successfully logged in and redirected to the home page
-
-<hr>
-
-Description:
-
-Ensure a user can sign out
-
-Steps:
-
-1. Login to the website
-2. Click the logout button
-3. Click confirm on the confirm logout page
-
-Expected:
-
-User is logged out
-
-Actual:
-
-User is logged out
-
-**Booking Forms**
-
-Description:
-
-Ensure a new booking can be created.
-
-Steps:
-
-1. Navigate to [page](https://sizzle-and-steak.herokuapp.com/booking/createbooking/) - Login if prompted.
-2. Enter the following:
-    - Name: Gareth
-    - No Of Guests: 3
-    - Date: Any future date
-    - Time: Any drop down field
-3. Click Create
-
-Expected:
-
-Form successfully submits and a toast is shown to alert the user of successful booking.
-
-Actual:
-
-Form successfully submits and a toast is shown to alert the user of successful booking.
-
-<hr> 
-
-Description:
-
-Ensure a booking can be edited.
-
-Steps:
-
-1. Navigate to [page](https://sizzle-and-steak.herokuapp.com/booking/managebookings/) - Login if prompted.
-2. Enter the following:
-    - Name: Gareth
-    - No Of Guests: 5
-    - Date: Any future date
-    - Time: Any drop down field
-3. Click Create
-
-Expected:
-
-Form successfully submits and a toast is shown to alert the user of updated booking.
-
-Actual:
-
-Form successfully submits and a toast is shown to alert the user of updated booking.
-
-<hr>
-
-Description:
-
-Ensure user can successfully delete a booking.
-
-Steps:
-1. Login as a user with a booking or create a new booking
-2. Click the Manage Booking nav link
-3. Click the delete button on a booking
-4. Click the confirm button on the delete page
-
-Expected:
-
-Booking is successfully deleted
-
-Actual:
-
-Booking is successfully deleted
-
-<hr>
-
-**Menu Pages**
-
-Description:
-
-Ensure a new menu item can be added
-
-Steps:
-
-1. Navigate to the create menu item page from the menu drop down nav item
-2. Enter the following details:
-    - Name: Test Menu
-    - Type: Starter
-    - Description: Test Item
-    - Price: 15.00
-    - Checkbox: Contains Nuts
-
-3. Click Create
-
-Expected:
-
-New menu item is sucessfully added and can be added to a new menu
-
-Actual:
-
-New menu item is sucessfully added and can be added to a new menu
-
-<hr>
-
-Description:
-
-Ensure a new menu can be created
-
-Steps:
-
-1. Sign in as a staff user
-2. Select the Create Menu item in the Menu drop down nav bar
-3. Enter the follow details:
-    - Name: Test Menu
-    - Starters: Chicken Veg Soup
-    - Mains: Chicken Supreme
-    - Deserts: Choclate Cake
-    - Drinks: Coke
-    - Sides: Chips
-4. Click Create
-
-Expected:
-
-New menu is created and can be viewed on the View Menus page
-
-Actual:
-
-New menu is created and can be viewed on the View Menus page
-
-<hr>
-
-Description:
-
-Ensure a menu can be updated
-
-Steps:
-
-1. Navigate to the manage mennus page from the menus drop down nav link
-2. Click edit on a menu
-3. Update a menu item and submit the form
-
-Expected:
-
-Menu has been updated and a toast message displayed to the user it was updated
-
-Actual: 
-
-Menu has been updated and a toast message displayed to the user it was updated
-
-<hr>
-
-Description:
-
-Ensure a menu can be deleted
-
-Steps:
-
-1. Navigate to the manage menus page from the menus drop down nav link
-2. Click the delete button on a menu
-3. On the delete confirmation page click confirm
-
-Expected:
-
-Menu has been deleted and cannot be seen on the menus page
-
-Actual:
-
-Menu has been deleted and cannot be seen on the menus page
-
-<hr>
-
-**Navigation Links**
-
-Testing was performed to ensure all navigation links on the respective pages, navigated to the correct pages as per design. This was done by clicking on the navigation links on each page.
-
-- Home -> index.html
-- Bookings Drop Down, Manage Bookings -> managebookings.html
-- Bookings Drop Down, New Booking -> create_booking.html
-- Menus Drop Down, View Menu -> menus.html
-- Menus Drop Down, Create Menu -> create_menu.html
-- Menus Drop Down, Manage Menus => manage_menus.html
-- Logout -> Sign out all auth page
-- Login -> Sign in all auth page
-- Register -> Sign up all auth page
-
-All navigation links directed to the corect pages as expected.
-
-<hr>
-
-**Footer**
-
-Testing was performed on the footer links by clicking the font awesome icons and ensuring that the facebook icon opened facebook in a new tab and the twitter icon opened twitter in a new tab. These behaved as expected.
-
-## Negative Testing
-
-Tests were performed on the create booking to ensure that:
-
-1. A customer cannot book a date in the past
-2. A customer cannot book if no tables are available for the amount of guests
-3. A customer cannot edit a booking with an increased guest size if no tables have capacity
-4. Forms cannot be submitted when required fields are empty
-
-## Unit Testing
-
-Unit tests were created to test some basic functionality such as templates used and redirects. These can be found in the tests.py files in the respective apps.
-
-Results:
-
-![unit tests](docs/testing/unit-test.PNG)
 
 ## Accessibility
 

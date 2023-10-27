@@ -22,9 +22,9 @@ A number of manual
 
 ### Navigation
 
-These tests ensure that a user can successfully navigate the site using the provided navbar links, buttons, and footer icons. Pages in the booking area of the site require a username and password to access; the username _testname_ and password _test#123_ have specifically been registered for this purpose.
+These tests ensure that a user can successfully navigate the site using the provided navbar links, buttons, and footer icons. The booking area of the site requires a username and password to access (username _testname_ and password _test#123_ have specifically been registered for this purpose) and specifics around this access are tested below under [Authentication](#authentication). Note that navigation specific to user-made bookings - i.e. page access using 'Update' and 'Delete' buttons - is covered under [CRUD Functionality](#crud-functionality).
 
-**Test**|**Steps**|**Expected**|**Outcome**
+**Test**|**Steps**|**Expected**|**Result**
 -----|-----|-----|:-----:
 Home page displays when using URL|<ol><li>Type https://east-street-bc0671035c95.herokuapp.com/ into the browser</li><li>Hit 'Enter'</li></ol>|Home page displays with navbar, footer and page contents|Pass
 Home page displays when using navbar link|<ol><li>Navigate to 'Menu' or 'Location' page</li><li>Click 'Home' in the navbar</li></ol>|Home page displays with navbar, footer and page contents|Pass
@@ -50,7 +50,7 @@ Facebook opens in a new tab/window when clicking footer icon|<ol><li>Click Faceb
 
 These tests check the sign up, sign in, and sign out functionality of the site which are essential for secure access to the booking area. The username _testname_ and password _test#123_ have specifically been registered to help determine the outcome of these tests.
 
-**Test**|**Steps**|**Expected**|**Outcome**
+**Test**|**Steps**|**Expected**|**Result**
 -----|-----|-----|:-----:
 User can sign up to access the booking site|<ol><li>Click 'Logout' if already signed in, otherwise navigate to Home page</li><li>Click 'Bookings' in the navbar</li><li>Click 'Sign Up' on the sign in form</li><li>Complete all fields with previously unregistered details</li><li>Click 'Sign Up'</li></ol>|<ul><li>User directed to 'New Booking' page</li><li>Alert message confirms sign up as successful</li></ul>|Pass
 User cannot sign up unless a username is entered|<ol><li>Click 'Logout' if already signed in, otherwise navigate to Home page</li><li>Click 'Bookings' in the navbar</li><li>Click 'Sign Up' on the sign in form</li><li>Complete all fields except for 'Username'</li><li>Click 'Sign Up'</li></ol>|<ul><li>Sign-up form will not submit</li><li>Warning prompt alerts user to the problem</li></ul>|Pass
@@ -65,23 +65,30 @@ User can sign out from the booking site|<ol><li>if required sign in, then click 
 
 ### CRUD Functionality
 
-**Test**|**Steps**|**Expected**|**Outcome**
+These tests determine if a user is able to successfully create, view, update and/or delete a booking, or not as the case may be, through the front-end capabilities of the site. In all test cases, one must first sign in to the booking area of the site before completing any of the other steps listed (the username _testname_ and password _test#123_ have specifically been registered for this purpose), while the desciptor 'valid details' indicates that the following is expected:
+
+- 'Date' is not left blank
+- 'Date' is not set earlier than tomorrow's date
+- 'Date' is not set to Monday/Tuesday
+- 'Time' is not left blank
+
+**Test**|**Steps**|**Expected**|**Result**
 -----|-----|-----|:-----:
-User can make a booking|Navigate|User directed to 'Current Bookings' page with success alert and booking added to list|Pass
-User cannot make a booking unless a valid date is entered|Navigate|Booking form will not submit|Pass
-User cannot make a booking unless a time is selected|Navigate|Booking form will not submit|Pass
-User cannot make a booking on today's date or before|Navigate|Booking form will not submit with message reading "A booking cannot be made any earlier than tomorrow" |Pass
-User cannot make a booking on a Monday or Tuesday|Navigate|Booking form will not submit with message reading "Sorry, the restaurant is closed on a Monday/Tuesday" |Pass
-User can view their previously made bookings|Navigate|'Current Bookings' page displays user-made bookings alongside appropriate action buttons|Pass
-User can update a booking|Navigate|User directed to 'Current Bookings' page with success alert and booking updated on list|Pass
-User cannot update a booking unless a valid date is entered|Navigate|Booking form will not submit|Pass
-User cannot update a booking unless a time is selected|Navigate|Booking form will not submit|Pass
-User cannot update a booking to today's date or before|Navigate|Booking form will not submit with message reading "A booking cannot be made any earlier than tomorrow" |Pass
-User cannot update a booking to a Monday or Tuesday|Navigate|Booking form will not submit with message reading "Sorry, the restaurant is closed on a Monday/Tuesday" |Pass
-User cannot update other users' bookings|Navigate|User automatically directed to 'Current Bookings' page instead of update form|Pass
-Bookings marked as 'Confirmed' change to 'Pending' when updated|Navigate|'Current Bookings' page displays booking with updated status|Pass
-User can delete a booking|Navigate|User directed to 'Current Bookings' page with success alert and booking removed from list|Pass
-User cannot delete other users' bookings|Navigate|User automatically directed to 'Current Bookings' page instead of deletion dialog|Pass
+User can make a booking|<ol><li>Navigate to 'New Booking' page</li><li>Complete all fields with valid details</li><li>Click 'Submit'</li></ol>|<ul><li>User directed to 'Current Bookings' page</li><li>Submitted details reflected on displayed list</li><li>Alert message confirms booking submitted successfully</li></ul>|Pass
+User cannot make a booking unless a date is entered|<ol><li>Navigate to 'New Booking' page</li><li>Leave 'Date' blank but complete all other fields with valid details</li><li>Click 'Submit'</li></ol>|<ul><li>Booking form will not submit</li><li>Warning prompt alerts user to the problem</li></ul>|Pass
+User cannot make a booking unless a time is selected|<ol><li>Navigate to 'New Booking' page</li><li>Leave 'Time' blank but complete all other fields with valid details</li><li>Click 'Submit'</li></ol>|<ul><li>Booking form will not submit</li><li>Warning prompt alerts user to the problem</li></ul>|Pass
+User cannot make a booking on today's date or before|<ol><li>Navigate to 'New Booking' page</li><li>Set 'Date' earlier than tomorrow's date but complete all other fields with valid details</li><li>Click 'Submit'</li></ul>|<ul><li>Booking form will not submit</li><li>Text displays saying "A booking cannot be made any earlier than tomorrow"</li></ul>|Pass
+User cannot make a booking on a Monday or Tuesday|<ol><li>Navigate to 'New Booking' page</li><li>Set 'Date' to Monday/Tuesday some time after tomorrow's date but complete all other fields with valid details</li><li>Click 'Submit'</li></ul>|<ul><li>Booking form will not submit</li><li>Text displays saying "Sorry, the restaurant is closed on a Monday/Tuesday"</li></ul>|Pass
+User can view their previously made bookings|<ol><li>Navigate to 'Current Bookings' page</li></ol>|<ul><li>'Current Bookings' page displays user-made bookings</li><li>'Update' buttons apepar beside all entries not marked as 'Cancelled'</li><li>'Delete' buttons appear beside all entries</li></ul>|Pass
+User can update a booking|<ol><li>Navigate to 'Current Bookings' page</li><li>Click 'Update' beside any listed booking</li><li>Complete all fields on Update Form with valid details</li><li>Click 'Confirm & Update'</li></ol>|<ul><li>User directed to 'Current Bookings' page</li><li>Updated details reflected on displayed list</li><li>Alert message confirms booking updated successfully</li></ul>|Pass
+User cannot update a booking unless a date is entered|<ol><li>Navigate to 'Current Bookings' page</li><li>Click 'Update' beside any listed booking</li><li>Make 'Date' blank but leave all other fields with valid details</li><li>Click 'Submit'</li></ol>|<ul><li>Update form will not submit</li><li>Warning prompt alerts user to the problem</li></ul>|Pass
+User cannot update a booking unless a time is selected|<ol><li>Navigate to 'Current Bookings' page</li><li>Click 'Update' beside any listed booking</li><li>Make 'Time' blank but leave all other fields with valid details</li><li>Click 'Submit'</li></ol>|<ul><li>Update form will not submit</li><li>Warning prompt alerts user to the problem</li></ul>|Pass
+User cannot update a booking to today's date or before|<ol><li>Navigate to 'Current Bookings' page</li><li>Click 'Update' beside any listed booking</li><li>Set 'Date' earlier than tomorrow's date but leave all other fields with valid details</li><li>Click 'Submit'</li></ol>|<ul><li>Update form will not submit</li><li>Text displays saying "A booking cannot be made any earlier than tomorrow"</li></ul>|Pass
+User cannot update a booking to a Monday or Tuesday|<ol><li>Navigate to 'Current Bookings' page</li><li>Click 'Update' beside any listed booking</li><li>Set 'Date' to Monday/Tuesday some time after tomorrow's date but leave all other fields with valid details</li><li>Click 'Submit'</li></ol>|<ul><li>Update form will not submit</li><li>Text displays saying "Sorry, the restaurant is closed on a Monday/Tuesday"</li></ul>|Pass
+User cannot update other users' bookings|<ol><li>Navigate to 'Current Bookings' page</li><li>Click 'Update' beside any listed booking</li><li>In the page URL, change the digit given before '/update' to '10' so the URL reads https://east-street-bc0671035c95.herokuapp.com/10/update/</li><li>Hit 'Enter'</li></ol>|<ul><li>User automatically directed to 'Current Bookings' page</li><li>Update form for this entry not displayed to user</li>|Pass
+Bookings marked as 'Confirmed' change to 'Pending' when updated|<ol><li>Navigate to 'Current Bookings' page</li><li>Click 'Update' beside any booking marked as 'Confirmed'</li><li>Complete all fields on Update Form with valid details</li><li>Click 'Confirm & Update'</li></ol>|<ul><li>User directed to 'Current Bookings' page</li><li>Updated details reflected on displayed list with status set to 'Pending'</li><li>Alert message confirms booking updated successfully</li></ul>|Pass
+User can delete a booking|<ol><li>Navigate to 'Current Bookings' page</li><li>Click 'Delete' beside any listed booking</li><li>Click 'Confirm & Delete'</li></ol>|<ul><li>User directed to 'Current Bookings' page</li><li>Appropriate details removed from displayed list</li><li>Alert message confirms booking deleted successfully</li></ul>|Pass
+User cannot delete other users' bookings|<ol><li>Navigate to 'Current Bookings' page</li><li>Click 'Delete' beside any listed booking</li><li>In the page URL, change the digit given before '/delete' to '10' so the URL reads https://east-street-bc0671035c95.herokuapp.com/10/delete/</li><li>Hit 'Enter'</li></ol>|<ul><li>User automatically directed to 'Current Bookings' page</li><li>Deletion form for this entry not displayed to user</li>|Pass
 
 ## Unit Testing
 

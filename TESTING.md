@@ -22,6 +22,8 @@ A number of manual
 
 ### Navigation
 
+These tests ensure that a user can successfully navigate the site using the provided navbar links, buttons, and footer icons. Pages in the booking area of the site require a username and password to access; the username _testname_ and password _test#123_ have specifically been registered for this purpose.
+
 **Test**|**Steps**|**Expected**|**Outcome**
 -----|-----|-----|:-----:
 Home page displays when using URL|<ol><li>Type https://east-street-bc0671035c95.herokuapp.com/ into the browser</li><li>Hit 'Enter'</li></ol>|Home page displays with navbar, footer and page contents|Pass
@@ -32,12 +34,12 @@ Home page displays when clicking brand/logo on main site|<ol><li>Navigate to 'Me
 Sign In/New Booking form displays when using 'Bookings' navbar link|<ol><li>Navigate to 'Home' page</li><li>Click 'Bookings' in the navbar</li></ol>|Sign In/New Booking form displays with navbar and footer|Pass
 Sign In/New Booking form displays when using 'Book Now' button|<ol><li>Navigate to 'Home' page</li><li>Click 'Book Now' button</li></ol>|Sign In/New Booking form displays with navbar and footer|Pass
 Menu page displays when using 'Menu' button|<ol><li>Navigate to 'Home' page</li><li>Reduce screen width until 'Menu' button appears below opening times</li><li>Click 'Menu' button</li></ol>|Menu page displays with navbar, footer and page contents|Pass
-Booking form displays when using  'New Booking' navbar link with correct username|<ol><li>Navigate to 'Current Bookings' page</li><li>Click 'New Booking' in the navbar</li></ol>|Booking form and username displays with navbar and footer|Pass
-Current bookings display when using navbar link and only show those made by user|<ol><li>Navigate to 'New Booking' page</li><li>Click 'Current Bookings' in the navbar</li></ol>|Booking list for signed-in user displays with navbar and footer|Pass
-Sign Out page displays when using 'Logout' navbar link|<ol><li>Navigate to 'New Booking' or 'Current Bookings' page</li><li>Click 'Logout' in the navbar</li></ol>|Sign Out page displays with navbar and footer|Pass
-Sign Out page displays when clicking brand/logo on booking site|<ol><li>Navigate to 'New Booking' or 'Current Bookings' page</li><li>Click the brand/logo at the top-left of navbar</ol></li>|Sign Out page displays with navbar and footer|Pass
-Home page displays when clicking 'Sign Out' button on Sign Out page|<ol><li>Navigate to 'Logout' page</li><li>Click 'Sign Out' button</li></ol>|Home page displays with navbar, footer and page contents|Pass
-Booking form displays when clicking 'Cancel' button on Sign Out page|<ol><li>Navigate to 'Logout' page</li><li>Click 'Cancel' button</li></ol>|Booking form and username displays with navbar and footer|Pass
+Booking form displays when using 'New Booking' navbar link with correct username|<ol><li>If required, sign in to booking area using preregistered details e.g. Username: _testname_; Password: _test#123_</li><li>Navigate to 'Current Bookings' page</li><li>Click 'New Booking' in the navbar</li></ol>|Booking form and username displays with navbar and footer|Pass
+Current bookings display when using navbar link and only show those made by user|<ol><li>If required, sign in to booking area using preregistered details e.g. Username: _testname_; Password: _test#123_</li><li>Navigate to 'New Booking' page</li><li>Click 'Current Bookings' in the navbar</li></ol>|Booking list for signed-in user displays with navbar and footer|Pass
+Sign Out page displays when using 'Logout' navbar link|<ol><li>If required, sign in to booking area using preregistered details e.g. Username: _testname_; Password: _test#123_</li><li>Navigate to 'New Booking' or 'Current Bookings' page</li><li>Click 'Logout' in the navbar</li></ol>|Sign Out page displays with navbar and footer|Pass
+Sign Out page displays when clicking brand/logo on booking site|<ol><li>If required, sign in to booking area using preregistered details e.g. Username: _testname_; Password: _test#123_</li><li>Navigate to 'New Booking' or 'Current Bookings' page</li><li>Click the brand/logo at the top-left of navbar</ol></li>|Sign Out page displays with navbar and footer|Pass
+Home page displays when clicking 'Sign Out' button on Sign Out page|<ol><li>If required, sign in to booking area using preregistered details e.g. Username: _testname_; Password: _test#123_</li><li>Click 'Logout' in the navabr</li><li>Click 'Sign Out' button</li></ol>|Home page displays with navbar, footer and page contents|Pass
+Booking form displays when clicking 'Cancel' button on Sign Out page|<ol><li>If required, sign in to booking area using preregistered details e.g. Username: _testname_; Password: _test#123_</li><li>Click 'Logout' in the navabr</li><li>Click 'Cancel' button</li></ol>|Booking form and username displays with navbar and footer|Pass
 Gmail opens in a new tab/window when clicking footer icon|<ol><li>Click email icon in footer|Gmail opens in a new tab/window</li></ol>|Pass
 Instagram opens in a new tab/window when clicking footer icon|<ol><li>Click Instagram icon in footer</li></ol>|Instagram opens in a new tab/window|Pass
 Facebook opens in a new tab/window when clicking footer icon|<ol><li>Click Facebook icon in footer</li></ol>|Facebook opens in a new tab/window|Pass
@@ -46,18 +48,20 @@ Facebook opens in a new tab/window when clicking footer icon|<ol><li>Click Faceb
 
 ### Authentication
 
+These tests check the sign up, sign in, and sign out functionality of the site which are essential for secure access to the booking area. The username _testname_ and password _test#123_ have specifically been registered to help determine the outcome of these tests.
+
 **Test**|**Steps**|**Expected**|**Outcome**
 -----|-----|-----|:-----:
-User can sign up to access the booking site|Navigate|User directed to 'New Booking' page with success alert|Pass
-User cannot sign up unless a username is entered|Navigate|Sign-up form will not submit|Pass
-User cannot sign up with previously registered username|Navigate|Sign-up form will not submit|Pass
-User can sign up without an email address|Navigate|User directed to 'New Booking' page with success alert|Pass
-User cannot sign up unless a password is entered|Navigate|Sign-up form will not submit|Pass
-User cannot sign up if passwords don't match|Navigate|Sign-up form will not submit|Pass
-User can sign in to access the booking site|Navigate|User directed to 'New Booking' page with success alert|Pass
-User cannot sign in unless a valid username is entered|Navigate|Sign-in form will not submit|Pass
-User cannot sign in unless a valid password is entered|Navigate|Sign-in form will not submit|Pass
-User can sign out from the booking site|Navigate|User directed to 'Home' page with success alert|Pass
+User can sign up to access the booking site|<ol><li>Click 'Logout' if already signed in, otherwise navigate to Home page</li><li>Click 'Bookings' in the navbar</li><li>Click 'Sign Up' on the sign in form</li><li>Complete all fields with previously unregistered details</li><li>Click 'Sign Up'</li></ol>|<ul><li>User directed to 'New Booking' page</li><li>Alert message confirms sign up as successful</li></ul>|Pass
+User cannot sign up unless a username is entered|<ol><li>Click 'Logout' if already signed in, otherwise navigate to Home page</li><li>Click 'Bookings' in the navbar</li><li>Click 'Sign Up' on the sign in form</li><li>Complete all fields except for 'Username'</li><li>Click 'Sign Up'</li></ol>|<ul><li>Sign-up form will not submit</li><li>Warning prompt alerts user to the problem</li></ul>|Pass
+User cannot sign up with previously registered username|<ol><li>Click 'Logout' if already signed in, otherwise navigate to Home page</li><li>Click 'Bookings' in the navbar</li><li>Click 'Sign Up' on the sign in form</li><li>Complete all fields ensuring 'Username' is filled with previously registered details e.g. _testname_</li><li>Click 'Sign Up'</li></ol>|<ul><li>Sign-up form will not submit</li><li>Text displays saying "A user with that username already exists"</li></ul>|Pass
+User can sign up without an email address|<ol><li>Click 'Logout' if already signed in, otherwise navigate to Home page</li><li>Click 'Bookings' in the navbar</li><li>Click 'Sign Up' on the sign in form</li><li>Complete all fields except for 'Email'</li><li>Click 'Sign Up'</li></ol>|<ul><li>User directed to 'New Booking' page</li><li>Alert message confirms sign up as successful</li></ul>|Pass
+User cannot sign up unless a password is entered|<ol><li>Click 'Logout' if already signed in, otherwise navigate to Home page</li><li>Click 'Bookings' in the navbar</li><li>Click 'Sign Up' on the sign in form</li><li>Complete all fields except for 'Password' and/or 'Password (again)'</li><li>Click 'Sign Up'</li></ol>|<ul><li>Sign-up form will not submit</li><li>Warning prompt alerts user to the problem</li></ul>|Pass
+User cannot sign up if passwords don't match|<ol><li>Click 'Logout' if already signed in, otherwise navigate to Home page</li><li>Click 'Bookings' in the navbar</li><li>Click 'Sign Up' on the sign in form</li><li>Complete all fields ensuring 'Password' and 'Password (again)' contain different data entry</li><li>Click 'Sign Up'</li></ol>|<ul><li>Sign-up form will not submit</li><li>Text displays saying "You must type the same password each time"</li></ul>|Pass
+User can sign in to access the booking site|<ol><li>Click 'Logout' if already signed in, otherwise navigate to Home page</li><li>Click 'Bookings' in the navbar</li><li>Complete all fields with previously registered details e.g. Username: _testname_; Password: _test#123_</li><li>Click 'Sign In'</li></ol>|<ul><li>User directed to 'New Booking' page</li><li>Alert message confirms sign in as successful</li></ul>|Pass
+User cannot sign in unless a valid username is entered|<ol><li>Click 'Logout' if already signed in, otherwise navigate to Home page</li><li>Click 'Bookings' in the navbar</li><li>Complete all fields ensuring 'Username' is filled with previously unregistered details</li><li>Click 'Sign In'</li></ol>|<ul><li>Sign-up form will not submit</li><li>Text displays saying "The username and/or password you specified are not correct"</li></ul>|Pass
+User cannot sign in unless a valid password is entered|<ol><li>Click 'Logout' if already signed in, otherwise navigate to Home page</li><li>Click 'Bookings' in the navbar</li><li>Complete all fields with 'Username' as _testname_ and ensure 'Password' IS NOT _test#123_</li><li>Click 'Sign In'</li></ol>|<ul><li>Sign-up form will not submit</li><li>Text displays saying "The username and/or password you specified are not correct"</li></ul>|Pass
+User can sign out from the booking site|<ol><li>if required sign in, then click 'Logout'</li><li>Click 'Sign Out'</li></ol>|<ul><li>User directed to 'Home' page</li><li>Alert message confirms sign out as successful</li></ul>|Pass
 
 ### CRUD Functionality
 

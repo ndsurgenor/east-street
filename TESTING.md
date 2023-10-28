@@ -22,7 +22,7 @@ A number of manual
 
 ### Navigation
 
-These tests ensure that a user can successfully navigate the site using the provided navbar links, buttons, and footer icons. The booking area of the site requires a username and password to access (username _testname_ and password _test#123_ have specifically been registered for this purpose) and specifics around this access are tested below under [Authentication](#authentication). Note that navigation specific to user-made bookings - i.e. page access using 'Update' and 'Delete' buttons - is covered under [CRUD Functionality](#crud-functionality).
+These tests ensure that a user can successfully navigate the site using the provided navbar links, buttons, and footer icons. The booking area of the site requires a username and password to access (username _testname_ and password _test#123_ have specifically been registered for this purpose); specifics around this access are tested below under [Authentication](#authentication). Note that navigation specific to user-made bookings - i.e. page access using 'Update' and 'Delete' buttons - is covered under [CRUD Functionality](#crud-functionality).
 
 **Test**|**Steps**|**Expected**|**Result**
 -----|-----|-----|:-----:
@@ -40,11 +40,26 @@ Sign Out page displays when using 'Logout' navbar link|<ol><li>If required, sign
 Sign Out page displays when clicking brand/logo on booking site|<ol><li>If required, sign in to booking area using preregistered details e.g. Username: _testname_; Password: _test#123_</li><li>Navigate to 'New Booking' or 'Current Bookings' page</li><li>Click the brand/logo at the top-left of navbar</ol></li>|Sign Out page displays with navbar and footer|Pass
 Home page displays when clicking 'Sign Out' button on Sign Out page|<ol><li>If required, sign in to booking area using preregistered details e.g. Username: _testname_; Password: _test#123_</li><li>Click 'Logout' in the navabr</li><li>Click 'Sign Out' button</li></ol>|Home page displays with navbar, footer and page contents|Pass
 Booking form displays when clicking 'Cancel' button on Sign Out page|<ol><li>If required, sign in to booking area using preregistered details e.g. Username: _testname_; Password: _test#123_</li><li>Click 'Logout' in the navabr</li><li>Click 'Cancel' button</li></ol>|Booking form and username displays with navbar and footer|Pass
-Gmail opens in a new tab/window when clicking footer icon|<ol><li>Click email icon in footer|Gmail opens in a new tab/window</li></ol>|Pass
-Instagram opens in a new tab/window when clicking footer icon|<ol><li>Click Instagram icon in footer</li></ol>|Instagram opens in a new tab/window|Pass
-Facebook opens in a new tab/window when clicking footer icon|<ol><li>Click Facebook icon in footer</li></ol>|Facebook opens in a new tab/window|Pass
+Gmail opens in a new tab/window when clicking footer icon|<ol><li>Navigate to any page on the site</li><li>Click email icon in footer|Gmail opens in a new tab/window</li></ol>|Pass
+Instagram opens in a new tab/window when clicking footer icon|<ol><li>Navigate to any page on the site</li><li>Click Instagram icon in footer</li></ol>|Instagram opens in a new tab/window|Pass
+Facebook opens in a new tab/window when clicking footer icon|<ol><li>Navigate to any page on the site</li><li>Click Facebook icon in footer</li></ol>|Facebook opens in a new tab/window|Pass
 
 ### Responsiveness
+
+These tests check that the site responds correctly at various sizes of screen, resizing, hiding, and reformatting elements where necessary. The booking area of the site requires a username and password to access (username _testname_ and password _test#123_ have specifically been registered for this purpose); specifics around this access are tested below under [Authentication](#authentication).
+
+**Test**|**Steps**|**Expected**|**Result**
+-----|-----|-----|:-----:
+Navbar toggler appears on main pages at screen width of 767px or smaller|<ol><li>Navigate to 'Home', 'Menu' or 'Location' page</li><li>Reduce screen width to 767px or smaller</li></ol>|<ul><li>Navbar links no longer display in header</li><li>Toggler appears at right of navbar</li><li>'Home', 'Menu', 'Location', and 'Booking' display when toggler is clicked</li></ol>|Pass
+Navbar toggler appears on booking pages at screen width of 767px or smaller|<ol><li>Navigate to 'New Booking' or 'Current Bookings' page</li><li>Reduce screen width to 767px or smaller</li></ol>|<ul><li>Navbar links no longer display in header</li><li>Toggler appears at right of navbar</li><li>'New Booking', 'Current Bookings', and 'Logout' display when toggler is clicked</li></ol>|Pass
+Home page adjusts layout at screen width of 767px or smaller|<ol><li>Navigate to 'Home' page</li><li>Reduce screen width to 767px or smaller</li></ol>|<ul><li>'Open' image is hidden</li><li>Header text above opening times is hidden</li><li>'Menu' button appears below opening times</li></ul>|Pass
+Menu page adjusts layout at screen width of 767px or smaller|<ol><li>Navigate to 'Menu' page</li><li>Reduce screen width to 767px or smaller</li></ol>|<ul><li>Menu text adjusts from two to one-column layout</li></ul>|Pass
+Location page adjusts layout at screen width of 991px or smaller|<ol><li>Navigate to 'Location' page</li><li>Reduce screen width to 991px or smaller</li></ol>|<ul><li>Text below map adjusts from one to two-row layout</li></ul>|Pass
+Current Bookings page adjusts layout at screen width of 767px or smaller|<ol><li>Navigate to 'Current Bookings' page</li><li>Reduce screen width to 767px or smaller</li></ol>|<ul><li>'Actions' table header is hidden</li><li>'Update' and 'Delete' buttons repositioned below booking details</li><li>Horizontal borders appear between booking entries</li></ul>|Pass
+Current Bookings page adjusts date format at screen width of 767px or smaller|<ol><li>Navigate to 'Current Bookings' page</li><li>Reduce screen width to 767px or smaller</li></ol>|<ul><li>Booking dates adjust from 'Day, Date Month Year' format to 'dd/mm/yyyy'</li></ul>|Pass
+Footer adjusts layout at screen width of 767 px or smaller|<ol><li>Navigate to any page on the site</li><li>Reduce screen width to 767px or smaller</li></ol>|<ul><li>'est. 2023' text is hidden</li><li>Social icons right-aligned with screen</li></ul>|Pass
+Footer adjusts format at screen width of 575 px or smaller|<ol><li>Navigate to any page on the site</li><li>Reduce screen width to 575px or smaller</li></ol>|<ul><li>Postcode under 'Address' is hidden</li><li>'Wed-Sun' under 'Opening Hours' adjusted to 'W-S'</li></ul>|Pass
+Navbar and Footer adjust layout at screen height of 800 px or smaller|<ol><li>Navigate to any page on the site</li><li>Reduce screen height to 800px or smaller</li></ol>|<ul><li>Brand, logo and navbar height reduced</li><li>Social icon size and footer height reduced</li><li>'Opening Hours' text is hidden</li></ul>|Pass
 
 ### Authentication
 
@@ -65,7 +80,7 @@ User can sign out from the booking site|<ol><li>if required sign in, then click 
 
 ### CRUD Functionality
 
-These tests determine if a user is able to successfully create, view, update and/or delete a booking, or not as the case may be, through the front-end capabilities of the site. In all test cases, one must first sign in to the booking area of the site before completing any of the other steps listed (the username _testname_ and password _test#123_ have specifically been registered for this purpose), while the desciptor 'valid details' indicates that the following is expected:
+These tests determine if a user is able to successfully create, view, update and/or delete a booking, or not as the case may be, through the front-end capabilities of the site. In all test cases, **one must first sign in** to the booking area of the site before completing any of the other steps listed (the username _testname_ and password _test#123_ have specifically been registered for this purpose), while the desciptor 'valid details' indicates that the following is expected:
 
 - 'Date' is not left blank
 - 'Date' is not set earlier than tomorrow's date

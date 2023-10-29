@@ -115,6 +115,15 @@ User cannot delete other users' bookings|<ol><li>Navigate to 'Current Bookings' 
 
 ## Bugs
 
+There are no known bugs in the current deployment of the site. A number of bugs were found, added to the [Kanban workflow](https://github.com/users/ndsurgenor/projects/5), and corrected during development. A brief summary of these bugs is provided below:
+
+**Bug**|**Description**|**Solution**|**Result**
+-----|-----|-----|:-----:
+Bootstrap/CSS styling not displaying correctly|Heroku deployment not displaying the Bootstrap/CSS styling as implemented in the code. Running a server using ```python3 manage.py runserver``` displays all styling correctly|<ul><li>Connect style.css by correcting typo of 'STATIC\_DIRS' to 'STATICFILES\_DIRS' in settings.py</li><li>Set images to load from static files rather than external links</li></ul>|Fixed
+Pages not scrolling correctly when required|On smaller screen heights the contents of the page will not scroll correctly to show content hidden behind the footer|<ul><li>Add margin-bottom to body under media query</li><li>Add margin-bottom divs on relevant pages where required e.g. Menu page</li></ul>|Fixed
+Booking form not recording submissions on database|Form is rendering correctly as a functional object but not storing data to the database|<ul><li>'Status' included on form as a hidden field</li><li>Code added to form_valid to automatically set contact info (form.instance.contact_id = self.request.user.id)</li>|Fixed
+
+
 
 
 ## Accessibility
@@ -155,34 +164,3 @@ JavaScript code was run through [JSHINT](https://jshint.com) javascript validato
 Lighthouse report showed areas for improvement on SEO and Best practices. Meta descriptions and keywords were added to boost the SEO to 100 but the best practice warnings were coming from the use of an embedded iframe's javascript. Unfortunately I did not find a way to improve this as I am not initialising the google map iframe with javascript.
 
 ![Lighthouse v1](docs/testing/light-house-v2.PNG)
-
-## Responsiveness
-
-All pages were tested to ensure responsiveness on screen sizes from 320px and upwards as defined in WCAG 2.1 Reflow criteria for responsive design on Chrome, Edge, Firefox and Opera browsers.
-
-Steps to test:
-
-- Open browser and navigate to [sizzle-and-steak](https://sizzle-and-steak.herokuapp.com/)
-- Open the developer tools (right click and inspect)
-- Set to responsive and decrease width to 320px
-- Set the zoom to 50%
--  Click and drag the responsive window to maximum width
-
-Expected:
-
-Website is responsive on all screen sizes and no images are pixelated or stretched. No horizontal scroll is present. No elements overlap.
-
-Actual:
-
-Website behaved as expected.
-
-Website was also opened on the following devices and no responsive issues were seen:
-
-Oukitel C21 Pro
-TCL 30 Pro
-iPhone SE
-
-
-## Bugs
-
-Logic has been implemented to ensure that when a booking is created that it books the table with the capacity lowest to suit the number of guests. When a user updates a booking, this does not function correctly on the edit and will reassign the booking to another table with the next lowest capacity. It should keep the booking on the current table if it is a lower capacity but unfortunately does not work correctly and has not been resolved in time for submission.

@@ -13,9 +13,8 @@ A number of manual
     - [Authentication](#authentication)
     - [CRUD Functionality](#crud-functionality)
 - [Unit Testing](#unit-testing)
-- [Accessibility](#accessibility)
 - [Validator Testing](#validator-testing)
-- [Performance](#performance)
+- [Accessibility & Performance](#accessibility--performance)
 - [Bugs](#bugs)
 
 ## Manual Testing
@@ -107,15 +106,28 @@ User cannot delete other users' bookings|<ol><li>Navigate to 'Current Bookings' 
 
 ## Unit Testing
 
-## Accessibility
+## Validator Testing
+
+## Accessibility & Performance
 
 The site has been tested using the [WAVE Evaluation Tool](https://wave.webaim.org/report#/https://east-street-bc0671035c95.herokuapp.com/) to ensure best practices have been followed regarding aria labels, heading hiearchy, and contrast between page elements. An initial valuation revealed that the 'Sign Up'/'Sign In' forms had a minor contrast issue with links so this has been corrected for better readability.
 
-## Validator Testing
+[Lighthouse](https://developer.chrome.com/docs/lighthouse/overview/) was used to used to produce reports on performance and accessibility for both desktop and mobile versions of the site. The image below shows results for the Home page on desktop and mobile respectively while sitewide results are provided in the table. In all cases the SEO score was 100 which was achieved after adding meta 'keyword' and 'desciption' tags to the base.html head section.
 
-Lighthouse reporting by Google Developer tools was used to 
+![Lighthouse](static/images/testing/lighthouse-testing.png)
 
-## Performance
+| | |**Desktop**| | |**Mobile**| |
+:-----|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:
+**Page**|**Performance**|**Accessibility**|**Best Practices**|**Performance**|**Accessibility**|**Best Practices**
+**Home**|94|100|95|92|97|95
+**Menu**|99|100|95|92|100|95
+**Location**|97|92|91|92|91|91
+**New Bookings**|98|100|91|92|100|95
+**Current Bookings**|98|100|95|91|100|91
+**Sign In**|98|100|95|92|100|95
+**Sign Up**|98|100|95|92|100|95
+**Sign Out**|98|100|95|92|100|95
+**_Averages_**|**_98_**|**_99_**|**_94_**|_92_|_99_|_94_
 
 ## Bugs
 

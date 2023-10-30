@@ -109,7 +109,11 @@ User cannot delete other users' bookings|<ol><li>Navigate to 'Current Bookings' 
 
 ## Accessibility
 
+The site has been tested using the [WAVE Evaluation Tool](https://wave.webaim.org/report#/https://east-street-bc0671035c95.herokuapp.com/) to ensure best practices have been followed regarding aria labels, heading hiearchy, and contrast between page elements. An initial valuation revealed that the Sign Up/Sign In forms had a minor contrast issue with links so this has been corrected for better readability.
+
 ## Validator Testing
+
+Lighthouse reporting by Google Developer tools was used to 
 
 ## Performance
 
@@ -125,21 +129,6 @@ Booking form not recording submissions on database|Form is rendering correctly a
 
 
 
-
-## Accessibility
-
-[Wave Accessibility](https://wave.webaim.org/) tool was used throughout development and for final testing of the deployed website to check for any aid accessibility testing.
-
-Testing was focused to ensure the following criteria were met:
-
-- All forms have associated labels or aria-labels so that this is read out on a screen reader to users who tab to form inputs
-- Color contrasts meet a minimum ratio as specified in [WCAG 2.1 Contrast Guidelines](https://www.w3.org/WAI/WCAG21/Understanding/contrast-minimum.html)
-- Heading levels are not missed or skipped to ensure the importance of content is relayed correctly to the end user
-- All content is contained within landmarks to ensure ease of use for assistive technology, allowing the user to navigate by page regions
-- All not textual content had alternative text or titles so descriptions are read out to screen readers
-- HTML page lang attribute has been set
-- Aria properties have been implemented correctly
-- WCAG 2.1 Coding best practices being followed
 
 ## Validator Testing
 
@@ -158,9 +147,3 @@ The django auto generated code for AUTH_PASSWORD_VALIDATORS were showing up as l
 JavaScript code was run through [JSHINT](https://jshint.com) javascript validator. lIt flagged up issues with undefined variables as I jad forgotten to use the let keyword. This was fixed and the only warnings remained were that they were unused variables. The functions were called via onclick from the html elements themselves, so are in fact being used.
 
 ![JS validator](docs/testing/javascript.PNG)
-
-## Lighthouse Report
-
-Lighthouse report showed areas for improvement on SEO and Best practices. Meta descriptions and keywords were added to boost the SEO to 100 but the best practice warnings were coming from the use of an embedded iframe's javascript. Unfortunately I did not find a way to improve this as I am not initialising the google map iframe with javascript.
-
-![Lighthouse v1](docs/testing/light-house-v2.PNG)

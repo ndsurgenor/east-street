@@ -341,9 +341,9 @@ Each of the following implementations was added in response to the acceptance cr
 
 ![Errors](static/images/readme/features-errors.png)
 
-- The 403 page displays
-- The 404 page displays
-- The 500 page displays
+- The 403 page displays when the user tries to access an area they do not have permission to view and provides links back to the main areas of the site
+- The 404 page displays when the user tries to access a non-existent page and provides links back to the main areas of the site
+- The 500 page displays when the there is an error with the site's internal server and provides links back to the main areas of the site
 
 ### Features to be implemented
 - Blocked out dates on calendar

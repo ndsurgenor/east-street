@@ -56,8 +56,8 @@ class BookUpdateView(UserPassesTestMixin, generic.UpdateView):
     template_name = 'bookingform.html'
     success_url = '/bookinglist'
 
-    def test_func(self, form):
-        return self.request.user.id == form.instance.contact_id
+    def test_func(self):
+        return self.request.user.id == self.get_object().contact_id
 
     def form_valid(self, form):
         form.instance.status = 0

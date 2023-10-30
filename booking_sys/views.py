@@ -65,13 +65,16 @@ class BookUpdateView(UserPassesTestMixin, generic.UpdateView):
         return super(BookUpdateView, self).form_valid(form)
 
 
-class BookDeleteView(generic.DeleteView):
+class BookDeleteView(UserPassesTestMixin, generic.DeleteView):
     """
     View to allow deletion of a booking
     """
     model = Booking
     template_name = 'bookingdelete.html'
     success_url = '/bookinglist'
+
+    def test_func(self):
+        return self.request.user.id == self.get_object().contact_id
 
     def delete(self, request, *args, **kwargs):
         messages.success(self.request, 'Booking deleted successfully')

@@ -1,12 +1,7 @@
 {% extends 'bookingsite.html' %}
-{% block details %}
 
-    {% if booking %}
-        {% if booking.contact_id != user.id %}
-        <!-- Redirect to user-made bookings when access to form not permitted -->
-        <meta http-equiv="refresh" content="0; url='{% url 'bookinglist' %}'" />
-        {% endif %}
-    {% endif %}
+{% if user.is_authenticated %}
+{% block details %}    
 
     <!-- New Booking/Update Form -->
     <div class="container-fluid">
@@ -29,6 +24,7 @@
                 </form>
             </div>
         </div>
-    </div>
+    </div> 
 
 {% endblock %}
+{% endif %}

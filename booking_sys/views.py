@@ -2,6 +2,7 @@ from django.shortcuts import render, get_object_or_404
 from django.http import HttpResponse
 from django.views import generic, View
 from django.contrib import messages
+from django.contrib.auth.mixins import UserPassesTestMixin
 from .models import Booking
 from .forms import BookingForm
 
@@ -46,7 +47,7 @@ class BookListView(generic.ListView):
     template_name = 'bookinglist.html'
 
 
-class BookUpdateView(generic.UpdateView):
+class BookUpdateView(UserPassesTestMixin, generic.UpdateView):
     """
     View to allow a booking to be updated
     """
@@ -54,6 +55,9 @@ class BookUpdateView(generic.UpdateView):
     form_class = BookingForm
     template_name = 'bookingform.html'
     success_url = '/bookinglist'
+
+    def test_func(self, form):
+        return self.request.user.id == form.instance.contact_id
 
     def form_valid(self, form):
         form.instance.status = 0

@@ -123,13 +123,13 @@ The site has been tested using the [WAVE Evaluation Tool](https://wave.webaim.or
 **Page**|**Performance**|**Accessibility**|**Best Practices**|**Performance**|**Accessibility**|**Best Practices**
 **Home**|94|100|95|92|97|95
 **Menu**|99|100|95|92|100|95
-**Location**|97|92|91|92|91|91
+**Location**|97|97|91|92|97|91
 **New Bookings**|98|100|91|92|100|95
 **Current Bookings**|98|100|95|91|100|91
 **Sign In**|98|100|95|92|100|95
 **Sign Up**|98|100|95|92|100|95
 **Sign Out**|98|100|95|92|100|95
-**_Averages_**|**_98_**|**_99_**|**_94_**|_92_|_99_|_94_
+**_Averages_**|**_98_**|**_100_**|**_94_**|**_92_**|**_99_**|**_94_**
 
 ## Bugs
 
@@ -145,12 +145,6 @@ Booking form not recording submissions on database|Form is rendering correctly a
 
 
 ## Validator Testing
-
-All pages were run through the [w3 HTML Validator](https://validator.w3.org/). Initially there were some errors due to stray script tags, misuse of headings within spans and some unclosed elements. All of these issues were corrected and all pages passed validation.
-
-Due to the django templating language code used in the HTML files, these could not be copy and pasted into the validator and due to the secured views, pages with login required or a secured view cannot be validated by direct URI. To test the validation on the files, open the page to validate, right click and view page source. Paste the raw html code into the validator as this will be only the HTML rendered code.
-
-![HTML Validator](docs/testing/html.PNG)
 
 All pages were run through the official [Pep8](http://pep8online.com/) validator to ensure all code was pep8 compliant. Some errors were shown due to blank spacing and lines too long, 1 line instead of 2 expected. All of these errors were resolved and code passed through validators with the exception of the settings.py file.
 

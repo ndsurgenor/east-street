@@ -1,7 +1,7 @@
 {% extends 'bookingsite.html' %}
 
 {% if user.is_authenticated %}
-    {% block details %}
+{% block details %}
 
     <!-- Deletion confirmation dialog -->
     {% if booking.contact_id == user.id %}
@@ -31,5 +31,5 @@
 
     {% endif %}
 
-    {% endblock %}
+{% endblock %}
 {% endif %}

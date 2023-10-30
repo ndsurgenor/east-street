@@ -136,6 +136,17 @@ body {
     margin-top: 2em;
 }
 
+.access-form a {
+    color: darkslategrey;
+    font-weight: bold;
+}
+
+.access-form a:hover {
+    color: ghostwhite;
+    background-color: dimgrey;
+    text-decoration: none;
+}
+
 .access-form button,
 .access-form-input {
     color: ghostwhite;

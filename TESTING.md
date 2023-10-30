@@ -59,7 +59,7 @@ Current Bookings page adjusts layout at screen width of 767px or smaller|<ol><li
 Current Bookings page adjusts date format at screen width of 767px or smaller|<ol><li>Navigate to 'Current Bookings' page</li><li>Reduce screen width to 767px or smaller</li></ol>|<ul><li>Booking dates adjust from 'Day, Date Month Year' format to 'dd/mm/yyyy'</li></ul>|Pass
 Footer adjusts layout at screen width of 767 px or smaller|<ol><li>Navigate to any page on the site</li><li>Reduce screen width to 767px or smaller</li></ol>|<ul><li>'est. 2023' text is hidden</li><li>Social icons right-aligned with screen</li></ul>|Pass
 Footer adjusts format at screen width of 575 px or smaller|<ol><li>Navigate to any page on the site</li><li>Reduce screen width to 575px or smaller</li></ol>|<ul><li>Postcode under 'Address' is hidden</li><li>'Wed-Sun' under 'Opening Hours' adjusted to 'W-S'</li></ul>|Pass
-Navbar and Footer adjust layout at screen height of 800 px or smaller|<ol><li>Navigate to any page on the site</li><li>Reduce screen height to 800px or smaller</li></ol>|<ul><li>Brand, logo and navbar height reduced</li><li>Social icon size and footer height reduced</li><li>'Opening Hours' text is hidden</li></ul>|Pass
+Navbar and Footer adjust layout at screen height of 825 px or smaller|<ol><li>Navigate to any page on the site</li><li>Reduce screen height to 825px or smaller</li></ol>|<ul><li>Brand, logo and navbar height reduced</li><li>Social icon size and footer height reduced</li><li>'Opening Hours' text is hidden</li></ul>|Pass
 
 ### Authentication
 
@@ -109,7 +109,7 @@ User cannot delete other users' bookings|<ol><li>Navigate to 'Current Bookings' 
 
 ## Accessibility
 
-The site has been tested using the [WAVE Evaluation Tool](https://wave.webaim.org/report#/https://east-street-bc0671035c95.herokuapp.com/) to ensure best practices have been followed regarding aria labels, heading hiearchy, and contrast between page elements. An initial valuation revealed that the Sign Up/Sign In forms had a minor contrast issue with links so this has been corrected for better readability.
+The site has been tested using the [WAVE Evaluation Tool](https://wave.webaim.org/report#/https://east-street-bc0671035c95.herokuapp.com/) to ensure best practices have been followed regarding aria labels, heading hiearchy, and contrast between page elements. An initial valuation revealed that the 'Sign Up'/'Sign In' forms had a minor contrast issue with links so this has been corrected for better readability.
 
 ## Validator Testing
 

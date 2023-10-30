@@ -129,7 +129,7 @@ body {
     margin-bottom: 10em;
 }
 
-/* Authorisation Forms */
+/* Access & Authorisation Forms */
 .access-form {
     background-color: ghostwhite;
     border: 0.5em solid gainsboro;
@@ -246,7 +246,7 @@ footer p {
     }
 }
 
-@media only screen and (max-height: 800px) {
+@media only screen and (max-height: 825px) {
     .navbar-brand {
         font-size: 0.85em;
     }

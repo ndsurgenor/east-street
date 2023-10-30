@@ -392,21 +392,23 @@ In order to code and design these featured the following technologies were utili
   - Used to create a timed automatic dismissal of on-screen alerts
 
 #### Packages Used
-- [Gitpod](https://gitpod.io) was used to code the site and transfer files between the editor and the repository
-- [GitHub](https://github.com) was used to store the files for this project
-- [Cacoo](https://cacoo.com) was used to develop the wireframe models for the site design
-- [DBDiagram](https://dbdiagram.io/) was used to create the database diagram
-- [Google Maps](https://www.google.com/maps) was used to create the specific map for the Location page
-- [Google Fonts](https://fonts.google.com/) was used to style the text throughout the site
-- [Coolors](https://coolors.co/) was used to help create the colour scheme
-- [Markdown Table Generator](https://jakebathman.github.io/Markdown-Table-Generator/) was used to create tables for this document
-- PowerPoint, MS Paint and the Windows Photo app were used to produce the image files for this document
+- [Gitpod](https://gitpod.io) used to code the site and transfer files between the editor and the repository
+- [GitHub](https://github.com) used to store the files for this project
+- [Cacoo](https://cacoo.com) used to develop the wireframe models for the site design
+- [DBDiagram](https://dbdiagram.io/) used to create the database diagram
+- [Google Fonts](https://fonts.google.com/) used to style the text throughout the site
+- [Google Maps](https://www.google.com/maps) used to create the specific map for the Location page
+- [TinyURL](https://tinyurl.com/app) used to shorten link for map source
+- [Coolors](https://coolors.co/) used to help create the colour scheme
+- [Markdown Table Generator](https://jakebathman.github.io/Markdown-Table-Generator/) used to create tables for documentation
+- PowerPoint, MS Paint, and the Windows Photo app used to produce image files for documentation
 
 #### Reference Materials
-- [Django documentation](https://docs.djangoproject.com/en/4.2/ref/class-based-views/generic-editing/) was referenced frequently in order to achieve CRUD functionality and associated views
-- [Django-allauth documentation](https://docs.allauth.org/en/latest/) was referenced frequently in order to implement its features correctly
+- [Django documentation](https://docs.djangoproject.com/en/4.2/ref/class-based-views/generic-editing/) referenced frequently in order to achieve CRUD functionality and associated views
+- [Django-allauth documentation](https://docs.allauth.org/en/latest/) referenced frequently in order to implement its features correctly
 - [Code Institute](https://codeinstitute.net/) course materials and walkthrough projects provided many reference points for implementing features of this project
-- Documentation for similar projects by [MattBCoding](https://github.com/MattBCoding/pp4-the-pantry) and [Gareth-McGirr](https://github.com/Gareth-McGirr/Portfolio-Project-4-SizzleAndSteak) was referenced frequently when creating the READ.md and TESTING.md files
+- [Codú article](https://www.codu.co/articles/securing-django-views-from-unauthorized-access-npyb3to_) by [Daisy McGirr]() referenced for writing code to protect against unauthorised views
+- Documentation for similar projects by [MattBCoding](https://github.com/MattBCoding/pp4-the-pantry) and [Gareth-McGirr](https://github.com/Gareth-McGirr/Portfolio-Project-4-SizzleAndSteak) referenced frequently when creating the READ.md and TESTING.md files
 - Any other resources used are directly referenced where appropriate
 
 ## Testing

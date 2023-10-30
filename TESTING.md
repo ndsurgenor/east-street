@@ -108,6 +108,8 @@ User cannot delete other users' bookings|<ol><li>Navigate to 'Current Bookings' 
 
 ## Validator Testing
 
+All pages have been passed through the [w3 HTML Validator](https://validator.w3.org/). One error remains on the base.html file regarding the use of 'background=' in the body element; attempts to correct this meant that the image did not show at all on the deployed site so the tag has been left as is.
+
 ## Accessibility & Performance
 
 The site has been tested using the [WAVE Evaluation Tool](https://wave.webaim.org/report#/https://east-street-bc0671035c95.herokuapp.com/) to ensure best practices have been followed regarding aria labels, heading hiearchy, and contrast between page elements. An initial valuation revealed that the 'Sign Up'/'Sign In' forms had a minor contrast issue with links so this has been corrected for better readability.

@@ -14,7 +14,12 @@ A number of manual
     - [CRUD Functionality](#crud-functionality)
 - [Unit Testing](#unit-testing)
 - [Validator Testing](#validator-testing)
+    - [W3C]()
+    - [PEP8]()
 - [Accessibility & Performance](#accessibility--performance)
+    - [WAVE](#wave)
+    - [Lighthouse](#lighthouse)
+    - [JSHint](#jshint)
 - [Bugs](#bugs)
 
 ## Manual Testing
@@ -108,12 +113,24 @@ User cannot delete other users' bookings|<ol><li>Navigate to 'Current Bookings' 
 
 ## Validator Testing
 
-All pages have been passed through the [w3 HTML Validator](https://validator.w3.org/). One error remains on the base.html file regarding the use of 'background =' in the body element; attempts to correct this meant that the image did not show at all on the deployed site so the tag has been left as is.
+### W3C
+All pages have been passed through the [W3C HTML Validator](https://validator.w3.org/) successfully save for a few minor issues which have been left 'as is' as attempts to correct them proved unsuccessful and lead to results which devalued the user experince. Specifically, these were:
+
+- The use of a 'background' attribute in the body tag of base.html. The validator suggested to replace this with CSS but attempts to do so meant the background image failed to load
+- The use of iframe styling attirbutes on the location.html page. Again, the validator suggested CSS replacements but these caused the map to display incorrectly and almost be unreadble
+
+### PEP8
+All Python files have been passed through the [Code Institute PEP8 Linter](https://pep8ci.herokuapp.com/)
+
+### JSHint
+The small [JShint](https://jshint.com/)
 
 ## Accessibility & Performance
 
+### WAVE
 The site has been tested using the [WAVE Evaluation Tool](https://wave.webaim.org/report#/https://east-street-bc0671035c95.herokuapp.com/) to ensure best practices have been followed regarding aria labels, heading hiearchy, and contrast between page elements. An initial valuation revealed that the 'Sign Up'/'Sign In' forms had a minor contrast issue with links so this has been corrected for better readability.
 
+### Lighthouse
 [Lighthouse](https://developer.chrome.com/docs/lighthouse/overview/) was used to used to produce reports on performance and accessibility for both desktop and mobile versions of the site. The image below shows results for the Home page on desktop and mobile respectively while sitewide results are provided in the table. In all cases the SEO score was 100 which was achieved after adding meta 'keyword' and 'desciption' tags to the base.html head section.
 
 ![Lighthouse](static/images/testing/lighthouse-testing.png)
@@ -140,18 +157,3 @@ There are no known bugs in the current deployment of the site. A number of bugs 
 Bootstrap/CSS styling not displaying correctly|Heroku deployment not displaying the Bootstrap/CSS styling as implemented in the code. Running a server using ```python3 manage.py runserver``` displays all styling correctly|<ul><li>Connect style.css by correcting typo of 'STATIC\_DIRS' to 'STATICFILES\_DIRS' in settings.py</li><li>Set images to load from static links rather than external sources</li></ul>|Fixed
 Pages not scrolling correctly when required|On smaller screen heights the contents of the page will not scroll correctly to show content hidden behind the footer|<ul><li>Add margin-bottom to body under media query</li><li>Add margin-bottom divs on relevant pages where required e.g. Menu page</li></ul>|Fixed
 Booking form not recording submissions on database|Form is rendering correctly as a functional object but not storing data to the database|<ul><li>'Status' included on form as a hidden field to ensure this present when form is submitted</li><li>Code added to form_valid to automatically set contact info (form.instance.contact_id = self.request.user.id)as this was also missing from the form</li>|Fixed
-
-
-
-
-## Validator Testing
-
-All pages were run through the official [Pep8](http://pep8online.com/) validator to ensure all code was pep8 compliant. Some errors were shown due to blank spacing and lines too long, 1 line instead of 2 expected. All of these errors were resolved and code passed through validators with the exception of the settings.py file.
-
-The django auto generated code for AUTH_PASSWORD_VALIDATORS were showing up as lines too long. I could not find a way to split these lines but since they were auto generated and not my own custom code, I hope this is acceptable.
-
-![PEP8](docs/testing/pep8.PNG)
-
-JavaScript code was run through [JSHINT](https://jshint.com) javascript validator. lIt flagged up issues with undefined variables as I jad forgotten to use the let keyword. This was fixed and the only warnings remained were that they were unused variables. The functions were called via onclick from the html elements themselves, so are in fact being used.
-
-![JS validator](docs/testing/javascript.PNG)

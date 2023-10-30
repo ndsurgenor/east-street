@@ -119,9 +119,9 @@ There are no known bugs in the current deployment of the site. A number of bugs 
 
 **Bug**|**Description**|**Solution**|**Result**
 -----|-----|-----|:-----:
-Bootstrap/CSS styling not displaying correctly|Heroku deployment not displaying the Bootstrap/CSS styling as implemented in the code. Running a server using ```python3 manage.py runserver``` displays all styling correctly|<ul><li>Connect style.css by correcting typo of 'STATIC\_DIRS' to 'STATICFILES\_DIRS' in settings.py</li><li>Set images to load from static files rather than external links</li></ul>|Fixed
+Bootstrap/CSS styling not displaying correctly|Heroku deployment not displaying the Bootstrap/CSS styling as implemented in the code. Running a server using ```python3 manage.py runserver``` displays all styling correctly|<ul><li>Connect style.css by correcting typo of 'STATIC\_DIRS' to 'STATICFILES\_DIRS' in settings.py</li><li>Set images to load from static links rather than external sources</li></ul>|Fixed
 Pages not scrolling correctly when required|On smaller screen heights the contents of the page will not scroll correctly to show content hidden behind the footer|<ul><li>Add margin-bottom to body under media query</li><li>Add margin-bottom divs on relevant pages where required e.g. Menu page</li></ul>|Fixed
-Booking form not recording submissions on database|Form is rendering correctly as a functional object but not storing data to the database|<ul><li>'Status' included on form as a hidden field</li><li>Code added to form_valid to automatically set contact info (form.instance.contact_id = self.request.user.id)</li>|Fixed
+Booking form not recording submissions on database|Form is rendering correctly as a functional object but not storing data to the database|<ul><li>'Status' included on form as a hidden field to ensure this present when form is submitted</li><li>Code added to form_valid to automatically set contact info (form.instance.contact_id = self.request.user.id)as this was also missing from the form</li>|Fixed
 
 
 

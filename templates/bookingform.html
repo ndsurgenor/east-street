@@ -3,11 +3,12 @@
 
     {% if booking %}
         {% if booking.contact_id != user.id %}
-        <!-- Redirect back to user-made bookings -->
+        <!-- Redirect to user-made bookings when access to form not permitted -->
         <meta http-equiv="refresh" content="0; url='{% url 'bookinglist' %}'" />
         {% endif %}
     {% endif %}
 
+    <!-- New Booking/Update Form -->
     <div class="container-fluid">
         <div class="row justify-content-center">
             <div class="col-10 col-sm-7 col-md-6 col-lg-4 col-xxl-3 booking-form text-center shadow">

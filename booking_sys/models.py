@@ -5,7 +5,7 @@ from .variables import TIMES, GROUP_SIZE, STATUS
 
 class Booking(models.Model):
     """
-    Model for user-made booking
+    Model for restaurant bookings
     """
     contact = models.ForeignKey(
         User, on_delete=models.CASCADE, related_name='bookings')

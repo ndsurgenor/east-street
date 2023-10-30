@@ -12,6 +12,7 @@
       <h2 class="pt-2">{% trans "Sign Out" %}</h2>
       <p>This will log you out of the booking section and return you to the main page. {% trans 'Are you sure you want to sign out?' %}</p>
 
+      <!-- Sign-out confirmation dialog -->
       <form method="post" action="{% url 'account_logout' %}">
         {% csrf_token %}
         {% if redirect_field_value %}

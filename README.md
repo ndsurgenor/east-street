@@ -330,7 +330,7 @@ Each of the following implementations was added in response to the acceptance cr
 ![Overview](static/images/readme/features-admin-overview.png)
 
 - A link named 'Bookings' provided in the lefthand menu allows the admin to view all entries on the database
-- Booking names formatted as ```<date>, <time>, x<group size> - <status>``` and displayed in date order for ease of reading/understanding
+- Booking names formatted as ```<date> <time> x<group size> - <status>``` and displayed in date order for ease of reading/understanding
 - Clicking a booking name will take the admin to its detailed view where the status can be updated and saved
 - These changes are fed back to the used via their booking list on the regular site
 

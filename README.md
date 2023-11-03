@@ -346,13 +346,13 @@ Each of the following implementations was added in response to the acceptance cr
 - The 500 page displays when the there is an error with the site's internal server and provides links back to the main areas of the site
 
 ### Features to be implemented
-- Blocked out dates on calendar
-- Blocked out times associated with dates
-- Email notification to admin of customer made booking
-- Email notification to customer of booking status update
-- Ability to add menu items
-- Ability to input closing times, dates, group numbers
-- Only status can be changed by staff to avoid accidentally changing bookings
+
+The following features have been identified as long-term goals which bring value to the UX; however, they have not been implemented at this stage as they would require a siginificant time investment, thereby delaying vital other features of the site, or a level of programming knowledge which I haven't yet developed. 
+
+- Admin module for staff/admin to set menu items and prices allowing Menu page to stay up-to-date
+- Blocked out dates/times on calendar when the restaurant is closed/fully booked thereby managing numbers for admin automatically
+- Ability for staff admin to define closing dates/time, min/max group sizes, restaurant capacity etc. to also help manage the booking system
+- Automatic email notifications for admin when customers make bookings and notifications to customers when booking status is updated
 
 ### Technology & Resources
 

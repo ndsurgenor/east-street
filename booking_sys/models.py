@@ -18,4 +18,5 @@ class Booking(models.Model):
         ordering = ['date', 'time']
 
     def __str__(self):
-        return f'{self.date}, {self.time} - {self.contact} x{self.group}'
+        status_name = STATUS[self.status]
+        return f'{self.date}, {self.time}, x{self.group} - {status_name}'

@@ -19,4 +19,4 @@ class Booking(models.Model):
 
     def __str__(self):
         status_name = dict(STATUS)[self.status]
-        return f'{self.date} {self.time} x{self.group} - {status_name}'
+        return f'{self.date} {self.time} {self.contact} x{self.group} - {status_name}'

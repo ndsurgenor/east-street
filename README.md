@@ -245,7 +245,7 @@ Each of the following implementations was added in response to the acceptance cr
 
 ![Admin](static/images/readme/features-admin.png)
 
-- An admin area accessible via the [following link](https://east-street-bc0671035c95.herokuapp.com/admin) which is only accessible by typing the address i.e. not direct link is provided to users of the site
+- An admin area accessible via https://east-street-bc0671035c95.herokuapp.com/admin which can only be accessed by typing the address i.e. no direct link is provided to users of the site
 - Username and password details must be entered to gain access and will only admit those designated as administrators
 - A link named 'Bookings' provided in the lefthand menu allows the admin to view all entries on the database
 
@@ -330,7 +330,7 @@ Each of the following implementations was added in response to the acceptance cr
 ![Overview](static/images/readme/features-admin-overview.png)
 
 - A link named 'Bookings' provided in the lefthand menu allows the admin to view all entries on the database
-- Booking names formatted as ```<date> <time> x<group size> - <status>``` and displayed in date order for ease of reading/understanding
+- Booking names formatted as ```<date> <time> <contact> x<group size> - <status>``` and displayed in date order for ease of reading/understanding
 - Clicking a booking name will take the admin to its detailed view where the status can be updated and saved
 - These changes are fed back to the used via their booking list on the regular site
 

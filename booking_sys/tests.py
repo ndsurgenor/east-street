@@ -2,111 +2,102 @@ from django.test import TestCase
 from django.contrib.auth import get_user_model
 
 
-class TestViews(TestCase):
+class TestViewsAuthorised(TestCase):
+    """
+    Tests for booking section views when user is signed in
+    """
 
     def test_bookingsite_signed_in(self):
         """
-        Tests that the booking form can be accessed when authorised user is signed in
+        Tests that 'New Booking' can be accessed without 403 error
         """
         user_model = get_user_model()
-        good_username = 'goodtest'
-        good_password = 'test#777'
-
         user = user_model.objects.create_user(
-            username=good_username,
-            password=good_password,
+            username='goodtest',
+            password='test#777',
             is_superuser=True,
         )
-        signed_in = self.client.login(
-            username=good_username,
-            password=good_password,
-        )
 
-        self.assertTrue(signed_in)
+        self.client.force_login(user)
+        assert user.is_authenticated
+
         response = self.client.get('/bookingsite/')
         self.assertEqual(response.status_code, 200)
-
+        self.assertTemplateNotUsed(response, '403.html')
 
     def test_bookinglist_signed_in(self):
         """
-        Tests that previous bookings can be accessed when authorised user is signed in
+        Tests that 'Current Bookings' can be accessed without 403 error
         """
         user_model = get_user_model()
-        good_username = 'goodtest'
-        good_password = 'test#777'
-
         user = user_model.objects.create_user(
-            username=good_username,
-            password=good_password,
+            username='goodtest',
+            password='test#777',
             is_superuser=True,
         )
-        signed_in = self.client.login(
-            username=good_username,
-            password=good_password,
-        )
 
-        self.assertTrue(signed_in)
+        self.client.force_login(user)
+        assert user.is_authenticated
+
         response = self.client.get('/bookinglist/')
         self.assertEqual(response.status_code, 200)
+        self.assertTemplateNotUsed(response, '403.html')
 
+
+class TestViewsUnauthorised(TestCase):
+    """
+    Tests for booking section views when user is not signed in
+    """
 
     def test_bookingsite_not_signed_in(self):
         """
-        Tests that the booking form cannot be accessed unless user is signed in
+        Tests that attempting to access 'New Booking' displays 403 Error
         """
         response = self.client.get('/bookingsite/')
-        self.assertEqual(response.status_code, 403)
-
+        self.assertTemplateUsed(response, '403.html')
 
     def test_bookinglist_not_signed_in(self):
         """
-        Tests that a list of bookings cannot be accessed unless user is signed in
+        Tests that attempting to access 'Current Bookings' displays 403 Error
         """
         response = self.client.get('/bookinglist/')
-        self.assertEqual(response.status_code, 403)
+        self.assertTemplateUsed(response, '403.html')
 
+
+class TestViewsForbidden(TestCase):
 
     def test_update_forbidden(self):
         """
         Tests that booking cannot be updated by user who is not the owner
         """
         user_model = get_user_model()
-        bad_username = 'badtest'
-        bad_password = 'test#666'
-
         user = user_model.objects.create_user(
-            username=bad_username,
-            password=bad_password,
+            username='badtest',
+            password='test#666',
             is_superuser=False,
         )
-        signed_in = self.client.login(
-            username=bad_username,
-            password=bad_password,
-        )
 
-        self.assertTrue(signed_in)
-        response = self.client.get('/10/update')
-        self.assertEqual(response.status_code, 403)
+        self.client.force_login(user)
+        assert user.is_authenticated
+
+        response = self.client.get('/90/update')
+        self.assertTemplateNotUsed(response, 'bookingform.html')
+        self.assertEqual(response.status_code, 301)
     
-
     def test_delete_forbidden(self):
         """
         Tests that booking cannot be deleted by user who is not the owner
         """
         user_model = get_user_model()
-        bad_username = 'badtest'
-        bad_password = 'test#666'
-
         user = user_model.objects.create_user(
-            username=bad_username,
-            password=bad_password,
+            username='badtest',
+            password='test#666',
             is_superuser=False,
         )
-        signed_in = self.client.login(
-            username=bad_username,
-            password=bad_password,
-        )
 
-        self.assertTrue(signed_in)
-        response = self.client.get('/10/delete')
-        self.assertEqual(response.status_code, 403)
+        self.client.force_login(user)
+        assert user.is_authenticated
+
+        response = self.client.get('/90/delete')
+        self.assertTemplateNotUsed(response, 'bookingdelete.html')
+        self.assertEqual(response.status_code, 301)

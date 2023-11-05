@@ -10,7 +10,7 @@ _Note: this document only contains testing info for the EastSt. site. If you req
     - [Responsiveness](#responsiveness)
     - [Authentication](#authentication)
     - [CRUD Functionality](#crud-functionality)
-- [Unit Testing](#unit-testing)
+- [Automated Testing](#automated-testing)
 - [Validator Testing](#validator-testing)
     - [W3C]()
     - [PEP8]()
@@ -111,7 +111,9 @@ User can delete a booking|[4.4](README.md#milestone-4---crud-functionality "As a
 User cannot delete other users' bookings|[5.3](README.md#milestone-5---additional-coding "Set up 404, 403 and 500 pages to correctly handle access/server issues when the site is in use")|<ol><li>Navigate to 'Current Bookings' page</li><li>Click 'Delete' beside any listed booking</li><li>In the page URL, change the digit given before '/delete' to '10' so the URL reads https://east-street-bc0671035c95.herokuapp.com/10/delete/</li><li>Hit 'Enter'</li></ol>|<ul><li>Deletion form for this entry not displayed to user</li><li>User redirected to 403 Error page</li>|Pass
 Admin can change status of bookings made by users|[4.5](#milestone-4---crud-functionality "As a Site Admin I want to have the ability to accept/reject new bookings so that I can manage customer numbers within the restaurant")|<ol><li>Navigate to Admin site</li><li>Sign in using superuser details (_not provided here for security purposes_)</li><li>Click 'Bookings' in the left-hand menu</li><li>Select an indiviual booking from the list displayed</li><li>Adjust the value under 'Status' and click 'SAVE'</li></ol>|<ul><li>Admin directed back to list of bookings</li><li>Success message displayed at top of screen</li>|Pass
 
-## Unit Testing
+## Automated Testing
+
+![Automated](static/images/testing/testing-automated.png)
 
 ## Validator Testing
 
@@ -135,7 +137,7 @@ The site has been tested using the [WAVE Evaluation Tool](https://wave.webaim.or
 ### Lighthouse
 [Lighthouse](https://developer.chrome.com/docs/lighthouse/overview/) was used to used to produce reports on performance and accessibility for both desktop and mobile versions of the site. The image below shows results for the Home page on desktop and mobile respectively while sitewide results are provided in the table. In all cases the SEO score was 100 which was achieved after adding meta 'keyword' and 'desciption' tags to the base.html head section.
 
-![Lighthouse](static/images/testing/lighthouse-testing.png)
+![Lighthouse](static/images/testing/testing-lighthouse.png)
 
 | | |**Desktop**| | |**Mobile**| |
 :-----|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:

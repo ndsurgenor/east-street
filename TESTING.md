@@ -113,6 +113,10 @@ Admin can change status of bookings made by users|[4.5](#milestone-4---crud-func
 
 ## Automated Testing
 
+A number of automated tests have been written to provide additional validation alongside those manual tests which check for a user's ability to view the booking section, depending on whether or not they are authenicated, as well as attempts to update/delete bookings which do not belong to a user.
+
+All of these tests are found within the [tests.py](booking_sys/tests.py) file in the repository.
+
 ![Automated](static/images/testing/testing-automated.png)
 
 ## Validator Testing
@@ -124,10 +128,10 @@ All pages have been passed through the [W3C HTML Validator](https://validator.w3
 - The use of iframe styling attirbutes on the location.html page. Again, the validator suggested CSS replacements but these caused the map to display incorrectly and almost be unreadble
 
 ### PEP8
-All Python files have been passed through the [Code Institute PEP8 Linter](https://pep8ci.herokuapp.com/)
+All Python files in the booking_sys and eaststreet apps, as well env.py and manage.py, have been passed through the [Code Institute PEP8 Linter](https://pep8ci.herokuapp.com/). The only warnings given were for the settings.py file which contains a small number of long lines (i.e. greater than 80 characters) under AUTH_PASSWORD_VALIDATORS; as this is code implemented by Django itself at setup, these lines will be left unchanged. 
 
 ### JSHint
-The small [JShint](https://jshint.com/)
+The small JavaScript snippet under the footer of base.html has been passed through [JShint](https://jshint.com/) without issue.
 
 ## Accessibility & Performance
 

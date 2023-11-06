@@ -217,7 +217,7 @@ footer p {
 }
 
 /* Media Queries */
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 767px) {
     .nav-item {
         padding-right: 0.5em;
     }
@@ -239,7 +239,7 @@ footer p {
     }
 }
 
-@media only screen and (max-width: 576px) {
+@media only screen and (max-width: 575px) {
     footer h2 {
         font-size: 1.75em;
         text-align: right;

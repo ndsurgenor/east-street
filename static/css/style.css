@@ -246,6 +246,20 @@ footer p {
     }
 }
 
+@media only screen and (max-width: 355px) { 
+    .navbar-brand {
+        font-size: 0.85em;
+    }
+    
+    .footer-icon {
+        background-color: darkslategrey;
+    }
+
+    .footer-icon a i {
+        color: whitesmoke;
+    }
+}
+
 @media only screen and (max-height: 825px) {
     .navbar-brand {
         font-size: 0.85em;

@@ -247,6 +247,14 @@ footer p {
 }
 
 @media only screen and (max-width: 355px) { 
+    h2 {
+        font-size: 1.75em;
+    }
+    
+    p {
+        font-size: 0.9em;
+    }
+    
     .navbar-brand {
         font-size: 0.85em;
     }

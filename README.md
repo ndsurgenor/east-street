@@ -364,7 +364,7 @@ In order to code and design these featured the following technologies were utili
   - cloudinary==1.34.0
   - dj-database-url==0.5.0
   - dj3-cloudinary-storage==0.0.6
-  - Django==3.2.20
+  - Django==4.2.7
   - django-allauth==0.55.0
   - gunicorn==21.2.0
   - oauthlib==3.2.2

@@ -10,7 +10,7 @@
 {% block details %}
 <div class="container-fluid">
   <div class="row justify-content-center">
-    <div class="col-9 col-md-7 col-lg-5 col-xl-3 access-form text-center shadow">
+    <div class="col-9 col-md-7 col-lg-6 col-xl-5 access-form text-center shadow">
       <!-- Sign-in title & subtitle with link for sign up -->
       <h2 class="pt-2">{% trans "Sign In" %}</h2>
       <p class="access-form-smalltxt">{% blocktrans %}If you have never booked with us before, please
@@ -19,7 +19,9 @@
       <!-- Sign-in form -->
       <form class="login" method="POST" action="{% url 'account_login' %}">
         {% csrf_token %}
-        {{ form.as_p }}
+        <div id="sign-in">
+          {{ form.as_p }}
+        </div>
         {% if redirect_field_value %}
         <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
         {% endif %}

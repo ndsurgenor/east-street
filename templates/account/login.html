@@ -19,9 +19,7 @@
       <!-- Sign-in form -->
       <form class="login" method="POST" action="{% url 'account_login' %}">
         {% csrf_token %}
-        <div id="sign-in">
-          {{ form.as_p }}
-        </div>
+        {{ form.as_p }}
         {% if redirect_field_value %}
         <input type="hidden" name="{{ redirect_field_name }}" value="{{ redirect_field_value }}" />
         {% endif %}

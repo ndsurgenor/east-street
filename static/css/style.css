@@ -158,9 +158,13 @@ body {
     font-size: 0.9em;
 }
 
-#sign-up,
-#sign-in {
-    width: 100%;
+#id_login,
+#id_password,
+#id_username,
+#id_email,
+#id_password1,
+#id_password2 {
+    width: 50%
 }
 
 #sign-out {

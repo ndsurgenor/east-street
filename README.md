@@ -347,7 +347,7 @@ Each of the following implementations was added in response to the acceptance cr
 
 ### Features to be implemented
 
-The following features have been identified as long-term goals which bring value to the UX; however, they have not been implemented at this stage as they would require a siginificant time investment, thereby delaying vital other features of the site, or a level of programming knowledge which I haven't yet developed. 
+The following features have been identified as long-term goals which bring value to the UX; however, they have not been implemented at this stage as they would require a significant time investment, thereby delaying vital other features of the site, or a level of programming knowledge which I haven't yet developed. 
 
 - Admin module for staff/admin to set menu items and prices allowing Menu page to stay up-to-date
 - Blocked out dates/times on calendar when the restaurant is closed/fully booked thereby managing numbers for admin automatically
@@ -413,7 +413,24 @@ In order to code and design these featured the following technologies were utili
 
 ## Testing
 
-Testing and reports undertaken for this project can be viewed in the [TESTING.md file](TESTING.md) separate to this document.
+Manual and automated testing undertaken for this project can be viewed in the separate [TESTING.md file](TESTING.md) (_Use CTRL + Click to this or any of the following links in a new tab/window_). You can also navigate to a specific area of the file by selecting one of the headings below:
+
+### Testing Contents
+- [Introduction](TESTING.md#eastst---testing)
+- [Manual Testing](TESTING.md#manual-testing)
+    - [Navigation](TESTING.md#navigation)
+    - [Responsiveness](TESTING.md#responsiveness)
+    - [Authentication](TESTING.md#authentication)
+    - [CRUD Functionality](TESTING.md#crud-functionality)
+- [Automated Testing](TESTING.md#automated-testing)
+- [Validator Testing](TESTING.md#validator-testing)
+    - [W3C](TESTING.md#w3c)
+    - [PEP8](TESTING.md#pep8)
+    - [JSHint](TESTING.md#jshint)
+- [Accessibility & Performance](TESTING.md#accessibility--performance)
+    - [WAVE](TESTING.md#wave)
+    - [Lighthouse](TESTING.md#lighthouse)
+- [Bugs](TESTING.md#bugs)
 
 ## Deployment
 

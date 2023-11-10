@@ -33,6 +33,11 @@ ALLOWED_HOSTS = [
     '8000-ndsurgenor-eaststreet-j1vdwlv49uq.ws-eu106.gitpod.io',
 ]
 
+CSRF_TRUSTED_ORIGINS = [
+    'https://east-street-bc0671035c95.herokuapp.com',
+    'https://8000-ndsurgenor-eaststreet-j1vdwlv49uq.ws-eu106.gitpod.io',
+]
+
 # Application definition
 
 INSTALLED_APPS = [

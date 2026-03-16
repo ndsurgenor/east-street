@@ -29,7 +29,7 @@ DEBUG = False
 
 ALLOWED_HOSTS = [
     'localhost',
-    'east-street-bc0671035c95.herokuapp.com',
+    'east-street.onrender.com',
     '8000-ndsurgenor-eaststreet-j1vdwlv49uq.ws-eu106.gitpod.io',
 ]
 
